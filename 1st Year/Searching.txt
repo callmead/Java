@@ -1,0 +1,86 @@
+
+import javax.swing.JOptionPane;
+public class test //Search a Number Program 30th Jan 2003
+{
+	public static void main(String args[])
+	{
+
+		int a[];				//Array to Store 5 Values step1
+		a=new int[50]; 			//Array to Store 5 Values step2
+		int i;					//Used for Loop
+		int j;					//for another loop
+		String num;				//for Inputing a Value as String
+		int num1;				//for Converting String Value to Int
+		boolean search=false; 	//Used for Search
+
+		for (i=0;i<50;i++){
+				a[i]=(int)(Math.random()*1000);
+		}
+	    num = JOptionPane.showInputDialog ("Enter Value 1...");
+		num1 = Integer.parseInt(num);
+
+			for (i=0;i<50;i++){
+
+					if (a[i] == num1){
+						search = true;
+					}
+			}
+
+			if (search == true){
+				System.out.println("*********************");
+				System.out.println(+(num1)+" is found...");
+				System.out.println("*********************");
+			}
+
+			else{
+				System.out.println("*********************");
+				System.out.println(+(num1)+" is not found...");
+				System.out.println("*********************");
+			}
+	System.exit(0);
+	}
+}
+--------------------------------------------------------------------------
+
+import javax.swing.JOptionPane;
+public class test //Search a Number Program 30th Jan 2003
+{
+	public static void main(String args[])
+	{
+
+		int a[];				//Array to Store 5 Values step1
+		a=new int[50]; 			//Array to Store 5 Values step2
+		int i;					//Used for Loop
+		int j;					//for another loop
+		String num;				//for Inputing a Value as String
+		int num1;				//for Converting String Value to Int
+		boolean search=false; 	//Used for Search
+
+		for (i=0;i<50;i++){
+				a[i]=(int)(Math.random()*1000);
+				System.out.print(" "+(a[i]));
+		}
+	    num = JOptionPane.showInputDialog ("Enter Value to Search...");
+		num1 = Integer.parseInt(num);
+
+			for (i=0;i<50;i++){
+
+					if (a[i] == num1){
+						search = true;
+					}
+			}
+
+			if (search == true){
+				System.out.println("\n*********************");
+				System.out.println(+(num1)+" is found...");
+				System.out.println("*********************");
+			}
+
+			else{
+				System.out.println("\n*********************");
+				System.out.println(+(num1)+" is not found...");
+				System.out.println("*********************");
+			}
+	System.exit(0);
+	}
+}

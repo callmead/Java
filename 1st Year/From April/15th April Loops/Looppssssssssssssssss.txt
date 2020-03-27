@@ -1,0 +1,87 @@
+Loops
+
+1) For Loop
+2) While
+3) do While
+
+for(int i=1; i<10; i++)
+
+for(int i=1; i<10; i+=2)
+for(int i=1; i<10; i=i+2)
+
+Example 1
+
+public class Loop
+{
+	public static void main (String args[])
+	{
+		for (int i = 1; i<10;i+=2)
+		System.out.println(i);
+	}
+}
+------------------------------------------------------
+Example 2 Reverse Order
+
+public class Loop
+{
+	public static void main (String args[])
+	{
+		for (int i = 10; i>0;i-=2)
+		System.out.println(i);
+	}
+}
+------------------------------------------------------
+Example 3 See This Logical Error
+
+public class Loop
+{
+	public static void main (String args[])
+	{
+		for (int i = 10; ;i-=2)
+		System.out.println(i);
+	}
+}
+------------------------------------------------------
+
+Example 4 SAme as Above but we are declaring Termination in between
+
+import javax.swing.*;
+public class Loop
+{
+	public static void main (String args[])
+	{
+		String s = JOptionPane.showInputDialog("Enter Termination Value");
+		int a = Integer.parseInt(s);
+
+		for (int i = 0; ;i+=2)
+		{
+			System.out.print(i+"\t");
+			if (i==a)
+			break;
+		}
+		System.out.println();
+		System.exit(0);
+	}
+}
+------------------------------------------------------
+
+Example 5 Advance one
+
+import javax.swing.*;
+public class Loop
+{
+	public static void main (String args[])
+	{
+		String s = JOptionPane.showInputDialog("Enter Termination Value");
+		int a = Integer.parseInt(s);
+
+		for (int i = 0;i<=a ;i+=2)
+		{
+			System.out.print(i+"\t");
+		}
+		System.out.println();
+		System.exit(0);
+	}
+}
+------------------------------------------------------
+

@@ -1,0 +1,87 @@
+import javax.swing.*;
+import java.awt.event.*;
+class Account extends JFrame
+{
+	public Account()
+	{
+	setInterface();
+	}
+	public void setInterface()
+	{
+		setSize(300,300);
+		setVisible(true);
+	}
+	public static void main (String args[])
+	{
+		Account account = new Account();
+	}
+}
+-------------
+import javax.swing.*;
+import java.awt.event.*;
+class Account extends JFrame
+{
+	public Account()
+	{
+	setInterface();
+	}
+	public void setInterface()
+	{
+		setLocation(260,120);//X and Y Axis in Pixels
+		setSize(300,300);
+		setVisible(true);
+	}
+	public static void main (String args[])
+	{
+		Account account = new Account();
+	}
+}
+-=------------------------
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+class Account extends JFrame
+{
+	public Account()
+	{
+	setInterface();
+	}
+	public void setInterface()
+	{
+		setLocation(260,120);
+		setBackground(Color.red);
+		setSize(300,300);
+		setVisible(true);
+	}
+	public static void main (String args[])
+	{
+		Account account = new Account();
+	}
+}
+------------------------------
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+class Account extends JFrame
+{
+	public Account()
+	{
+	setInterface();
+	}
+	public void setInterface()
+	{
+		setLocation(260,120);
+		setBackground(Color.green);
+		setSize(300,300);
+		setVisible(true);
+	}
+	public void paint(Graphics g)
+	{
+
+	}
+	public static void main (String args[])
+	{
+		Account account = new Account();
+	}
+
+}

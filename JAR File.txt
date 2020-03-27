@@ -1,0 +1,124 @@
+jar cmf existing-manifest jar-file input-file(s)
+
+e.g include all files and main class set in z.mf run the following command
+	
+jar cmf z.mf sss.jar *
+
+z.mf file
+------------
+Manifest-Version: 1.0
+Main-Class: frmSplash
+
+
+------------
+mf file Must end with New lines
+=========================
+jar cvf sss.jar *
+=========================
+How to make a JAVA application - executable JAR archive: 
+
+This simple tutorial is based on the DiveLog example published by Sun.
+
+For a more advanced example see: Java Application Template Tutorial 
+
+Download these templates for an extremely simple application template. If you know how to make an applet, you can easily make an application with this template:
+
+Basically you need 3 files to get started:
+Main class: DiveLog.java
+The class which will be displayed in the JFrame: Welcome.java
+The manifest file, which will define the main method for the application: mymanifest 
+
+Save all files into a directory. (rename *.java.txt to *.java)
+Create a batch file with the following content:
+
+javac DiveLog.java
+jar cvfm DiveLog.jar mymanifest DiveLog.class DiveLog$1.class DiveLog$2.class Welcome.class
+
+Watch the line wrap: There are only 2 lines in the batch file, one starting with javac and the other with jar.
+Run the batch file and it should compile the application and create DiveLog.jar, which can be clicked in order to run it.
+
+You can also run the application from the command line by typing: 
+java -jar DiveLog.jar
+
+which does the same like clicking on the icon of the application, but you can see any output written by System.out.println("..."); or error messages. 
+
+DONE! :-) It's that easy! Now it's time to add something useful to the application. Port the code of your applet to the application, or write something completely from scratch. Java applications are a really neat thing - the JPL and NASA use tons of Java applications (yes, even the Mars Rovers are controlled with Java applications!)
+
+TROUBLESHOOTING:
+
+QUESTION: When clicking the executable jar-archive an error window appears! Whats wrong ?
+
+Java Virtual Machine Launcher
+Could not find the main class. Program will exit!
+
+ANSWER:
+1. The Main-Class in the manifest is not defined / has the wrong classname.
+A correct manifest looks like this:
+
+
+Manifest-Version: 1.2
+Main-Class: DiveLog
+Created-By: 1.4 (Sun Microsystems Inc.)
+
+The Main-Class in the manifest defines the class with the starting point for the application:
+In other words, it is the class with this line:
+
+public static void main(String[] args)
+
+2. Make sure you added the Manifest to the JAR-archive:
+Verify the archive with: 
+jar vft DiveLog.jar
+There should be a line with META-INF/MANIFEST.MF
+
+Extract the archive in a new directory with: 
+jar xvf DiveLog.jar
+
+There should be a directory named META-INF. Verify the manifest in META-INF for it's correct syntax and content. 
+
+QUESTION: When running the app In the command line with java -jar DiveLog.jar I see the following:
+
+Exception in thread "main" 
+java.lang.NoClassDefFoundError: divelog/DiveLog
+
+ANSWER:
+1. Make sure you added the Manifest to the JAR-archive:
+Verify the archive with: 
+jar vft DiveLog.jar
+There should be a line with META-INF/MANIFEST.MF
+
+Extract the archive in a new directory with: 
+jar xvf DiveLog.jar
+
+There should be a directory named META-INF. Verify the manifest in META-INF for it's correct syntax and content. 
+
+2. The original example of the DiveLog at sun.com has a package declaration:
+
+package divelog;
+
+In my opinion this just complicates everything, therefore I deleted the line in my example.
+
+In order to compile the original DiveLog, you need to add a few things:
+Assuming there is package divelog; at the beginning of any java-file of the project and your files are located in:
+
+c:\java\divelog\
+(note: the name of the directory divelog is a must)
+
+Go to c:\java\divelog\ and compile it with: 
+javac -classpath c:\java\ DiveLog.java
+
+Go to c:\java\ and make the archive with:
+
+
+jar cvfm DiveLog.jar mymanifest divelog\DiveLog.class divelog\DiveLog$1.class
+divelog\DiveLog$2.class divelog\Welcome.class
+
+Note: This is just one line!
+
+The manifest looks like this (possibly you had that before, hence the error message):
+
+
+Manifest-Version: 1.2
+Main-Class: divelog.DiveLog
+Created-By: 1.4 (Sun Microsystems Inc.)
+
+But you see where this is going to: Much more hassle for the same effect! Therefore I left out the package declaration!

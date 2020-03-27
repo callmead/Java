@@ -1,0 +1,57 @@
+insert into Student (lksdhf sdhf lshdfl lsdhg lsdkg)
+update set slkdhflshd fhsdlf lsdhgl sdglskh
+UPDATE Student SET SName='Adeel Ashraf Malik',Address='Banani Dhaka',Phone='011094474',DOB='06/04/1982',Dues=.0000 WHERE SID='N0001';
+INSERT INTO Student VALUES ('N0005','Test','REcord','4328598','03/03/1980', 0);
+DELETE FROM Student WHERE SID='n0005';
+UPDATE Student SET SName='Adeel Ashraf Malik.',Address='Banani Dhaka',Phone='011094474',DOB='04/06/1982',Dues=1000 WHERE SID='N0001';
+UPDATE Student SET SName='Adeel Ashraf Malik',Address='Banani Dhaka',Phone='011094474',DOB='06/04/1982',Dues=1000.0000 WHERE SID='N0001';
+INSERT INTO Student VALUES ('N0005','Malik','Banani','4209211','03/03/1985', 100);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+------------
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+DELETE FROM Student WHERE SID='n0005';
+---------------
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0005','Test','banani','2398457','04-Jun-82', 3478);
+INSERT INTO Student VALUES ('N0001','Adeel Ashraf Malik','Banani','011094474','04-Jun-82', 3478);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='junaid' and pass='diit'
+=======================================================================
+MySQL Insertion
+INSERT INTO Student VALUES ('N0005','test','test','328947','1980-03-03', 10);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+DELETE FROM Student WHERE SID='n0005';
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='junaid' and pass='diit'
+INSERT INTO Student VALUES ('n0005','test','test','23848','1982-01-02', 12.4);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+UPDATE Student SET SName='Adeel Ashraf Malik',Address='Banani',Phone='011094474',DOB='1982-06-04',Dues=0 WHERE SID='N0001';
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+UPDATE Student SET SName='Raheel Ashraf Malik',Address='Banani',Phone='011094474',DOB='31-jan-86',Dues=0 WHERE SID='N0002';
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0002','Shabana','Islamabad','5323865','03-Mar-81', 10);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0002','Shabana','Islamabad','394857','03-mar-81', 10);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0002','Shabana Naz','Islamabad','5323865','03-mar-80', 10);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0004','Raheel','Banani','3498579','31-Mar-86', 10);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0004','Raheel','BAnani','4398569','1986-01-31', 100);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+INSERT INTO Student VALUES ('N0005','test','sdjkf','3486','1970-08-26', 100);
+UPDATE Student SET SName='test',Address='lahore',Phone='3486',DOB='1970-08-26',Dues=100 WHERE SID='N0005';
+DELETE FROM Student WHERE SID='n0005';
+UPDATE Student SET SName='Raheel',Address='BAnani',Phone='4398569',DOB='1986-01-31',Dues=0 WHERE SID='N0004';
+UPDATE Student SET SName='Raheel',Address='BAnani',Phone='4398569',DOB='1986-1-31',Dues=0 WHERE SID='N0004';
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+SELECT * FROM Users WHERE username='adeel' and password='malik'

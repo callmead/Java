@@ -1,0 +1,51 @@
+import java.awt.*;
+import java.applet.*;
+
+//This project demonstrates the basic drawing functions in Java
+//Predifined colors in Java are: black, blue, cyan, darkGray, gray,
+//green, lightGray, magenta, orange, pink, red, white and yellow
+
+
+public class Project1 extends Applet
+{
+        public void paint (Graphics g)
+        {
+                //Paint Background black (300 x 300 Pixels)
+                g.setColor(Color.black);
+                g.fillRect(0,0,300,300);
+
+                //Red square
+                g.setColor(Color.red);
+                g.fillRect(0,0,50,50);
+
+                //Yellow circle
+                g.setColor(Color.yellow);
+                g.fillOval(100,10,100,100);
+
+                //Orange oval
+                g.setColor(Color.orange);
+                g.fillOval(230,50,50,70);
+
+                //Blue rectangle with round corners
+                g.setColor(Color.blue);
+                g.fillRoundRect(10,130,160,60,20,20);
+
+                //Cyan colored triangle - not so easy
+                //You can make polygons with more corners the same way
+                g.setColor(Color.cyan);
+                //set all x-coordinates of the corners
+                int x[] = {20,80,140};
+                //set all y-coordinates of the corners
+                int y[] = {270,200,270};
+                //the third parameter is the number of corners
+                g.fillPolygon(x,y,3);
+
+                //Green line
+                g.setColor(Color.green);
+                g.drawLine(0,0,300,300);
+
+                //Some white text
+                g.setColor(Color.white);
+                g.drawString("This is some Text",180,250);
+        }
+}

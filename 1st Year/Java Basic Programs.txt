@@ -1,0 +1,56 @@
+***** JAVA PROGRAMS TESTED AND COMPILED SUCCESSFULLY *****
+-------------------------------------------------------------
+Program for Printing different ways
+-------------------------------------------------------------
+public class test1
+{
+  public static void main(String args[])
+   {
+   		System.out.print("Test \n\tProgram \n\t\t\tHello \"Adeel\" \n");
+   		System.out.print("Me\\Her\\And... \n"); //Printing \ we need \\ and printing " we need \"
+   }
+}
+
+----------------------------------------------------------
+Showing a Dialog Box Using a Premade Classes 7th Jan 2003
+----------------------------------------------------------
+
+import javax.swing.*;    // Imports all Java Classes Available.
+public class MyProgram
+{
+ public static void main(String args[])
+ {
+ String value;
+ value = JOptionPane.showInputDialog("Enter a value");
+ System.out.print(value);
+ System.exit(0);
+ }
+}
+
+--------------------------------------------
+Addition Program of two Values 8th Jan 2003
+--------------------------------------------
+
+import javax.swing.JOptionPane;      // Imports JOptionPane Class
+public class My2ndProgram
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String firstNumber;
+		 String secondNumber;
+		 int num1;
+		 int num2;
+		 int sum;
+		 firstNumber = JOptionPane.showInputDialog ("Enter 1st Value");
+		 secondNumber = JOptionPane.showInputDialog ("Enter 2nd Value");
+		 num1 = Integer.parseInt(firstNumber);
+		 num2 = Integer.parseInt(secondNumber);
+		 sum = num1 + num2;
+		 JOptionPane.showMessageDialog(null, "The Sum is " + sum);
+		 System.exit(0);
+ 	}
+}
+
+
+
+----------------------------------------------------------------------------

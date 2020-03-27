@@ -1,0 +1,31 @@
+function si(object) {
+	if (document.getElementById){
+		document.getElementById(object).style.display = 'inline';
+	} 
+}
+
+function h(object) { 
+	if (document.getElementById){
+		document.getElementById(object).style.display = 'none'; 
+	} 
+}
+
+function sb(object) { 
+	if (document.getElementById){
+		document.getElementById(object).style.display = 'block'; 
+	}
+}
+
+function hl(linav) { 
+	if (document.getElementById){
+		mainnav=document.getElementById("nav").childNodes; 
+		i=0; while(mainnav[i]){ mainnav[i].id=""; i++;} 
+		linav.id="high"; 
+	}	
+}
+
+function jump(targ,selObj,restore){ //v3.0
+	if (selObj.options[selObj.selectedIndex].value) 
+		eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+	if (restore) selObj.selectedIndex=0;
+}

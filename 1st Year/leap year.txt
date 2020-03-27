@@ -1,0 +1,29 @@
+-------------------------------
+LEAP YEAR FINDER 14th Jan 2003
+-------------------------------
+
+import javax.swing.JOptionPane;  // To Find the Leap Year Program
+public class test
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String yr;
+		 int year;
+		 yr = JOptionPane.showInputDialog ("Enter Year...");
+		 year = Integer.parseInt(yr);
+		 if (year % 4 == 0)
+		 	{
+				if (year % 100 == 0 && year % 400 == 0)
+				JOptionPane.showMessageDialog(null, "The Year is Leap");
+				else
+				{
+				JOptionPane.showMessageDialog(null, "The Year is not Leap");
+				}
+			}
+		else
+		{
+		JOptionPane.showMessageDialog(null, "The Year is not Leap");
+		}
+		System.exit(0);
+ 	}
+}

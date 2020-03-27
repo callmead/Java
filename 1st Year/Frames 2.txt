@@ -1,0 +1,83 @@
+import javax.swing.*; // Flow Layout
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JLabel lbl1=new JLabel("Enter Ur Name");
+	JButton btn1=new JButton("Exit");
+	Container c;
+	FlowLayout layout=new FlowLayout(); //layout is an object
+	testFrame()
+	{
+		frm1.setSize(300,300);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object by default the objets allignments are centerd
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(btn1);
+
+		frm1.show();
+	}
+}
+
+
+--------------------------------
+import javax.swing.*; // Flow Layout Complete Shish
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt2=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt3=new JTextField(12);//JTextFiled(12) width of the field
+
+	JLabel lbl1=new JLabel("Name :");
+	JLabel lbl2=new JLabel("Address :");
+	JLabel lbl3=new JLabel("Telephone :");
+
+	JButton btn1=new JButton("Ok");
+	JButton btn2=new JButton("Exit");
+
+	Container c;
+	FlowLayout layout=new FlowLayout(); //layout is an object
+	testFrame()
+	{
+		frm1.setResizable(false);//to Disable Maximize Button
+		frm1.setSize(220,150);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object
+		layout.setAlignment(FlowLayout.LEFT); //Setting Objects Layouts to Left
+
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(lbl2);
+		c.add(txt2);
+		c.add(lbl3);
+		c.add(txt3);
+		c.add(btn1);
+		c.add(btn2);
+
+		frm1.show();
+	}
+}
+-----------------

@@ -1,0 +1,190 @@
+Class Program Main Class and Sub Class in this Program Tested and Compiled. 11th March 2003
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		A test = new A(); //A() is blank then the First Message will be printed.
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+	A()	//Constructors
+	{
+		System.out.println ("Class A Has been Created");
+
+	}
+	A(int n)	//Constructors
+	{
+		a=n;
+		System.out.println("Class A Has been created and Initialized");
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+-----------------------
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		A test = new A(3);	//A(3) is blank then the Second Message will be printed.	
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+	A()	//Constructors
+	{
+		System.out.println ("Class A Has been Created");
+
+	}
+	A(int n)	//Constructors
+	{
+		a=n;
+		System.out.println("Class A Has been created and Initialized");
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+---------------------
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		A test = new A("test"); //A() is blank then the First Message will be printed.
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+	A()	//Constructors
+	{
+		System.out.println ("Class A Has been Created");
+
+	}
+	A(int n)	//Constructors
+	{
+		a=n;
+		System.out.println("Class A Has been created and Initialized");
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+-----------------------------
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		A test = new A("test"); //A() is blank then the First Message will be printed if String the the SEcond and If Int then third
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+	A()	//Constructors if A is Blank then this will run
+		{
+			System.out.println ("Class A Has been Created");
+
+	}
+	A(String S)	//Constructors if Our Value A is String then this will Run
+	{
+		System.out.println ("Your Value is "+S);
+
+	}
+	A(int n)	//Constructors if Our Value A is Int then this will Run
+	{
+		a=n;
+		System.out.println("Class A Has been created and Initialized");
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+-----------------------------
+Master Piece 3 Constructors
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		A test1 = new A(); //A() is blank then the First Message will be printed if String the the SEcond and If Int then third
+		A test2 = new A("String is Given");
+		A test3 = new A(3);
+
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+
+	A()	//Constructors
+		{
+			System.out.println ("Class A Has been Created as Null");
+
+	}
+	A(String S)	//Constructors if Our Value A is String then this will Run
+	{
+		System.out.println ("Class A Has been created as String the Value is "+S);
+
+	}
+	A(int n)	//Constructors if Our Value A is Int then this will Run
+	{
+		a=n;
+		System.out.println("Class A Has been created as Int and the Value is "+n);
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+------------------------
+public class testClass    //Main Class
+{
+	public static void main (String args[])
+	{
+		int a;
+		//A test1 = new A(); //A() is blank then the First Message will be printed if String the the SEcond and If Int then third
+		//A test2 = new A("String is Given");
+		A test3 = new A(3);
+		a= test3.getData();  //Getting the Value without going into subclass From the Main Class we can also use a = test3.a instead of a= test3.getData()
+		System.out.println("Your Data is "+a);//Printing the Data Imported.
+
+	}
+}			//Main Class ended
+class A			//Creating New Clas A Created
+{
+	int a;  //ByDefault Private Variables
+	int b;	//ByDefault Private Variables
+
+	A()	//Constructors
+		{
+			System.out.println ("Class A Has been Created as Null");
+
+	}
+	A(String S)	//Constructors if Our Value A is String then this will Run
+	{
+		System.out.println ("Class A Has been created as String the Value is "+S);
+
+	}
+	A(int n)	//Constructors if Our Value A is Int then this will Run
+	{
+		a=n;
+		System.out.println("Class A Has been created as Int and the Value is "+n);
+	}
+	int getData()	//Member Method.
+	{
+		return a;
+	}
+}
+----------------------------------

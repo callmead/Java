@@ -1,0 +1,2 @@
+frmEmail frmE = new frmEmail();
+getContentPane.add(frmE);

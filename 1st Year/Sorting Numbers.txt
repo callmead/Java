@@ -1,0 +1,73 @@
+
+public class test //Sorting Number Program 28-30th Jan 2003
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int min;		//for Minimum
+
+
+		for (i=0;i<5;i++){
+				a[i]=(int)(Math.random()*1000);
+				System.out.println("The "+(i+1)+" Number is "+a[i]);
+				}
+				min = a[0];
+				for (i=0;i<4;i++){
+					for (j=i+1;j<5;j++){
+					if (a[i] < a[j]){
+						min = a[i];
+						a[i]=a[j];
+						a[j]=min;
+						}
+					}
+				}
+
+			System.out.println("****************************");
+			System.out.println("Sorted Numbers are...");
+			for (j=0;j<5;j++){
+			System.out.println(+(j+1)+" Number "+a[j]);
+			}
+			System.out.println("****************************");
+	}
+}
+---------------------------------------------------------
+
+public class test //Sorting Acending Order Number Program 30th Jan 2003 
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int min;		//for Minimum
+
+
+		for (i=0;i<5;i++){
+				a[i]=(int)(Math.random()*1000);
+				System.out.println("The "+(i+1)+" Number is "+a[i]);
+				}
+				min = a[0];
+				for (i=0;i<4;i++){
+					for (j=i+1;j<5;j++){
+					if (a[i] > a[j]){
+                       				 min = a[i];
+						a[i]=a[j];
+						a[j]=min;
+						}
+					}
+				}
+
+			System.out.println("****************************");
+			System.out.println("Sorted Numbers are...");
+			for (j=0;j<5;j++){
+			System.out.println(+(j+1)+" Number "+a[j]);
+			}
+			System.out.println("****************************");
+	}
+}

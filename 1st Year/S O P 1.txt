@@ -1,0 +1,21 @@
+public class test1
+{
+  public static void main(String args[])
+   {
+   		System.out.print("Test \n\tProgram \n\t\t\tHello \"Adeel\" \n");
+   		System.out.print("Me\\Her\\And... \n"); //Printing \ we need \\ and printing " we need \"
+   }
+}
+----------------------
+
+public class test1 //SOP Statements
+{
+  public static void main(String args[])
+   {
+   		System.out.print("Test \n\tProgram \n\t\t\tHello \"Adeel\" \n");
+   		System.out.print("Me\\Her\\And... \n"); //Printing \ we need \\ and printing " we need \"
+   }
+}
+
+
+----------------------------

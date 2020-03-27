@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0057)http://www.utdallas.edu/~pxm034000/files/integrating.html -->
+<HTML><HEAD><TITLE>Crystal Report Integration Using Java - Report Viewer Bean</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2900.2668" name=GENERATOR><!-- start of no right click script -->
+<SCRIPT language=JavaScript>
+
+ <!--
+// No rightclick script.
+
+
+var message="Pooja Mohan"; // Put your message for the alert box between the quotes.
+
+
+function click(e) {
+if (document.all) {
+if (event.button == 2) {
+alert(message);
+return false;
+}
+}
+if (document.layers) {
+if (e.which == 3) {
+alert(message);
+return false;
+}
+}
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+}
+document.onmousedown=click;
+// --></SCRIPT>
+<!-- end of no right click script -->
+<SCRIPT language=JavaScript>
+<!-- Begin
+function scrollit(seed) {
+var m1  = "Pooja M. - Place for Resolving Issues related to Crystal Reports...Only queries posted on the COMPUTER FORUM will be replied to ...";
+var msg=m1;
+var out = " ";
+var c   = 1;
+if (seed > 100) {
+seed--;
+cmd="scrollit("+seed+")";
+timerTwo=window.setTimeout(cmd,100);
+}
+else if (seed <= 100 && seed > 0) {
+for (c=0 ; c < seed ; c++) {
+out+=" ";
+}
+out+=msg;
+seed--;
+window.status=out;
+cmd="scrollit("+seed+")";
+timerTwo=window.setTimeout(cmd,100);
+}
+else if (seed <= 0) {
+if (-seed < msg.length) {
+out+=msg.substring(-seed,msg.length);
+seed--;
+window.status=out;
+cmd="scrollit("+seed+")";
+timerTwo=window.setTimeout(cmd,100);
+}
+else {
+window.status=" ";
+timerTwo=window.setTimeout("scrollit(100)",75);
+}
+}
+}
+// End -->
+</SCRIPT>
+
+<META 
+content="java,Seagate,Seagate Crystal Reports,Reports,Crystal Report,Resume,job,Professional,advice,technology,ReportViewer,Integrating Crystal Reports,Java,Report Integration,Job Search,Queries Related to Crystal Reports,Java,reportviewerbean,javaviewerbean,forum,pdf,SQL,IIS,Apache,Crystal report - Java,Oracle Form,report,sample code,report.java" 
+name=Keywords>
+<META content="Pooja Mohan" name=author>
+<STYLE>BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #997731; SCROLLBAR-TRACK-COLOR: #997731; SCROLLBAR-DARKSHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #ffffff
+}
+</STYLE>
+<LINK href="pmk.ICO" rel="SHORTCUT ICON"></HEAD>
+<BODY text=#7d6042 vLink=#869574 aLink=#7d6042 link=#7d6042 bgColor=#ffffff 
+background=Guide_files/bckgrnd.bmp onload=scrollit(100)>
+<P>&nbsp;</P>
+<TABLE width=941 border=0>
+  <TBODY>
+  <TR>
+    <TD width=935>
+      <H1 align=center><B><FONT color=#997731 
+      size=7>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color=#7d6042 
+      size=7>Crystal Report Integration Using JAVA</FONT></B></H1>
+      <H1 align=center><FONT 
+      color=#7d6042>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report Viewer Bean(Java 
+      Viewer)&nbsp;</FONT><FONT color=#997731>&nbsp;&nbsp;</FONT>&nbsp;</H1>
+      <H1 align=center><IMG height=25 alt=LINE src="Guide_files/Line1.bmp" 
+      width=315 border=0></H1></TD></TR>
+  <TR>
+    <TD vAlign=top width=935>
+      <DIV style="LINE-HEIGHT: 150%">
+      <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+      title="Using Report Viewer Bean to Integrate CR with Java" 
+      href="http://www.utdallas.edu/~pxm034000/files/integrating.html"><FONT 
+      color=#7d6042 size=1>[ Report Viewer Bean ] </FONT></A><FONT color=#7d6042 
+      size=1>&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A 
+      title="Calling EXE formatted reports using JAVA" 
+      href="http://www.utdallas.edu/~pxm034000/files/execalling.html"><FONT 
+      color=#7d6042 size=1>&nbsp;[ EXE Calling]</FONT></A><FONT color=#7d6042 
+      size=1>&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A 
+      title="Calling a report on the Browser using ActiveX Viewer" 
+      href="http://www.utdallas.edu/~pxm034000/files/activex.html"><FONT 
+      color=#7d6042 size=1>[ ActiveX Viewer ]</FONT></A><FONT 
+      color=#7d6042>&nbsp; &nbsp;</FONT><FONT color=#7d6042 
+      size=1>&nbsp;</FONT><A 
+      title="Computer Forum to help solve problems related to Crystal Reports" 
+      href="http://forum.europeanservers.us/cgi-bin/lst.eur?pmk16" 
+      target=_blank><FONT color=#7d6042 size=1>[ Computer Forum 
+      ]</FONT></A></P></DIV>
+      <HR align=center width=450 color=#7d6042 SIZE=1>
+
+      <P align=center><IMG src="Guide_files/index_html_smartbutton1.gif" 
+      border=0><FONT face=Georgia color=#7d6042>Please visit my new website at : 
+      <A title=www.poojam.info href="http://www.poojam.info/" 
+      target=_blank>www.poojam.info </FONT></A></P>
+      <P align=left><FONT color=#66ffff 
+      size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT 
+      color=#7d6042 size=2>Seeing the &nbsp;number of people who have been 
+      facing problems with Integration of Reports with Java/JSP , I decided to 
+      put up a small write up about the 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;same 
+      and &nbsp;make it readily available for everybody.</FONT> 
+      <P align=left><FONT color=#7d6042 
+      size=1><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</B></FONT><FONT 
+      color=#7d6042 size=2>This page contains downloadable files which can be 
+      obtained by : 1) Left Mouse Click on the <B>FileName</B> and selecting 
+      "<B>Save</B>" option 2) If the file gets 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed 
+      on a new page,then click on <B>File --&gt; Save As</B> option to start 
+      downloading .</FONT></P>
+      <TABLE cellSpacing=0 borderColorDark=white width="78%" align=center 
+      borderColorLight=black border=1>
+        <TBODY>
+        <TR>
+          <TD width=194>
+            <P><B><FONT color=black 
+            size=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B><A 
+            title="Report Viewer Bean PDF" 
+            href="http://www.utdallas.edu/~pxm034000/files/scr_reportviewerbean.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>scr_reportviewerbean.pdf&nbsp;</FONT></B></A><FONT 
+            color=black size=2><B>&nbsp;</B></FONT></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>It describes the Definition of Report 
+            Viewer Bean and<B> </B>various properties of the Smart Viewer 
+            Bean(Source - </FONT><A title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>Crystal Decisions</FONT></A><FONT color=#7d6042 
+            size=2> )</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="URL Commands for Web Component Server" 
+            href="http://www.utdallas.edu/~pxm034000/files/scr8_urlcmds.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>scr8_urlcmds.pdf</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>It explains the URL commands for Web 
+            Component Server.(Source - </FONT><A 
+            title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>&nbsp;Crystal Decisions</FONT></A><FONT 
+            color=#7d6042 size=2> )</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><FONT color=#7d6042>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A 
+            title="Report Viewer Bean JAR File" 
+            href="http://www.utdallas.edu/~pxm034000/files/ReportViewerBean.jar" 
+            target=_blank><FONT color=#7d6042>&nbsp;</FONT><B><FONT 
+            color=#7d6042 size=2>ReportViewerBean.jar</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This JAR file is shipped along with 
+            the Crystal Reports CD and , can be obtained from the 
+            /Viewers/JavaViewerBean Folder on installation of Seagate Crystal 
+            Reports .</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="Various Properties of Report Viewer Bean" 
+            href="http://www.utdallas.edu/~pxm034000/files/ListOfProperties.doc" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>ListOfProperties.doc</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This document enlists the various 
+            properties of ReportViewerBean and, shows you exactly how a 
+            particular method can be invoked in your Java file.</FONT></P></TD></TR>
+        <TR>
+          <TD width=194 rowSpan=3>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+            title="PMK JAR FILE ( Version 1.0 )" 
+            href="http://www.utdallas.edu/~pxm034000/files/pmk.jar" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>pmk.jar&nbsp;</FONT></B></A><FONT color=#7d6042 size=2><B> 
+            (Ver 1.0)</B></FONT></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This JAR file contains <I>three</I> 
+            class files : 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B><IMG height=15 
+            alt=Point src="Guide_files/point1.bmp" width=17 border=0> 
+            &nbsp;&nbsp;&nbsp;ReportBeanException.class</B> : It is a general 
+            exception class . </FONT></P></TD></TR>
+        <TR>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2><B><IMG height=15 alt=Point 
+            src="Guide_files/point1.bmp" width=17 border=0> 
+            &nbsp;&nbsp;&nbsp;ReportBeanProperties.class</B> : It consists of 
+            all the methods that a ReportViewerBean contains and,in your code 
+            development ,you are supposed to : &nbsp;&nbsp;</FONT></P>
+            <P><FONT color=#7d6042 size=2>a) &nbsp;&nbsp;&nbsp;Create an 
+            instance of ReportBeanProperties ( Using a No Argument Constructor ) 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.e. , 
+            &nbsp;&nbsp;&nbsp;<I>ReportBeanProperties b = new 
+            ReportBeanProperties();</I> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            </FONT></P>
+            <P><FONT color=#7d6042 size=2>b) &nbsp;&nbsp;&nbsp;Set the necessary 
+            properties ( Please check the doc "ListOfProperties") to a report 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. , 
+            <I>b.setReportName("</I></FONT><A 
+            href="http://servername/reportname.rpt"><FONT color=#7d6042 
+            size=2><I>http://servername:80/reportname.rpt</I></FONT></A><FONT 
+            color=#7d6042 
+            size=2><I>");&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>b.setBackground(Color.green); 
+            &nbsp;&nbsp;&nbsp; </I>&nbsp;</FONT></P>
+            <P><FONT color=#7d6042 size=2>c) &nbsp;&nbsp;&nbsp;&nbsp;i)&nbsp; 
+            Call <I>init()</I> to View a report on the Smart 
+            Viewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) &nbsp;Call 
+            <I>printReport()</I> to Print the Report directly to a 
+            printer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) &nbsp;Call 
+            <I>exportReport(File f)</I> or <I>exportReport(int type,File f)</I> 
+            inorder to Export the report to 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.doc,.xls,.rpt,.rtf&nbsp; 
+            format. 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            Please note : &nbsp;&nbsp; Create a fresh instance of 
+            ReportBeanProperties each time a button is pressed . 
+        </FONT></P></TD></TR>
+        <TR>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2><B><IMG height=15 alt=Point 
+            src="Guide_files/point1.bmp" width=17 border=0> 
+            &nbsp;ReportBeanProperties$MyWindowAdapter.class</B> : Simply 
+            include this class file along with other class files. It is used to 
+            destroy the frame incase you want to close the report after viewing. 
+            Don't worry incase you are not able to understand what I am saying 
+            as the <B>SampleCode.java</B> file will clarify your doubts 
+            further.</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A title="Report.JAVA File" 
+            href="http://www.utdallas.edu/~pxm034000/files/Report.java" 
+            target=_blank><FONT color=#7d6042>&nbsp;</FONT><B><FONT 
+            color=#7d6042 size=2>Report.java&nbsp;</FONT></B></A><FONT 
+            color=black size=2><B> </B></FONT></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This JAVA file is a <B>Sample Code 
+            </B>explaining the usage of the various properties of the 
+            bean.Please 
+            note:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;<IMG height=15 alt=Point src="Guide_files/point1.bmp" width=17 
+            border=0> &nbsp;</B>While creating your own Java code , you can make 
+            your Java file in <B>pmk.com.report</B> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package&nbsp;&nbsp;itself&nbsp; 
+            as shown or import this package in your code as: 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>&nbsp;</B><I><B>import 
+            pmk.com.report.* 
+            ;&nbsp;&nbsp;&nbsp;</B>&nbsp;&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inorder 
+            to use these class 
+            files.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B> 
+            </B>&nbsp;<B><IMG height=15 alt=Point src="Guide_files/point1.bmp" 
+            width=17 border=0>&nbsp;&nbsp;</B>Change the string being passed to 
+            : <B>setReportName,setReportParameters</B> according to 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View/Export/Print 
+            a desired 
+            report.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;<B><IMG height=15 alt=Point src="Guide_files/point1.bmp" 
+            width=17 border=0> &nbsp;&nbsp;</B>Change the <B>Property values</B> 
+            acc. to the requirements.The List of Properties that can be used are 
+            listed in the </FONT><A title="List Of Properties" 
+            href="http://www.utdallas.edu/~pxm034000/files/ListOfProperties.doc" 
+            target=_blank><FONT color=#7d6042 
+            size=2>ListOfProperties.doc</FONT></A><FONT color=#7d6042 size=2> 
+            .</FONT></P>
+            <P><FONT color=#7d6042 size=2><B><I>Please note 
+            :&nbsp;&nbsp;</I></B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;<I>Unzip the contents of the jar files to the same folder as 
+            your application ,preserving the &nbsp;path.</I>ie.,say ,you try 
+            unzipping pmk.jar file.Since,I have included it in pmk.com.report 
+            &nbsp;package;So,unzipping the contents of this jar file will create 
+            a sub-folder pmk\com\report where all &nbsp;the class files will be 
+            available.So,Do<I> NOT add the class files directly to your 
+            &nbsp;application path.Instead,<B>add them to 
+            &lt;application_name&gt;\pmk\com\report folder</B>. 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I> 
+            Incase you are using some tool like, JBuilder or JDeveloper, you can 
+            directly refer to JAR files.Please edit the User Information as 
+            required by your Report.</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#7d6042 
+            size=2><U><B>Report.html&nbsp;</B></U></FONT></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>Inorder to run the SampleCode,run the 
+            Report.html file.Please edit the&nbsp; HTML file according to your 
+            Java filename.</FONT></P>
+            <P><FONT color=#7d6042 size=3><SAMP><B>&lt;! DOCTYPE HTML PUBLIC 
+            "-//W3C//DTD HTML 4.0 Transitional 
+            //EN"&gt;<BR>&lt;HTML&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;HEAD&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt; 
+            CALLING REPORT USING JAVA 
+            VIEWER&nbsp;&lt;/TITLE&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/HEAD&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;BODY&gt;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;APPLET 
+            CODE="pmk.com.report.Report.class" CODEBASE="." WIDTH="450" 
+            HEIGHT="300"&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/APPLET&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            &lt;/BODY&gt;<BR>&lt;/HTML&gt;<BR></B></SAMP></FONT><FONT 
+            color=black><SAMP><B><FONT 
+size=1></FONT></B></SAMP></FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><FONT color=#7d6042>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A 
+            title="PMK.JAR Version 2.0" 
+            href="http://www.utdallas.edu/~pxm034000/files/ver2/pmk.jar" 
+            target=_blank><FONT color=#7d6042>&nbsp;</FONT></A><B><A 
+            title="PMK.JAR Version 2.0" 
+            href="http://www.utdallas.edu/~pxm034000/files/ver2/pmk.jar" 
+            target=_blank><FONT color=#7d6042 
+            size=2>pmk.jar&nbsp;</FONT></A><FONT color=#7d6042 size=2> (Ver 
+            2.0)</FONT></B></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This JAR file contains <I>five</I> 
+            class files ,which includes two additional class files ,namely 
+            </FONT><FONT color=#7d6042 size=2><I>CrystalFrame.class</I>&nbsp; 
+            </FONT><FONT color=#7d6042 size=2>and&nbsp; </FONT><FONT 
+            color=#7d6042 size=2><I>CrystalReport.class</I></FONT><FONT 
+            color=#7d6042 size=2> which have been included inorder to handle the 
+            problems related to Viewing of Report.</FONT></P>
+            <P><FONT color=#7d6042 size=2>Other files are :</FONT><FONT 
+            color=#7d6042 size=2><BR>&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp; 
+            ReportBeanProperties.class<BR>&nbsp;&nbsp;&nbsp; -&nbsp;&nbsp;&nbsp; 
+            ReportBeanProperties$MyWindowAdapter.class<BR>&nbsp;&nbsp;&nbsp; 
+            -&nbsp;&nbsp;&nbsp; ReportBeanException.class</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><A title="Java Bean Integration Document" target=_blank><B><FONT 
+            color=#7d6042 size=2>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B></A><A 
+            title="Java Bean Integration Document" 
+            href="http://www.utdallas.edu/~pxm034000/files/JavaBeansIntegration.doc" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>JavaBeansIntegration.doc&nbsp;</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This is a list of some common problems 
+            which we face while integrating reports,directly taken from Seagate 
+            site.</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P>&nbsp;&nbsp;<B>&nbsp;</B><FONT size=2><A 
+            title="IIS Settings for calling reports" 
+            href="http://www.utdallas.edu/~pxm034000/files/IISSettings.doc" 
+            target=_blank><B>IISSettings.doc</B></A></FONT></P></TD>
+          <TD width=525><SPAN 
+            style="FONT-SIZE: 10pt; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Times New Roman'; mso-fareast-font-family: " 
+            auto;mso-ansi-language:en-us;mso-fareast-language:en-us;mso-bidi-language:ar-sa? 
+            roman?;text-shadow: new times>To configure Internet Information 
+            Server ( IIS</SPAN><B><SPAN 
+            style="FONT-SIZE: 10pt; TEXT-TRANSFORM: uppercase; FONT-FAMILY: 'Times New Roman'; mso-fareast-font-family: " 
+            auto;mso-ansi-language:en-us;mso-fareast-language:en-us;mso-bidi-language:ar-sa? 
+            roman?;text-shadow: new times> )</SPAN></B></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><A 
+            title="Comparitive Check list of various versions of Crystal Reports" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B></A><A 
+            title="Comparitive Check list of various versions of Crystal Reports" 
+            href="http://www.utdallas.edu/~pxm034000/files/cr9feat_ver.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>cr9feat_ver.pdf&nbsp;</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>Provides a comparitive checklist of 
+            features supported in current and previous versions leading to the 
+            latest Version 9.0 (Source - </FONT><A 
+            title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>&nbsp;Crystal Decisions</FONT></A><FONT 
+            color=#7d6042 size=2>)</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><A title="Table Linking in Crystal Reports" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B></A><A 
+            title="Table Linking in Crystal Reports" 
+            href="http://www.utdallas.edu/~pxm034000/files/scr_pclinking.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>scr_pclinking.pdf&nbsp;</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This document discusses linking for 
+            PC-type databases,ODBC linking and frequently asked questions. The 
+            linking processes are based on matching records, from a parent table 
+            (left table) to records in a child table (right table). The match is 
+            based on whether the value in the link field in the source record is 
+            identical to the value of the link field in the searched records. 
+            The linking process is a form of record selection. (Source - 
+            </FONT><A title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>&nbsp;Crystal Decisions</FONT></A><FONT 
+            color=#7d6042 size=2>)</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><A 
+            title="Troubleshooting the Installation of the Report Viewer for ActiveX&#13;&#10;" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B></A><A 
+            title="Troubleshooting the Installation of the Report Viewer for ActiveX&#13;&#10;" 
+            href="http://www.utdallas.edu/~pxm034000/files/crystal_web_viewer_for_actx.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>crystal_web_viewer_for_actx.pdf&nbsp;</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This document troubleshoots the 
+            stumbling blocks that can be encountered while installing the 
+            ActiveX Viewer onto a client machine. (Source - </FONT><A 
+            title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>&nbsp;Crystal Decisions</FONT></A><FONT 
+            color=#7d6042 size=2>)</FONT></P></TD></TR>
+        <TR>
+          <TD width=194>
+            <P><A title="Virtual Directories and Path Mapping&#13;&#10;" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></B></A><A 
+            title="Virtual Directories and Path Mapping&#13;&#10;" 
+            href="http://www.utdallas.edu/~pxm034000/files/ce8_virtual_dir_path_mapping.pdf" 
+            target=_blank><B><FONT color=#7d6042 
+            size=2>ce8_virtual_dir_path_mapping.pdf&nbsp;</FONT></B></A></P></TD>
+          <TD width=525>
+            <P><FONT color=#7d6042 size=2>This document describes the process of 
+            setting up Virtual Directories &amp; Path Mappings to integrate 
+            Crystal Enterprise into various WebServer Environments. (Source - 
+            </FONT><A title="Crystal Decisions Official Web Site" 
+            href="http://www.crystaldecisions.com/" target=_blank><FONT 
+            color=#7d6042 size=2>&nbsp;Crystal Decisions</FONT></A><FONT 
+            color=#7d6042 size=2>)</FONT></P></TD></TR></TBODY></TABLE>
+      <P align=center><FONT color=#7d6042>&nbsp;&nbsp;<IMG height=50 
+      src="Guide_files/line2.bmp" width=350 border=0></FONT></P>
+      <P align=center><FONT color=#7d6042>&nbsp;&nbsp;</FONT><A 
+      title="Integration Of Crystal Reports Using JAVA" 
+      href="http://www.utdallas.edu/~pxm034000/files/java.html" 
+      target=_self><FONT color=#7d6042><IMG height=50 
+      alt="Integration of Reports using JAVA" src="Guide_files/left.bmp" 
+      width=50 border=0></FONT></A><FONT color=#7d6042> &nbsp;</FONT><A 
+      title=HOME href="http://www.utdallas.edu/~pxm034000/index.html" 
+      target=_self><FONT color=#7d6042><IMG height=65 alt=HOME 
+      src="Guide_files/home1.bmp" width=75 border=0></FONT></A><FONT 
+      color=#7d6042> &nbsp;</FONT><A 
+      title="Integration of Reports using Java - Using EXE Calling" 
+      href="http://www.utdallas.edu/~pxm034000/files/execalling.html" 
+      target=_self><FONT color=#7d6042><IMG height=50 
+      alt="Integration of Reports using Java -  Using EXE Calling" 
+      src="Guide_files/right.bmp" width=50 border=0></FONT></A><FONT 
+      color=#7d6042> &nbsp;&nbsp;&nbsp;</FONT></P>
+      <DIV align=center><FONT color=#7d6042>&nbsp;&nbsp;&nbsp;[</FONT><A 
+      onmouseover="" title="About Me" onmouseout="" 
+      href="http://www.utdallas.edu/~pxm034000/files/profile.html" 
+      target=_self><FONT color=#7d6042>About Myself</FONT></A><FONT 
+      color=#7d6042>][</FONT><A onmouseover="" 
+      title="Crystal Reports Integration" onmouseout="" 
+      href="http://www.utdallas.edu/~pxm034000/files/crystal.html" 
+      target=_self><FONT color=#7d6042>Crystal Reports</FONT></A><FONT 
+      color=#7d6042>][</FONT><A onmouseover="" title=Resume onmouseout="" 
+      href="http://www.utdallas.edu/~pxm034000/files/resume.html" 
+      target=_self><FONT color=#7d6042>Resume</FONT></A><FONT 
+      color=#7d6042>][</FONT><A title=Links 
+      href="http://www.utdallas.edu/~pxm034000/files/links.html" 
+      target=_self><FONT color=#7d6042>Links</FONT></A><FONT 
+      color=#7d6042>][</FONT><A onmouseover="" title="Contact Me" onmouseout="" 
+      href="mailto:pmk16@yahoo.com" target=_blank><FONT color=#7d6042>Contact 
+      Me</FONT></A><FONT color=#7d6042>]</FONT> 
+      <P>[<A onmouseover="" title="Crystal Reports Related Queries and Issues" 
+      onmouseout="" href="http://forum.europeanservers.us/cgi-bin/lst.eur?pmk16" 
+      target=_blank>Computer Forum</A>]</P></DIV>
+      <HR align=center width=450 color=#7d6042 SIZE=1>
+    </TD></TR>
+  <TR>
+    <TD vAlign=top width=935>
+      <P><FONT color=#7d6042></FONT>&nbsp;</P></TD></TR></TBODY></TABLE></BODY></HTML>

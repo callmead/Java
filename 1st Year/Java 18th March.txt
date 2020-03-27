@@ -1,0 +1,94 @@
+Applets Class 1 18th March 2003
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+Write this code in Java and press CTRL + 1 and CTRL + 3
+
+import java.applet.Applet;
+import java.awt.Graphics;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		g.drawString("Hello Applets !",50,25);
+	}
+}
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+Now use the following code in Ur web Page
+<HTML>
+<HEAD>
+<TITLE> WELCOME CLASS </TITLE>
+</HEAD>
+<Body>
+This is the Applet:<p>
+<applet codebase="classes" code = "AppletDemo" width=200 height=200>
+</applet>
+</body>
+</HTML>
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+import java.applet.Applet;
+import java.awt.*;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		setBackground (Color.black);
+		setBackground (Color.red);
+		g.drawString("Hello Applets !",50,25);
+	}
+}
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+import java.applet.Applet;
+import java.awt.*;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		setBackground (Color.black);
+		setBackground (Color.red);
+		g.drawString("Hello Applets !",50,25); //X Axis and Y Axis
+		g.drawRect(60,30,90,60); //X,Y,X,Y Axis because we have to tell 4 points of Rectangle to draw 2 on X Axis and 2 on Y.
+	}
+}
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+import java.applet.Applet;
+import java.awt.*;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		setBackground (Color.black);
+		setBackground (Color.red);
+		g.drawString("Hello Applets !",68,32); //X Axis and Y Axis
+		g.drawRect(60,30,90,60); //X,Y,X,Y Axis because we have to tell 4 points of Rectangle to draw 2 on X Axis and 2 on Y.
+		g.drawLine(50,40,70,40); //Starting XY axis and Ending XY Axis
+	}
+}
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+import java.applet.Applet;
+import java.awt.*;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		setBackground (Color.black);
+		setBackground (Color.red);
+		g.drawString("Hello Applets !",68,32); //X Axis and Y Axis
+		g.drawRect(50,40,90,80); //X,Y,X,Y Axis because we have to tell 4 points of Rectangle to draw 2 on X Axis and 2 on Y.
+		g.drawLine(50,40,70,40); //Starting XY axis and Ending XY Axis
+		g.drawOval(50,40,90,80);//XY on 
+		
+	}
+}
+==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+import java.applet.Applet;
+import java.awt.*;
+public class AppletDemo extends Applet
+{
+	public void paint (Graphics g)
+	{
+		setBackground (Color.black);
+		setBackground (Color.red);
+		g.drawString("Hello Applets !",68,32); //X Axis and Y Axis
+		g.drawLine(50,40,70,40); //Starting XY axis and Ending XY Axis
+		g.drawLine(70,40,100,70);
+	}
+}

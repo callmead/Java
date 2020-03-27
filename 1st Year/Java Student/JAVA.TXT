@@ -1,0 +1,314 @@
+Addition..
+-------------------------------------
+import javax.swing.JOptionPane;
+public class Friend1
+{
+	public static void main(String args[])
+	{
+		String choice;
+		int ch;
+		String first;
+		String second;
+		int num1;
+		int num2;
+		int result;
+		do
+		{
+		 choice = JOptionPane.showInputDialog("Enter a choice.\n1) Addition.\n2) Subtraction.\n3) Multiplication.\n4) Divition.\n5) Exit.");
+		 ch=Integer.parseInt(choice);
+		 JOptionPane.showMessageDialog(null,"Your choice is "+choice);
+		 if(ch==1)
+		 {
+		 	
+			first=JOptionPane.showInputDialog("Enter first number");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second number");
+			num2=Integer.parseInt(second);
+			result=num1+num2;
+			JOptionPane.showMessageDialog(null,"The result is "+result);			
+		 }
+		 if (ch==2)
+		 {
+		 
+			first=JOptionPane.showInputDialog("Enter first number");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second number");
+			num2=Integer.parseInt(second);
+			result=num1- num2;
+			JOptionPane.showMessageDialog(null,"The result is "+result);
+		 }
+		 if (ch==3)
+		 {
+		 	
+			first=JOptionPane.showInputDialog("Enter first number ");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second number ");
+			num2=Integer.parseInt(second);
+			result=num1*num2;
+			JOptionPane.showMessageDialog(null,"The result is"+result);
+			
+		 }
+		 if (ch==4)
+		 {
+		 	
+			first=JOptionPane.showInputDialog("Enter first number ");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second number ");
+			num2=Integer.parseInt(second);
+			if (num2==0)
+			{
+				JOptionPane.showMessageDialog(null,"It is infinity.Please choice other value. ");
+			}else
+			{
+			result=num1/num2;
+			JOptionPane.showMessageDialog(null,"The result is"+result);
+			}
+			
+		}
+		if (ch>5||ch<1)
+			{
+				JOptionPane.showMessageDialog(null,"You are fool.  Your selection is wrong ");
+			}
+			if (ch==5)
+			{
+				JOptionPane.showMessageDialog(null,"Thank You For Use this things. See you, Good by!");
+				
+			}
+		}while (ch!=5);
+		
+		
+		System.exit(0);
+	
+	}
+}
+------------------------------------------------------------
+friend1
+-----------------------------------------------------------------
+import javax.swing.JOptionPane;
+public class Friend1
+{
+	public static void main(String args[])
+	{
+		String choice;
+		int ch;
+		String first;
+		String second;
+		int num1;
+		int num2;
+		int result;
+		do
+		{
+		 choice = JOptionPane.showInputDialog("Enter a choice.\n1) Addition.\n2) Subtraction.\n3) Multiplication.\n4) Divition.\n5) Exit.");
+		 ch=Integer.parseInt(choice);
+		 JOptionPane.showMessageDialog(null,"You have chosen "+choice);
+		 if(ch==1)
+		 {
+		 	choice="Addition....!";
+			first=JOptionPane.showInputDialog("Enter first value");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second value");
+			num2=Integer.parseInt(second);
+			result=num1+num2;
+			JOptionPane.showMessageDialog(null,"The result is "+result);			
+		 }
+		 if (ch==2)
+		 {
+		 	choice="Subtraction......!";
+			first=JOptionPane.showInputDialog("Enter first value");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second value");
+			num2=Integer.parseInt(second);
+			result=num1- num2;
+			JOptionPane.showMessageDialog(null,"The result is "+result);
+		 }
+		 if (ch==3)
+		 {
+		 	choice="Multiplication.....!";
+			first=JOptionPane.showInputDialog("Enter first value ");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second value ");
+			num2=Integer.parseInt(second);
+			result=num1*num2;
+			JOptionPane.showMessageDialog(null,"The result is"+result);
+			
+		 }
+		 if (ch==4)
+		 {
+		 	choice="Divition.....!";
+			first=JOptionPane.showInputDialog("Enter first value ");
+			num1=Integer.parseInt(first);
+			second=JOptionPane.showInputDialog("Enter second value ");
+			num2=Integer.parseInt(second);
+			if (num2==0)
+			{
+				JOptionPane.showMessageDialog(null,"It is infinity.Please choice other value. ");
+			}else
+			{
+			result=num1/num2;
+			JOptionPane.showMessageDialog(null,"The result is"+result);
+			}
+			
+		}
+		if (ch>5||ch<1)
+			{
+				JOptionPane.showMessageDialog(null,"You are fool. Because Your selection is wrong ");
+			}
+			if (ch==5)
+			{
+				JOptionPane.showMessageDialog(null,"Thank You For Use this things. See you, Good by!");
+				
+			}
+		}while (ch!=5);
+		
+		
+		System.exit(0);
+	
+	}
+}
+-------------------------------------------------------------------
+fRIEND2
+-------------------------------------------------------------------
+import javax.swing.JOptionPane;
+public class Friend2
+{
+	public static void main(String arg[])
+	{
+		String n;
+		int month;
+		n=JOptionPane.showInputDialog("Please enter a number");
+		month=Integer.parseInt(n);
+		do
+		{
+			if (month>1 && month<12)
+			{
+				switch (month)
+				{
+					case 1: JOptionPane.showMessageDialog(null," It's January");break;
+					case 2: JOptionPane.showMessageDialog(null," It's February");break;
+					case 3: JOptionPane.showMessageDialog(null," It's Murch");break;
+					case 4: JOptionPane.showMessageDialog(null," It's April");break;
+					case 5: JOptionPane.showMessageDialog(null," It's May");break;
+					case 6: JOptionPane.showMessageDialog(null," It's June");break;
+					case 7: JOptionPane.showMessageDialog(null," It's July");break;
+					case 8: JOptionPane.showMessageDialog(null," It's Augest");break;
+					case 9: JOptionPane.showMessageDialog(null," It's September");break;
+					case 10: JOptionPane.showMessageDialog(null," It's October");break;
+					case 11: JOptionPane.showMessageDialog(null," It's November");break;
+					case 12: JOptionPane.showMessageDialog(null," It's December");break;
+			
+				}
+			}
+		}while(month<=12);
+	}
+}
+-----------------------------------------------------------------------
+Factorail
+-------------------------------------
+
+import javax.swing.JOptionPane;
+public class Friend3
+{
+	public static void main(String args[])
+	{
+		String str;
+		int i=1;
+		int n=1;
+		int fact;
+		str=JOptionPane.showInputDialog("Enter the value");
+		n=Integer.parseInt(str);
+		fact = 1;
+		for (i=1;i<= n;i++);
+		{
+			fact = fact * i;
+
+		}
+		JOptionPane.showMessageDialog(null,"The result is" + fact);
+		System.exit(0);
+	}
+}
+----------------------------------------------------------------------------
+Leap Year
+-----------------------------
+import javax.swing.JOptionPane;
+public class LeapYear
+{
+	public static void main(String args[])
+	{
+		String str1;
+		int y;
+		str1=JOptionPane.showInputDialog("Entert the year");
+		y=Integer.parseInt(str1);
+		if  (y%4==0)
+		{
+			if (y%100==0)  
+			{ if(y%400==0)
+			{
+			JOptionPane.showMessageDialog(null,"This year is Leap year");
+			}
+			else
+			{JOptionPane.showMessageDialog(null,"This year is not Leap year");
+			}
+			}      
+			else
+			{
+				JOptionPane.showMessageDialog(null,"This year is  Leap year");
+			}
+		}
+			else
+			{ 
+			JOptionPane.showMessageDialog(null,"This year is not Leap year");
+		}
+		
+		System.exit(0);
+	}
+	
+}
+----------------------------------------------------------
+Forloop
+---------------------
+import javax.swing.*;
+public class MyProgram2
+{
+	public static void main(String args[])
+	{
+	int i;
+	for (i=0;i<100;i++)
+		System.out.print("Hello ");
+	System.exit(0);
+	}
+}	
+-------------------------
+Temparature
+-------------------
+import javax.swing.JOptionPane;
+public class Temperature
+{
+	public static void main(String args[])
+	{
+		String str1;
+		int temp;
+		str1=JOptionPane.showInputDialog("Entert the temperature");
+		temp=Integer.parseInt(str1);
+		if ((temp>=0) && (temp<=10))
+		{
+			JOptionPane.showMessageDialog(null,"It's too cold");
+		}
+
+
+		if ((temp>=11) && (temp<=15))
+		{
+			JOptionPane.showMessageDialog(null,"It's  cold");
+		}
+		if ((temp>=16) && (temp<=25))
+		{
+			JOptionPane.showMessageDialog(null,"It's Hot");
+		}
+		if ((temp>=26) && (temp<=35))
+		{
+			JOptionPane.showMessageDialog(null,"It's too Hot");
+		}
+		System.exit(0);
+	}
+	
+}
+-----------------------------------------------

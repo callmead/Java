@@ -1,0 +1,475 @@
+Java 3rd June 2003 to 24th June 
+Event Handling
+=-=-=-=-=-=-=-=-=-=-=-=-=-
+1) Action Listener
+2) Mouse Listener
+3) Key Listener
+4) Focus Listener
+5) Item Listener
+x-x-x-x-x-x-x-x-x-x-x-x-x-
+
+Example a Simple Frame Without ActionListner
+Example 1
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.*;
+import javax.swing.*;
+class A extends JFrame
+{
+ JButton b;
+ JTextField t;
+ Container co;
+ public A()
+ {
+  co=getContentPane();
+  b=new JButton("Button");
+  t=new JTextField(20);
+  co.setLayout(null);
+  co.add(b);b.setBounds(20,20,80,20);
+  co.add(t);t.setBounds(20,50,80,20);
+  setSize(200,200);setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+ }
+ public static void main (String x[])
+ {
+  A a = new A();
+ }
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Example 2 Action Events for Button and TextField (ActionListener)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.*;
+import javax.swing.*;  
+import java.awt.event.*; file://For Action Listening
+class A extends JFrame implements ActionListener
+{
+ JButton b;
+ JTextField t;
+ Container co;
+ public A()
+ {
+  co=getContentPane();
+  b=new JButton("Button");
+  t=new JTextField(20);
+  co.setLayout(null);
+  co.add(b);b.setBounds(20,20,80,20);b.addActionListener(this);//"this" means this class is ActionListener himself. This class is acting like Action Listener Means this class
+  co.add(t);t.setBounds(20,50,80,20);t.addActionListener(this);
+  setSize(200,200);setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+ }
+ public void actionPerformed(ActionEvent Matrix)
+ {
+  if (Matrix.getSource()==b) file://e.getSource Returns the Object on which the Event has been Performed
+  {
+   JOptionPane.showMessageDialog(null,"Dont Click Me");
+   System.out.println("Dont Press........");
+  }
+  if (Matrix.getSource()==t)
+  {
+   JOptionPane.showMessageDialog(null,"Dont Write Anything");
+   System.out.println("Dont Write.........");
+  }
+ }
+ public static void main (String x[])
+ {
+  A a = new A();
+ }
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Mouse Listener 7th June 2003
+Example3 Mouse Listener
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+class MouseX extends JFrame implements MouseListener
+{
+ Container co;
+ public MouseX()
+ {
+  co=getContentPane();
+  co.addMouseListener(this);
+  co.setLayout(null);
+  setSize(200,200);setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+ }
+ public static void main (String x[])
+ {
+  MouseX a = new MouseX();
+ }
+  file://Mouse Events *************************************
+  public void mouseEntered(MouseEvent e)
+  {
+   System.out.println("Mouse Entered.....");
+  }//
+  public void mouseClicked(MouseEvent e)
+  {
+   System.out.println("Mouse Clicked...");
+  }//
+  public void mouseExited(MouseEvent e)
+  {
+   System.out.println("Mouse Exited.....");
+  }//
+  public void mousePressed(MouseEvent e)
+  {
+   System.out.println("Mouse Pressed.....");
+  }//
+  public void mouseReleased(MouseEvent e)
+  {
+    System.out.println("Mouse Released.....");
+  }//
+  file://Mouse Events *************************************
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+Example 4 (Example 2+3) Mouse Listener with TextField and Button but no ActionListener
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+class Mouse extends JFrame implements MouseListener
+{
+ JButton b;
+ JTextField t;
+ Container co;
+ public Mouse()
+ {
+  co=getContentPane();
+  co.addMouseListener(this);
+  b=new JButton("Button");
+  t=new JTextField(20);
+  b.addMouseListener(this);
+  t.addMouseListener(this);
+  co.setLayout(null);
+  co.add(b);b.setBounds(20,20,80,20);
+  co.add(t);t.setBounds(20,50,80,20);
+  setSize(200,200);setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+ }
+ public static void main (String x[])
+ {
+  Mouse a = new Mouse();
+ }
+  file://Mouse Events *************************************
+  public void mouseEntered(MouseEvent e)
+  {
+   System.out.println("Mouse Entered.....");
+   if(e.getSource()==co)
+   System.out.println("Mouse Entered..on container...");
+   if(e.getSource()==b)
+   System.out.println("Mouse Entered..on button...");
+   if(e.getSource()==t)
+   System.out.println("Mouse Entered..on textfiled...");
+  }//
+  public void mouseClicked(MouseEvent e)
+  {
+   System.out.println("Mouse Clicked.....");
+   if(e.getSource()==co)
+   System.out.println("Mouse Clicked..on container...");
+   if(e.getSource()==b)
+   System.out.println("Mouse Clicked..on button...");
+   if(e.getSource()==t)
+   System.out.println("Mouse Clicked..on textfiled...");
+  }//
+  public void mouseExited(MouseEvent e)
+  {
+   System.out.println("Mouse Exited.....");
+   if(e.getSource()==co)
+   System.out.println("Mouse Exited..from container...");
+   if(e.getSource()==b)
+   System.out.println("Mouse Exited..from button...");
+   if(e.getSource()==t)
+   System.out.println("Mouse Exited..from textfiled...");
+  }//
+  public void mousePressed(MouseEvent e)
+  {
+   System.out.println("Mouse Pressed.....");
+   if(e.getSource()==co)
+   System.out.println("Mouse Pressed on container...");
+   if(e.getSource()==b)
+   System.out.println("Mouse Pressed on button...");
+   if(e.getSource()==t)
+   System.out.println("Mouse Pressed on textfiled...");
+  }//
+  public void mouseReleased(MouseEvent e)
+  {
+   System.out.println("Mouse Released.....");
+   if(e.getSource()==co)
+   System.out.println("Mouse Released from container...");
+   if(e.getSource()==b)
+   System.out.println("Mouse Released from button...");
+   if(e.getSource()==t)
+   System.out.println("Mouse Released from textfiled...");
+  }//
+  file://Mouse Events *************************************
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+   *************************************************************************
+     Example 5 (Example 2+3) Mouse Listener + Action Listener Master Piece
+   *************************************************************************
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*; file://For Action Listening
+class Mix extends JFrame implements ActionListener, MouseListener
+{
+ JButton b;
+ JTextField t;
+ Container co;
+ public Mix()
+ {
+  co=getContentPane();
+  b=new JButton("Button");
+  t=new JTextField(20);
+  co.setLayout(null);
+  co.add(b);b.setBounds(20,20,80,20);
+  co.add(t);t.setBounds(20,50,80,20);
+  file://"this" means this class is ActionListener himself. This class is acting like Action Listener Means this class
+  file://Action Listener
+  b.addActionListener(this);
+  t.addActionListener(this);
+  file://Mouse Listener
+  co.addMouseListener(this);
+  b.addMouseListener(this);
+  t.addMouseListener(this);
+  setSize(200,200);setVisible(true);
+  setDefaultCloseOperation(EXIT_ON_CLOSE);
+ }
+ public void actionPerformed(ActionEvent Matrix)
+ {
+  if (Matrix.getSource()==b) file://e.getSource Returns the Object on which the Event has been Performed
+  {
+   JOptionPane.showMessageDialog(null,"Dont Click Me");
+   System.out.println("Dont Press........");
+  }
+  if (Matrix.getSource()==t)
+  {
+   JOptionPane.showMessageDialog(null,"Dont Write Anything");
+   System.out.println("Dont Write.........");
+  }
+ }
+ file://Mouse Events *************************************
+   public void mouseEntered(MouseEvent e)
+   {
+    System.out.println("Mouse Entered.....");
+    if(e.getSource()==co)
+    System.out.println("Mouse Entered..on container...");
+    if(e.getSource()==b)
+    System.out.println("Mouse Entered..on button...");
+    if(e.getSource()==t)
+    System.out.println("Mouse Entered..on textfiled...");
+   }//
+   public void mouseClicked(MouseEvent e)
+   {
+    System.out.println("Mouse Clicked.....");
+    if(e.getSource()==co)
+    System.out.println("Mouse Clicked..on container...");
+    if(e.getSource()==b)
+    System.out.println("Mouse Clicked..on button...");
+    if(e.getSource()==t)
+    System.out.println("Mouse Clicked..on textfiled...");
+   }//
+   public void mouseExited(MouseEvent e)
+   {
+    System.out.println("Mouse Exited.....");
+    if(e.getSource()==co)
+    System.out.println("Mouse Exited..from container...");
+    if(e.getSource()==b)
+    System.out.println("Mouse Exited..from button...");
+    if(e.getSource()==t)
+    System.out.println("Mouse Exited..from textfiled...");
+   }//
+   public void mousePressed(MouseEvent e)
+   {
+    System.out.println("Mouse Pressed.....");
+    if(e.getSource()==co)
+    System.out.println("Mouse Pressed on container...");
+    if(e.getSource()==b)
+    System.out.println("Mouse Pressed on button...");
+    if(e.getSource()==t)
+    System.out.println("Mouse Pressed on textfiled...");
+   }//
+   public void mouseReleased(MouseEvent e)
+   {
+    System.out.println("Mouse Released.....");
+    if(e.getSource()==co)
+    System.out.println("Mouse Released from container...");
+    if(e.getSource()==b)
+    System.out.println("Mouse Released from button...");
+    if(e.getSource()==t)
+    System.out.println("Mouse Released from textfiled...");
+   }//
+ file://Mouse Events *************************************
+
+ public static void main (String x[])
+ {
+  System.out.println("Loading Frame........");
+  Mix a = new Mix();
+ }
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+*************************************************************************
+Example 6 ( ) Key Listener + Action Listener Master Piece Java Task1 Assg
+*************************************************************************
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+public class Task1 extends Applet implements KeyListener , ActionListener
+{
+ JTextField t=new JTextField(15);
+ JTextField t1=new JTextField(15);
+ JTextField t2=new JTextField(15);
+ JTextField t3=new JTextField(15);
+ JLabel l=new JLabel("Value A   ");
+ JLabel l1=new JLabel("Value B   ");
+ JLabel l2=new JLabel("Value C   ");
+ JLabel l3=new JLabel("Total :   ");
+ JButton btn=new JButton("Reset");
+ JButton btn1=new JButton("Exit");
+ Container c;
+ public void init()
+ {
+  file://c=getContentPane();
+  setLayout(new FlowLayout());
+  add(l);
+  add(t);
+  add(l1);
+  add(t1);
+  add(l2);
+  add(t2);
+  add(l3);
+  add(t3);
+  add(btn);add(btn1);
+  file://Adding KeyListener for Checking and Processing
+  t.addKeyListener(this);
+  t1.addKeyListener(this);
+  t2.addKeyListener(this);
+  btn.addActionListener(this);
+  btn1.addActionListener(this);
+  file://t3.addKeyListener(this);
+  setSize(200,300);
+  setVisible(true);
+ }
+ public static void main(String a[])
+ {
+  Task1 k1=new Task1();
+ }
+ boolean b;
+ float txt,txt1,txt2,total;
+ public void keyPressed(KeyEvent k1)
+ {
+  if(k1.getSource()==t || k1.getSource()==t1 ||k1.getSource()==t2 || k1.getSource()==t3)
+  {
+   if((k1.getKeyCode()>=48 && k1.getKeyCode()<=57 )|| k1.getKeyCode()==8 || k1.getKeyCode()==46)//0-9 then back spc then .
+   b=true;
+   else b=false;
+  }
+ }
+ public void keyTyped(KeyEvent k2)
+ {
+  if(!b)
+  k2.consume();
+ }
+ public void keyReleased(KeyEvent k3)
+ {
+  if ((t.getText()).equals(""))
+   txt=0;
+  else
+   file://txt=Integer.parseInt(t.getText());
+   txt =Float.parseFloat(t.getText());
+  if ((t1.getText()).equals(""))
+   txt1=0;
+  else
+   file://txt1=Integer.parseInt(t1.getText());
+   txt1 =Float.parseFloat(t1.getText());
+  if ((t2.getText()).equals(""))
+   txt2=0;
+  else
+   file://txt2=Integer.parseInt(t2.getText());
+   txt2 =Float.parseFloat(t2.getText());
+  total = (txt + txt1 + txt2);
+  t3.setText(String.valueOf(total));
+ }
+ public void actionPerformed(ActionEvent e)
+ {
+  if(e.getSource()==btn)
+  {
+   t.setText("");
+   t1.setText("");
+   t2.setText("");
+   t3.setText("");
+   t.requestFocus();
+  }
+  if(e.getSource()==btn1)
+  {
+   JOptionPane.showMessageDialog(null,"Thank you for use....!!!");
+   System.exit(0);
+  }
+ }
+}//class
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+*************************************************************************
+Focus Listener
+*************************************************************************
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+class To extends JFrame implements FocusListener
+{
+ JTextField btn=new JTextField(20);
+ JButton btn1=new JButton("Exit");
+ Container c;
+ public To()
+ {
+  c=getContentPane();
+  c.setLayout(new FlowLayout());
+  c.add(btn);
+  c.add(btn1);
+  btn.addFocusListener(this);
+  btn1.addFocusListener(this);
+      setSize(200,300);
+    setVisible(true);
+btn1.requestFocus();
+ }
+ public void focusGained(FocusEvent e)
+ {
+  if(e.getSource()==btn)
+  {
+   System.out.println("focus gained by Reset");
+  }
+  if(e.getSource()==btn1)
+  {
+   System.out.println("focus gained by Exit");
+  }
+ }
+ public void focusLost(FocusEvent e)
+ {
+  if(e.getSource()==btn)
+  {
+   if(btn.getText().equals(""))
+   {JOptionPane.showMessageDialog(null,"The field cannot be empty");
+   btn.requestFocus();}
+  }
+  if(e.getSource()==btn1)
+  {
+   System.out.println("focus lost by Exit");
+  }
+ }
+ public static void main(String a[])
+ {
+ new To();
+ }
+}
+x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x

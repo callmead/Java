@@ -1,0 +1,172 @@
+There are several Packages we can use but the most important are
+
+import java.lang.*; //Import Everything from Java Folder and lang is Sub Folder
+When you import this then not all the classes are imported only those which we have used 
+in our program.
+
+There are several Sub classes of this Package but we dont need to Imporrt his Package
+because by default his is Imported.
+
+
+import java.io.*; 
+All the File, BR, BW, These classes are inside this.
+
+javax.swing.*;
+All the Components which can be used in Forms(Frames) are insode Swing Package.
+
+
+How to compile Java Files from DOS (JDK)
+first 
+Set Path=c:\jdk1.3\bin
+Then goto File Dir and then 
+Javac test.java           //this will produce a class file and for running program we use 
+class file.
+
+java test //Run it
+
+Try Catch Exception
+Run this Code
+
+public class test
+{
+	public static void main(String a[])
+	{
+		int x=3/0;
+	
+		System.out.print(x);
+	}//main
+}//class
+
+The Error will be "Exception in thread "main" java.lang.ArithmaticException: /by zero
+at test.main(test.java:5)
+
+Now we use Try Catch Exception Handling Method
+
+public class test
+{
+	public static void main(String a[])
+	{
+		int x=0;
+		try
+		{
+			x=3/0;
+		}
+		catch(ArithmeticException v)
+		{
+			System.out.println("Exception Occured....!");
+		}
+
+		System.out.println(x);
+		System.out.println("Program Crashed....");
+	}//main
+}//class
+
+Now as in the Above code we know which Exception is Ocured, but we can also use more 
+then one Catch like this
+
+public class test
+{
+	public static void main(String a[])
+	{
+		int x=0;
+		try
+		{
+			x=3/0;
+		}
+		catch(ArithmeticException v)
+		{
+			System.out.println("ArithmeticException Occured....!");
+		}
+
+		catch(FileNotFoundException v)
+		{
+			System.out.println("FileNotFoundException Occured....!");
+		}
+
+		System.out.println(x);
+		System.out.println("Program Crashed....");
+	}//main
+}//class
+
+We can also use 2 Exceptions like the coding below but When the First Exception will be
+Catch then the second one will not execute.
+
+import java.io.*;
+public class test
+{
+	public static void main(String a[])
+	{
+		int x=0;
+		File f;
+
+		try
+		{
+			x=3/0;
+			f=new File("c:\\test.txt");
+			FileReader fr = new FileReader(f);
+		}
+		catch(ArithmeticException v)
+		{
+			System.out.println("ArithmeticException Occured....!");
+		}
+
+		catch(FileNotFoundException v)
+		{
+			System.out.println("FileNotFoundException Occured....!");
+		}
+
+		System.out.println(x);
+		System.out.println("Program Crashed....");
+	}//main
+}//class
+
+But if we use this way then the Second one will be Caught
+
+import java.io.*;
+public class test
+{
+	public static void main(String a[])
+	{
+		int x=0;
+		File f;
+
+		try
+		{
+			//x=3/0;
+			f=new File("c:\\test.txt");
+			FileReader fr = new FileReader(f);
+		}
+		catch(ArithmeticException v)
+		{
+			System.out.println("ArithmeticException Occured....!");
+		}
+
+		catch(FileNotFoundException v)
+		{
+			System.out.println("FileNotFoundException Occured....!");
+		}
+
+		System.out.println(x);
+		System.out.println("Program Crashed....");
+	}//main
+}//class
+
+So this is a Big Head acheq
+
+This is all about Exception Handeling if you know what type of Exception is Occuring
+then you can catch it and save the program from Abnormal Crash.
+
+
+
+
+How to get all Java Codes of Packages
+Set Path=c:\jdk1.3\bin
+java xvf src.jar
+
+x means Extract
+for making Jar 
+java cvf a.jar a.class (a.jar is the new jar file to be created and a.class in the source file)
+java cvf a.jar *.* (from all files in the Current Dir make Jar)
+
+Extracting Jar file ....
+java xvf a.jar

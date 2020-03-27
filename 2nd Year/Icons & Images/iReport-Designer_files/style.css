@@ -1,0 +1,901 @@
+body {
+	scrollbar-face-color: #001F5B;  
+	scrollbar-highlight-color: #BECFF1;  
+	scrollbar-shadow-color: #001F5B;  
+	scrollbar-arrow-color: #BECFF1;  
+	scrollbar-base-color: #001F5B;  
+	scrollbar-darkshadow-color: #001F5B;  
+	scrollbar-track-color: #BECFF1;  
+}
+
+/* These are standard sIFR styles... do not modify */
+.sIFR-flash {
+	visibility: visible !important;
+	margin: 0;
+}
+.sIFR-replaced { visibility: visible !important; }
+span.sIFR-alternate {
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+display: block;
+overflow: hidden;
+}
+.sIFR-hasFlash h1.welcome_hdr { visibility: hidden; }
+.sIFR-hasFlash h2.dwlc_hdr { visibility: hidden; }
+.sIFR-hasFlash div.mi_heading{ visibility: hidden; }
+.sIFR-hasFlash div.mi_heading_long{ visibility: hidden; }
+.sIFR-hasFlash div.sect_title_win { visibility: hidden; }
+.sIFR-hasFlash div.sect_title_mac { visibility: hidden; }
+.sIFR-hasFlash div.sect_title_linux { visibility: hidden; }
+
+h1.welcome_hdr{
+font-size:17px;
+font-family: Verdana;
+padding: 0px;
+margin: 0px 0px 5px 0px;
+}
+
+h2.dwlc_hdr{
+font-size:13px;
+font-family: Verdana;
+padding: 0px;
+margin: 0px 0px 5px 0px;
+}
+
+div.sect_title_win {
+font-size:19px;
+font-family: Verdana;
+position:relative;
+top:7px;
+cursor:pointer;
+}
+span.sect_title_win a { font-size: 18px; }
+
+div.sect_title_linux {
+font-size:22px;
+font-family: Verdana;
+position:relative;
+top:0px;
+cursor:pointer;
+}
+span.sect_title_linux a { font-size: 18px; }
+
+div.sect_title_mac{
+font-size:24px;
+font-family: Verdana;
+position:relative;
+top:5px;
+cursor:pointer;
+}
+span.sect_title_mac a { font-size: 18px; }
+
+div.mi_heading{
+position:relative;
+left:20px;
+top:7px;
+font:18px Verdana;
+color:#F0F0F0;
+width:280px;
+z-index:100;
+}
+div.mi_heading a{ font:18px Verdana; }
+
+div.mi_heading_long{
+position:relative;
+left:20px;
+top:7px;
+font:18px Verdana;
+width:300px;
+color:#F0F0F0;
+z-index:100;
+}
+div.mi_heading_long a{ font:18px Verdana; }
+
+span.mi_subheading_l{
+float:left;
+position:relative;
+left:7px;
+top:13px;
+font:10px Verdana;
+color:#888888;
+width:220px;
+}
+span.mi_subheading_l a {color:#34538C; }
+
+span.mi_subheading_r{
+float:right;
+position:relative;
+left:100px;
+top:0px;
+font:10px Verdana;
+width:120px;
+}
+span.mi_subheading_r a {color:#34538C; }
+
+span.rssklipbtn{
+position:relative;
+float:right;
+left:-5px;
+top:-12px;
+width:90px;
+}
+
+table.releasetbl{
+position:relative;
+top:-5px
+}
+
+/*
+HEADINGS
+*/
+.win_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/win_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.games_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/games_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.mac_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/mac_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.drivers_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/drivers_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.linux_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/linux_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.mobile_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/mobile_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.news_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/news_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.gen_heading {
+	background-image: url(http://www.softpedia.com/base_img/new/gen_heading.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.gen_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_gen_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.gen_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_gen_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.gen_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_gen_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.win_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_win_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.win_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_win_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: transparent;
+}
+.win_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_win_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+	 background-color: transparent;
+}
+
+.games_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_games_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.games_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_games_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.games_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_games_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.drivers_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_drivers_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.drivers_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_drivers_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.drivers_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_drivers_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.linux_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_linux_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.linux_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_linux_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.linux_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_linux_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.mac_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mac_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.mac_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mac_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.mac_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mac_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.mobile_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mobile_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.mobile_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mobile_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.mobile_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_mobile_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.news_heading_center {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_news_bkgc.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.news_heading_left {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_news_bkgl.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+.news_heading_right {
+	background-image: url(http://www.softpedia.com/base_img/new/___head_news_bkgr.gif);
+     background-repeat: repeat-x;
+     background-position: right top;
+}
+
+.right_col_back { 
+     background-color: #CEDEFE; 
+     background-image: url(http://www.softpedia.com/base_img/right_col_back.jpg); 
+     background-repeat: repeat-x;
+     background-position: bottom;
+}
+
+.right_title_bkg {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #21427D;
+	font-weight: bold;
+	/*background-image: url(http://www.softpedia.com/base_img/right_title_bkg.gif);*/
+	background-image: url(http://www.softpedia.com/base_img/new/right_title_bkg2.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-left: 6px;
+	padding-bottom: 4px;
+}
+.right_title_bkg a, .right_title_bkg a:hover, .right_title_bkg a:active, .right_title_bkg a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #21427D;
+}
+
+.right_title_bkg2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #21427D;
+	font-weight: bold;
+	background-image: url(http://www.softpedia.com/base_img/new/right_title_bkg2.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-left: 6px;
+	padding-bottom: 4px;
+}
+.right_title_bkg2 a, .right_title_bkg2 a:hover, .right_title_bkg2 a:active, .right_title_bkg2 a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #21427D;
+}
+
+.mainbkg {
+	background-image: url(http://www.softpedia.com/base_img/main_bkg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.indexcellbkg {
+	background-image: url(http://www.softpedia.com/base_img/620_cell_bkg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.dotbkg {
+	background-image: url(http://www.softpedia.com/base_img/r_dot_bkg.gif);
+	background-repeat: repeat-y;
+}
+.recentcells {
+	background-image: url(http://www.softpedia.com/base_img/recent_cell_bkg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.recentcells_2 {
+	background-image: url(http://www.softpedia.com/base_img/recent_cell_bkg_2.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.recentcontentpadding {
+	padding-top: 12px;
+	padding-left: 18px;
+}
+.recentcontent_red {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+}
+.recentcontent_red a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #E63333;
+}
+.recentcontent_red a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #9B0D0D;
+	text-decoration: none;
+}
+.recentcontent_pink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+}
+.recentcontent_pink a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #B93766;
+}
+.recentcontent_pink a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #9A0D40;
+	text-decoration: none;
+}
+.recentcontent_orange {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+}
+.recentcontent_orange a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #D26E16;
+}
+.recentcontent_orange a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #914807;
+	text-decoration: none;
+}
+.recentcontent_green {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+}
+.recentcontent_green a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #509737;
+}
+.recentcontent_green a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #1E6206;
+	text-decoration: none;
+}
+.recentcontent_blue {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+}
+.recentcontent_blue a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #3772C4;
+}
+.recentcontent_blue a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #093C82;
+	text-decoration: none;
+}
+.update {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #808FAD;
+}
+.searchfield {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #001F5B;
+	border: 1px inset #426BBC;
+	background-color: #F2F5FF;
+	/*text-align: center;*/
+}
+.quickcategory {
+	width:120px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	background-color: #F2F5FF;
+}
+.spidxquickcategory{
+	width:120px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	background-color: #F2F5FF;
+}
+
+.option_pleaseselect {background-color:#F2F5FF;color:#34538C;}
+.option_category {background-color:#8099CA;color:#FFFFFF;}
+.option_sub1 {background-color:#ECF0F8;color:#677695;}
+.option_sub2 {background-color:#FFFFFF;color:#677695;}
+
+.celltitles {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #001F5B;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.celltext_n {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #5C6985;
+}
+.celltext_n a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #34538C;
+}
+.celltext_n a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #001F5B;
+	text-decoration: none;
+}
+
+.celltext_big {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #364269;
+}
+.celltext_big a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #34538C;
+}
+.celltext_big a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #001F5B;
+	text-decoration: none;
+}
+
+.celltext_bigger {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #364269;
+}
+.celltext_bigger a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #34538C;
+}
+.celltext_bigger a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #001F5B;
+	text-decoration: none;
+}
+
+.celltext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5C6985;
+}
+.celltext a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #34538C;
+}
+.celltext a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	text-decoration: none;
+}
+hr {color: #E3E8F3;}
+
+.google_vertical_text {	font-family: Arial, Helvetica, sans-serif;	font-size: 12px; color: #677695;}
+.google_vertical_link a { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #21427D; font-weight: bold;}
+.google_vertical_url a { font-family: Arial, sans-serif; font-size: 9px; color: #21427D; text-decoration:none}
+.google_vertical_ads a { font-family: Arial, sans-serif; font-size: 11px; color: #21427D;}
+
+.rightcellcontent {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #34538C;
+}
+.rightcellcontent a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #001F5B;
+	text-decoration: underline;
+}
+.rightcellcontent a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #001F5B;
+	text-decoration: none;
+}
+li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	list-style-image: url(http://www.softpedia.com/base_img/li.gif);
+	text-indent: -8px;
+	line-height: 16px;
+}
+li a, li a:link, li a:visited, li a:active{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #001F5B;
+	text-decoration: underline;
+	line-height: 16px;
+}
+li a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #001F5B;
+	text-decoration: none;
+}
+
+.celltext_description ul{
+	margin-top:2px;
+}
+.celltext_description li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #5C6985;
+	list-style-image: url(http://www.softpedia.com/base_img/li.gif);
+}
+.celltext_description li a, .celltext_description li a:link, .celltext_description li a:visited, .celltext_description li a:active{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #34538C;
+}
+
+.copyrights  { font-family: Arial, Helvetica, sans-serif;	font-size: 10px;  color : #62708B;  }
+.copyrights  a { font-family: Arial, Helvetica, sans-serif;	font-size: 10px;  text-decoration:underline; color : #001F5B;  }
+.copyrights  a:hover { font-family: Arial, Helvetica, sans-serif;	font-size: 10px;  text-decoration:none; color : #000000; }
+
+.indexcellbkg_2 {
+	background-image: url(http://www.softpedia.com/base_img/767_cell_bkg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.dwldbkg {
+	background-image: url(http://www.softpedia.com/base_img/767_dwld_bkg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.vertdotsbkg {
+	background-image: url(http://www.softpedia.com/base_img/vert_dots.gif);
+	background-repeat: repeat-y;
+	background-position: center top;
+	background-attachment: scroll;
+}
+.orizdotsbkg {
+	background-image: url(http://www.softpedia.com/base_img/oriz_dots.gif);
+	background-repeat: repeat-x;
+	background-position: right center;
+	background-attachment: scroll;
+}
+.dotsdwld {
+	background-image: url(http://www.softpedia.com/base_img/dots_dwld.gif);
+	background-repeat: repeat-x;
+	background-position: right center;
+	background-attachment: scroll;
+}
+.searchnews {
+	width:100px;
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}
+.searchstring {
+	width:208px;
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+	
+	scrollbar-face-color: #849ECF;  
+	scrollbar-highlight-color: #BECFF1;  
+	scrollbar-shadow-color: #849ECF;  
+	scrollbar-arrow-color: #BECFF1;  
+	scrollbar-base-color: #849ECF;  
+	scrollbar-darkshadow-color: #849ECF;  
+	scrollbar-track-color: #BECFF1;  
+}
+.reviewbox{
+	width:350px;
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+	scrollbar-face-color: #849ECF;  
+	scrollbar-highlight-color: #BECFF1;  
+	scrollbar-shadow-color: #849ECF;  
+	scrollbar-arrow-color: #BECFF1;  
+	scrollbar-base-color: #849ECF;  
+	scrollbar-darkshadow-color: #849ECF;  
+	scrollbar-track-color: #BECFF1;  
+}
+.subtitles {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #34538C;
+	font-weight: normal;
+}
+.subtitles a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #34538C;
+	font-weight: normal;
+}
+.subtitles a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #001F5B;
+	font-weight: normal;
+	text-decoration: none;
+}
+.celltitles_categ {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles_categ_2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles_categ_ptitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles_categ a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #34538C;
+	font-weight: bold;
+}
+.celltitles_categ a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #001F5B;
+	font-weight: bold;
+	text-decoration: none;
+}
+.celltext_pick {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #32A738;
+}
+.celltext_new {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #E04753;
+}
+.celltext_description {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+}
+.celltext_description a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+}
+.celltext_description a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	text-decoration:none;
+}
+.field_rating {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	width: 110px;
+	background-color: #F2F5FF;
+}
+.searchdrop {
+	width:110px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	background-color: #F2F5FF;
+}
+.feedbackselect {
+	width:240px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	background-color: #F2F5FF;
+}
+.field_usd {
+	width:70px;
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}
+.submitdrop {
+	width:130px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #001F5B;
+	background-color: #F2F5FF;
+}
+.celltext_underline {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #677695;
+	text-decoration: underline;
+}
+.field_poll {
+ 	width:40px; 
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}  
+.general_button {
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}
+.field_subtitles_rating {
+ 	width:90px; 
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}  
+.news_2nd_bkg {
+	background-image: url(http://www.softpedia.com/base_img/770_sp_bkg.gif);
+	background-repeat: repeat-y;
+}
+.mainbkg_forum {
+	background-image: url(http://www.softpedia.com/base_img/main_bkg_forum.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+.general_button {
+	font-family: Arial, Helvetica, sans-serif;  
+	font-size: 11px;  
+	color: #001F5B; 
+	border-color: #426BBC;  
+	background-color: #F2F5FF; 
+}
+
+.cl_font_class{font: bold 11px verdana;}
+.cl_font_class A {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.embed {
+	position: relative;
+	float: right;
+	padding: 5px;
+	margin-right: 5px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 9px;
+}
+.embedImg {
+	position: relative;
+	float: left;
+	padding: 5px;
+}
+#dwlinks{
+	font-size:14px;
+	font-weight:bold;
+}
+#biglinks{
+	font-size:12px;
+}
+.headline
+{
+	background-color:#EFF3FC;
+	padding:5px;
+	width:100%;
+	margin-top:10px;
+	vertical-align:middle;
+}
+

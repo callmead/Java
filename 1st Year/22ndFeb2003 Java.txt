@@ -1,0 +1,220 @@
+import javax.swing.*; // Flow Layout
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JLabel lbl1=new JLabel("Enter Ur Name");
+	JButton btn1=new JButton("Exit");
+	Container c;
+	FlowLayout layout=new FlowLayout(); //layout is an object
+	testFrame()
+	{
+		frm1.setSize(300,300);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object by default the objets allignments are centerd
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(btn1);
+
+		frm1.show();
+	}
+}
+
+
+--------------------------------
+import javax.swing.*; // Flow Layout Complete Shish
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt2=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt3=new JTextField(12);//JTextFiled(12) width of the field
+
+	JLabel lbl1=new JLabel("Name :");
+	JLabel lbl2=new JLabel("Address :");
+	JLabel lbl3=new JLabel("Telephone :");
+
+	JButton btn1=new JButton("Ok");
+	JButton btn2=new JButton("Exit");
+
+	Container c;
+	FlowLayout layout=new FlowLayout(); //layout is an object
+	testFrame()
+	{
+		frm1.setResizable(false);//to Disable Maximize Button
+		frm1.setSize(220,150);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object
+		layout.setAlignment(FlowLayout.LEFT); //Setting Objects Layouts to Left
+
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(lbl2);
+		c.add(txt2);
+		c.add(lbl3);
+		c.add(txt3);
+		c.add(btn1);
+		c.add(btn2);
+
+		frm1.show();
+	}
+}
+-----------------
+import javax.swing.*; // Border Layout
+import java.awt.*;
+import java.awt.event.*;
+public class test
+{
+	public static void main (String args[])
+	{
+		FrameClass test = new FrameClass(); 				// test is a kind of a Variable
+	}
+}
+
+class FrameClass
+
+{
+	JFrame frm1 = new JFrame("Test"); 						//Caption of the Frame
+
+	JButton btn1 = new JButton("Click Me"); 				// For Button
+	JButton btn2 = new JButton("Exit"); 				// For Button
+	JLabel lbl1 = new JLabel ("Enter Ur Name"); 			// For a Label
+	JTextField txt1 = new JTextField(); 					// For TextBox
+	Container c; 											// For Button
+
+	FrameClass()
+	{
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);	// If U dont Add this coding here then what will happen that when U will close the form the DOS window will not close by any key check it out by Ur self
+		frm1.setSize(300,100); 								// Size of Frame Windth and Height
+		c=frm1.getContentPane(); 							// For giving the Form Area to C and after it we just add things on Form now Form is Ready to add objects
+		c.setLayout(new BorderLayout()); 					// For sub dividing the From's Layout to South North East West and Center
+
+		c.add(btn1,"North"); 								// For Showing Button
+		c.add(lbl1,"West"); 								//For Showing lable
+		c.add(txt1,"Center");								//For Showing textbox
+		c.add(btn2,"South"); 								// For Showing Button
+
+		frm1.show(); 										// For showing Form
+	}
+}
+
+-----------------
+import javax.swing.*; // GRID Layout 
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt2=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt3=new JTextField(12);//JTextFiled(12) width of the field
+
+	JLabel lbl1=new JLabel("Name :");
+	JLabel lbl2=new JLabel("Address :");
+	JLabel lbl3=new JLabel("Telephone :");
+
+	JButton btn1=new JButton("Ok");
+	JButton btn2=new JButton("Exit");
+
+	Container c;
+	GridLayout layout=new GridLayout(4,2); //4,a are 4 rows and 2 columns
+	testFrame()
+	{
+		frm1.setResizable(false);//to Disable Maximize Button
+		frm1.setSize(220,150);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object
+		// we cant use this in Grid Layout layout.setAlignment(FlowLayout.LEFT); //Setting Objects Layouts to Left
+
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(lbl2);
+		c.add(txt2);
+		c.add(lbl3);
+		c.add(txt3);
+		c.add(btn1);
+		c.add(btn2);
+
+		frm1.show();
+	}
+}
+----------------------
+import javax.swing.*; // GRID Layout 
+import java.awt.*;
+
+public class test
+{
+	public static void main (String args[])
+	{
+		testFrame form1 = new testFrame();
+	}
+}
+class testFrame
+{
+	JFrame frm1=new JFrame("Test");
+	JTextField txt1=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt2=new JTextField(12);//JTextFiled(12) width of the field
+	JTextField txt3=new JTextField(12);//JTextFiled(12) width of the field
+
+	JLabel lbl1=new JLabel("Name :");
+	JLabel lbl2=new JLabel("Address :");
+	JLabel lbl3=new JLabel("Telephone :");
+
+	JButton btn1=new JButton("Ok");
+	JButton btn2=new JButton("Exit");
+
+	Container c;
+	GridLayout layout=new GridLayout(4,2,20,20); //4,a are 4 rows and 2 columns and 20,20 are Horizontal and Vertical Spacing between them.
+	testFrame()
+	{
+		frm1.setResizable(false);//to Disable Maximize Button
+		frm1.setSize(220,150);// Its Just outputting the Layout as one after another Just resize and then you will see
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);
+
+		c=frm1.getContentPane();
+		c.setLayout(layout); //layout is an object
+		// we cant use this in Grid Layout layout.setAlignment(FlowLayout.LEFT); //Setting Objects Layouts to Left
+
+		c.add(lbl1);
+		c.add(txt1);
+		c.add(lbl2);
+		c.add(txt2);
+		c.add(lbl3);
+		c.add(txt3);
+		c.add(btn1);
+		c.add(btn2);
+
+		frm1.show();
+	}
+}
+-------------------

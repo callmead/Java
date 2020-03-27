@@ -1,0 +1,1 @@
+Report.exec("./reports/member_bill",cs,Report.OUTPUT_TO_WINDOW,"{amount_calculation.date1} = DateTime("+item[2]+","+item[1]+","+item[0]+") and {amount_calculation.pc} = \"" + pc +"\" and {amount_calculation.stime} = \"" + stime + "\" and {amount_calculation.id} = " + id ,new String[] {""});

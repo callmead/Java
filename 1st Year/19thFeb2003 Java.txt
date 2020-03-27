@@ -1,0 +1,116 @@
+import java.io.*; //19th Feb 2003 Buffer Reader Standard Input w/o JOptionPane
+public class test
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader br=new BufferedReader (new InputStreamReader(System.in)); //we make a method br which we use later.
+		System.out.print ("Enter furst number");
+		String s1 = br.readLine(); //br is a method we have used above
+		System.out.print ("Enter second number");
+		String s2 = br.readLine();
+		int n1 = Integer.parseInt(s1);
+		int n2 = Integer.parseInt(s2);
+		System.out.print("The Sum is "+(n1+n2));
+	}
+}
+
+----------------------------------
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class testFrame
+{
+	public static void main (String args[])
+	{
+		FrameClass test = new FrameClass(); // test is a kind of a Variable
+	}
+}
+
+class FrameClass
+
+{
+	JFrame frm1 = new JFrame("Test"); //Caption of the Frame
+	FrameClass()
+	{
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);//if U dont Add this coding here then what will happen that when U will close the form the DOS window will not close by any key check it out by Ur self
+		frm1.setSize(300,200); //Size of Frame Windth and Height
+		frm1.show();
+	}
+}
+-------------------------------------------
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class testFrame
+{
+	public static void main (String args[])
+	{
+		FrameClass test = new FrameClass(); 				// test is a kind of a Variable
+	}
+}
+
+class FrameClass
+
+{
+	JFrame frm1 = new JFrame("Test"); 						//Caption of the Frame
+	JButton btn1 = new JButton("Click Me"); 				// For Button
+	JLabel lbl1 = new JLabel ("Enter Ur Name"); 			// For a Label
+	JTextField txt1 = new JTextField(); 					// For TextBox
+	Container c; 											// For Button
+
+	FrameClass()
+	{
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);	// If U dont Add this coding here then what will happen that when U will close the form the DOS window will not close by any key check it out by Ur self
+		frm1.setSize(300,100); 								// Size of Frame Windth and Height
+		c=frm1.getContentPane(); 							// For giving the Form Area to C and after it we just add things on Form now Form is Ready to add objects
+		c.setLayout(new BorderLayout()); 					// For sub dividing the From's Layout to South North East West and Center
+
+		c.add(btn1,"South"); 								// For Showing Button
+		c.add(lbl1,"North"); 								//For Showing lable
+		c.add(txt1,"Center");								//For Showing textbox
+
+		frm1.show(); 										// For showing Form
+	}
+}
+-------------------------
+
+import javax.swing.*; // Border Layout
+import java.awt.*;
+import java.awt.event.*;
+public class test
+{
+	public static void main (String args[])
+	{
+		FrameClass test = new FrameClass(); 				// test is a kind of a Variable
+	}
+}
+
+class FrameClass
+
+{
+	JFrame frm1 = new JFrame("Test"); 						//Caption of the Frame
+
+	JButton btn1 = new JButton("Click Me"); 				// For Button
+	JButton btn2 = new JButton("Exit"); 				// For Button
+	JLabel lbl1 = new JLabel ("Enter Ur Name"); 			// For a Label
+	JTextField txt1 = new JTextField(); 					// For TextBox
+	Container c; 											// For Button
+
+	FrameClass()
+	{
+		frm1.setDefaultCloseOperation(frm1.EXIT_ON_CLOSE);	// If U dont Add this coding here then what will happen that when U will close the form the DOS window will not close by any key check it out by Ur self
+		frm1.setSize(300,100); 								// Size of Frame Windth and Height
+		c=frm1.getContentPane(); 							// For giving the Form Area to C and after it we just add things on Form now Form is Ready to add objects
+		c.setLayout(new BorderLayout()); 					// For sub dividing the From's Layout to South North East West and Center
+
+		c.add(btn1,"North"); 								// For Showing Button
+		c.add(lbl1,"West"); 								//For Showing lable
+		c.add(txt1,"Center");								//For Showing textbox
+		c.add(btn2,"South"); 								// For Showing Button
+
+		frm1.show(); 										// For showing Form
+	}
+}
+
+-----------------

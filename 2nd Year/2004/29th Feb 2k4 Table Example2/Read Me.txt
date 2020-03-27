@@ -1,0 +1,6 @@
+Load both files on Text Pad and then run the TableExample First
+Select Student from Menu and IT will show TableExample
+
+29th Feb 2004
+DeskTopPane
+MDI form and child forms

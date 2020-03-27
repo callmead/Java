@@ -1,0 +1,150 @@
+--------------------------------
+23rd Jan 2003 Maximum No Finder
+--------------------------------
+import javax.swing.JOptionPane;		//Maximum Number Program
+public class test
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		String str; 	//No need to Declear too many String Variables, It will over write it again and again
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int max;		//for Maximum
+		for (i=0;i<5;i++){
+			str=JOptionPane.showInputDialog("Enter Value "+(i+1));//If we use only i then it will ask 0-4
+			a[i] = Integer.parseInt(str);
+			}
+			max = 0;
+		for (i=0;i<5;i++){
+			if (a[i] > max){
+				max = a[i];
+			}
+		}
+		JOptionPane.showMessageDialog(null,"The Maximum Number is " +max);
+		System.exit(0);
+	}
+}
+
+		/* Too Much lines for This Methid so not Applicable
+
+		num1 = JOptionPane.showInputDialog ("Enter Value 1...");
+		a = Integer.parseInt(num1);
+		num2 = JOptionPane.showInputDialog ("Enter Value 2...");
+		b = Integer.parseInt(num2);
+		num3 = JOptionPane.showInputDialog ("Enter Value 3...");
+		c = Integer.parseInt(num2);
+		num4 = JOptionPane.showInputDialog ("Enter Value 4...");
+		d = Integer.parseInt(num4);
+		num5 = JOptionPane.showInputDialog ("Enter Value 5...");
+		e = Integer.parseInt(num5);
+
+
+		if (a>b && a>c && a>d && a>e)
+				{
+				JOptionPane.showMessageDialog ("Mazimum Number is "+a);
+				}
+		if (b>a && b>c && b>d && b>e)
+				{
+				JOptionPane.showMessageDialog ("Mazimum Number is "+b);
+				}
+		if (c>a && c>b && c>d && b>e)
+				{
+				JOptionPane.showMessageDialog ("Mazimum Number is "+c);
+				}
+		if (d>a && d>b && d>c && d>e)
+				{
+				JOptionPane.showMessageDialog ("Mazimum Number is "+d);
+				}
+		if (e>a && e>b && e>c && e>d)
+				{
+				JOptionPane.showMessageDialog ("Mazimum Number is "+b);
+				}
+		System.exit(0);
+	}
+}*/
+-------------------------------------
+
+import javax.swing.JOptionPane;		//Minimum Number Program 28th Jan 2003
+public class test
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int min;		//for Minimum
+		for (i=0;i<5;i++){
+
+			a[i]=(int)(Math.random()*1000);
+			JOptionPane.showMessageDialog(null,"The "+(i+1)+" Number is "+a[i]);
+			}
+			min = a[1];
+		for (i=0;i<5;i++){
+
+			if (a[i] < min){
+				min = a[i];
+			}
+		}
+		JOptionPane.showMessageDialog(null,"The Minimum Number is " +min);
+		System.exit(0);
+	}
+}
+-----------------------------------------
+public class test //Minimum Number Program 28th Jan 2003
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int min;		//for Minimum
+		for (i=0;i<5;i++){
+			a[i]=(int)(Math.random()*1000);
+			System.out.println("The "+(i+1)+" Number is "+a[i]);
+			}
+			min = a[0];
+		for (i=0;i<5;i++){
+			if (a[i] < min){
+			min = a[i];
+			}
+		}
+		System.out.println("****************************");
+		System.out.println("The Minimum Number is " +min);
+		System.out.println("****************************");
+	}
+}
+---------------------------------------------
+public class test //Maximum Number Program 28th Jan 2003
+{
+	public static void main(String args[])
+	{
+
+		int a[];		//Array to Store 5 Values step1
+		a=new int[5]; 	//Array to Store 5 Values step2
+		int i;			//Used for Loop
+		int j;			//for another loop
+		int max;		//for Maximum
+		for (i=0;i<5;i++){
+			a[i]=(int)(Math.random()*1000);
+			System.out.println("The "+(i+1)+" Number is "+a[i]);
+
+			}
+			max = a[1];
+		for (i=0;i<5;i++){
+
+			if (a[i] > max){
+				max = a[i];
+			}
+		}
+		System.out.println("****************************");
+		System.out.println("The Maximum Number is " +max);
+		System.out.println("****************************");
+	}
+}

@@ -1,0 +1,32 @@
+----------------------------------
+TEMPRATURE VARIFIER 14th Jan 2003
+----------------------------------
+
+import javax.swing.JOptionPane;  // Temprature Program
+public class test1
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String tm;
+		 int tepmrature;
+		 tm = JOptionPane.showInputDialog ("Enter Temprature from (0-30)...");
+		 tepmrature = Integer.parseInt(tm);
+
+			if (tepmrature >=0 && tepmrature <= 30)
+			{
+				 if (tepmrature >=0 && tepmrature<= 10)
+					JOptionPane.showMessageDialog(null, "Its Too Cold");
+				 if (tepmrature >10 && tepmrature<= 15)
+					JOptionPane.showMessageDialog(null, "Its Cold");
+				 if (tepmrature >15 && tepmrature<= 25)
+					JOptionPane.showMessageDialog(null, "Its Normal");
+				 if (tepmrature >25 && tepmrature< 30)
+					JOptionPane.showMessageDialog(null, "Its Hot");
+			}
+			else
+			{
+			JOptionPane.showMessageDialog(null, "Invalid Temprature....!");
+			}
+			System.exit(0);
+ 	}
+}

@@ -1,0 +1,273 @@
+----------====== Inheritance 5th April 2003 ======----------- (Emon Sir)
+
+	public		void		func			()	    <== Is Called Method Function Header
+	(Modifier	ReturnType	Method/Function Name	Parameters)
+
+write the code step1 Create class A
+
+class A
+{
+	public void func1()
+	{
+		System.out.println("function 1");
+	}
+}
+Run It
+----------------
+Step 2 Modify Class A
+
+class A
+{
+	public void func1()
+	{//Function 1 to Print
+		System.out.println("function 1");
+	}//End of Function 1
+
+	public static void main (String a[]) //args can be replaced by any suitable variable name
+	{//Main Function
+		A a1 = new A(); //
+		a1.func1();
+	}//End of Main Function
+
+}
+Run It
+------------------------------
+Suppose we are trying a sub class B of class A creare a seperate file for B And then Run it both should be in same Dir
+Create a new Class B in the Same Dir
+
+class B extends A
+{//Class B Starts
+
+	public static void main (String a[])
+
+	{//Main Function Starts
+		B b1 = new B();
+		b1.func1(); //we have not writen the method func1 but it is running because it is due to Inheritance
+
+	}//Main Function Ends
+
+}//Class B Ends
+Run It
+-----------------------
+
+Now Update class B as this coding 
+
+class B extends A
+{//Class B Starts
+
+	public void func2()
+	{//func2 Starts
+		System.out.println("function 2");
+	}//end of func2
+
+	public static void main (String a[])
+
+	{//Main Function Starts
+		
+		B b1 = new B();	// Creating an Object in class B
+		b1.func1();		// Calling Functions
+		
+		b1.func2(); //calling func2 we dont need to declear new Object for this we can use the same Object
+
+	}//Main Function Ends
+
+}//Class B Ends
+Run It
+----------------------------------
+Now Create a new class C which extends class B
+
+class C extends B
+{//Class C Starts
+	public static void main (String r[])
+	{//main Function
+		C c1 = new C();
+		c1.func1(); //Function Present in Class A
+		c1.func2();	//Function Present in Class B
+
+	}//end Main Function
+}//Class C Ends
+Run It
+-----------------------------------
+
+
+Modifiers 
+we have used Modifier Public in Every class there are 3 modifiers
+Public , Private, Protected
+Now write func2 as private in Class B then Run it 
+
+class B extends A
+{//Class B Starts
+
+	private void func2()
+	{//func2 Starts
+		System.out.println("function 2");
+	}//end of func2
+
+	public static void main (String a[])
+
+	{//Main Function Starts
+		
+		B b1 = new B();	// Creating an Object in class B
+		b1.func1();		// Calling Functions
+		
+		b1.func2(); //calling func2 we dont need to declear new Object for this we can use the same Object
+
+	}//Main Function Ends
+
+}//Class B End
+
+And Compile both classes B and C then when you will run class C you will find the following error
+
+func2() has private access in B
+c1.func2();	//Function Present in Class B
+
+Because func2 in class B is Private and it can only be used in class B.
+
+
+********* In Every Class the Main Function should be Public ************
+
+Now Use func2 in class B as Proctected and 
+
+class B extends A
+{//Class B Starts
+
+	protected void func2()
+	{//func2 Starts
+		System.out.println("function 2");
+	}//end of func2
+
+	public static void main (String a[])
+
+	{//Main Function Starts
+
+		B b1 = new B();	// Creating an Object in class B
+		b1.func1();		// Calling Functions
+
+		b1.func2(); //calling func2 we dont need to declear new Object for this we can use the same Object
+
+	}//Main Function Ends
+
+}//Class B End
+
+Compile class B and then Compile Class C then see its also Accessable in C
+------------
+
+Write a Function in Class C now 
+
+class C extends B
+{//Class C Starts
+
+	protected void func3()
+	{//Func 3 starts
+		System.out.println("This is a Protected Function");
+	}//func 3 ends
+
+	public static void main (String r[])
+	{//main Function
+
+		C c1 = new C();
+		c1.func1(); //Function Present in Class A
+		c1.func2();	//Function Present in Class B
+		c1.func3();	//Function Present in Class C
+
+	}//end Main Function
+
+}//Class C Ends
+
+Compile and Run
+--------------------
+
+
+Public can be accessed from any where in any time
+Private can only be accessable in the Same class only
+Protected can be accessable in the Same Package not in anyother Package. (Later on we will discuss Package Ceration then clear)
+
+-------------------------------------****************************_--------------------
+
+Method
+1) Over Loading
+2) Over writing
+
+public class Bush
+{
+	public void abc (String a)
+	{
+		System.out.println("This is Function with A");
+		
+	}
+
+	public void abc (Strig b)
+	{
+		System.out.println("This is Function with B");
+	}
+
+	public static void main (String x[])
+	{
+		Bush blare1 = new Bush();
+
+		blare1.abc("A");
+		blare1.abc("B");
+	}
+}
+This will Give Overloading Error to Fix This Problem See below
+-------------------------------------------------
+public class Bush
+{
+	public void abc (String a)
+	{
+		System.out.println("This is Function with A");
+		
+	}
+
+	public void abc (int b)
+	{
+		System.out.println("This is Function with B");
+	}
+
+	public static void main (String x[])
+	{
+		Bush blare1 = new Bush();
+
+		blare1.abc("A");
+		blare1.abc("B");
+	}
+}
+This Program  will not give any error
+------------------------------------------------
+Examples of Methods Overloading are as Follow
+
+public void abc(c)
+public void abc(c)
+This will Overload
+
+public void abc(c)
+public void abc(String a)
+This will not overload
+
+public void abc(String c)
+public void abc(String x)
+This will also overload.
+
+
+Examples of Constructor Overloading are as Follow (Uncomplete Will do in Next Class)
+
+Public Class X 
+{
+	public ab()
+	{//First default Constructor 
+	
+	}
+
+	public ABC(int a)
+	{// Integer Return Type Constructor
+
+	}
+
+	public ABC(int x, String s)
+	{// Integer and String Return Type Constructor
+
+	}
+}
+--------------------------------
+
+2) Overwriting (Next Class)

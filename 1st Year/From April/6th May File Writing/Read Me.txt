@@ -1,0 +1,1 @@
+Take an input from Console and write it

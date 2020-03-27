@@ -1,0 +1,72 @@
+1. Paste thr Report.exe file in java bin folder
+
+2. For the Connectivity, ODBC Name & report file name with path are required only
+   No DBU, database connectivity required, just by specidying ODBC it connectes itself
+
+3. There are 2 Main files for report ConnectionSpecification.java & Report.java
+   you dont need to edit them, There is a sample file myLogin.java open that file
+   and see the code in the action event of CmdOk, you will call the report from
+   there, works with any crystal report software upto Ver 10
+
+4. Some more info can be taken from Desktop.java bigger example
+
+Examples
+
+    mniConsultantsRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        Report.exec("D:\\PDNMS\\reports\\Consultants",cs,Report.OUTPUT_TO_WINDOW,"{doctor.type} = \"Consultant\"",new String[] {""});
+      }
+    });
+
+    mniAllDoctorRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        Report.exec("D:\\PDNMS\\reports\\AllDoctor",cs,Report.OUTPUT_TO_WINDOW,"",new String[] {""});
+      }
+    });
+
+    mniSurgerySchedulingRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        String id = JOptionPane.showInputDialog(null,"Enter Surgery ID","Surgery ID Input",JOptionPane.INFORMATION_MESSAGE);
+        Report.exec("D:\\PDNMS\\reports\\SurgeryReport",cs,Report.OUTPUT_TO_WINDOW,"{surgery.surgery_id} = \""+id+"\"",new String[] {""});
+      }
+    });
+
+    mniSurgeryBillRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        String id = JOptionPane.showInputDialog(null,"Enter Surgery ID","Surgery ID Input",JOptionPane.INFORMATION_MESSAGE);
+        Report.exec("D:\\PDNMS\\reports\\SurgeryBill",cs,Report.OUTPUT_TO_WINDOW,"{surgery.surgery_id} = \""+id+"\"",new String[] {""});
+      }
+    });
+
+    mniMedOffRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        Report.exec("D:\\PDNMS\\reports\\MedicalOfficers",cs,Report.OUTPUT_TO_WINDOW,"{doctor.type} = \"Medical Officer\"",new String[] {""});
+      }
+    });
+
+    mniAllNurseRep.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        Report.exec("D:\\PDNMS\\reports\\AllNurse",cs,Report.OUTPUT_TO_WINDOW,"",new String[] {""});
+      }
+    });
+
+    mniSinglePatientAdmission.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        String pReg = JOptionPane.showInputDialog(null,"Enter Patient Registration Number","Input",JOptionPane.INFORMATION_MESSAGE);
+        Report.exec("D:\\PDNMS\\reports\\PatientAdmission",cs,Report.OUTPUT_TO_WINDOW,"{patient.p_reg_no} = '"+pReg+"'",new String[] {""});
+      }
+    });
+
+    mniPatAdmissionOnDate.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent ae) {
+        String date = JOptionPane.showInputDialog(null,"Enter Date [Format: Month/Date/Year (5/22/2004)]","Input Date",JOptionPane.INFORMATION_MESSAGE);
+        StringTokenizer st = new StringTokenizer(date,"/");
+        String item[] = new String[3];
+        int i = 0;
+        while(st.hasMoreTokens()) {
+          item[i] = st.nextToken();
+          i++;
+        }
+        Report.exec("D:\\PDNMS\\reports\\PatientAdmissionOnDate",cs,Report.OUTPUT_TO_WINDOW,"{Patient.Date_of_Admission} = DateTime("+item[2]+","+item[0]+","+item[1]+")",new String[] {""});
+      }
+    });

@@ -1,0 +1,6 @@
+------====Java 1st April 2003====------ 		(Emon)
+
+We will Create 2 Frames and then get data from 1 to another 
+
+1st Frame coding is as follow see TEstFrame1 and 2
+The text from frame 1 will be taken to frame 2

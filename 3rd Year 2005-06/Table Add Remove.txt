@@ -1,0 +1,609 @@
+package agora;
+
+import java.awt.*;
+import javax.swing.*;
+import java.sql.*;
+import java.text.DecimalFormat;
+import java.awt.event.*;
+import java.util.Date;
+import java.util.*;
+import java.text.*;
+//import com.borland.internetbeans.*;
+//import com.borland.dbswing.*;
+
+/**
+ * Title:
+ * Description:
+ * Copyright:    Copyright (c) 2006
+ * Company:
+ * @author
+ * @version 1.0
+ */
+
+public class frmPO extends JFrame {
+
+//---------- Database Connection -------
+  DBConn db = new DBConn();
+  ResultSet rsPO;
+  ResultSet rsPO_Det;
+  ResultSet rsP;
+  String newId;
+  //Boolean Variable to check status
+  boolean isAdd = false;
+
+
+  JPanel mainpanel1 = new JPanel();
+  JLabel lblpid = new JLabel();
+  JTextField txtpid = new JTextField();
+  JLabel lblsid = new JLabel();
+  JTextField txtsid = new JTextField();
+  JLabel lbldate = new JLabel();
+  JTextField txtdate = new JTextField();
+  JLabel lblsalesmanid = new JLabel();
+  JTextField txtsalesmanid = new JTextField();
+  JPanel mainpanel2 = new JPanel();
+  //IxTable ixTable1 = new IxTable();
+  JPanel mainpanel3 = new JPanel();
+  JButton btnsave = new JButton();
+  JButton btnSearch = new JButton();
+  JButton btnadd = new JButton();
+  JButton btndelete = new JButton();
+  JButton btnprevious = new JButton();
+  JButton btnnext = new JButton();
+  JButton btnedit = new JButton();
+  JLabel lblremarks = new JLabel();
+  JLabel lbltotal = new JLabel();
+  JTextField txttotal = new JTextField();
+  JLabel lblitemcategory = new JLabel();
+  JTextField txtitemcateg = new JTextField();
+  JButton btnitemcategory = new JButton();
+  JTextField txtitemid = new JTextField();
+  JLabel lblitemid = new JLabel();
+  JLabel lblqty = new JLabel();
+  JTextField txtqty = new JTextField();
+  JButton btnnew = new JButton();
+  JLabel lbldiscount = new JLabel();
+  JTextField txtdiscount = new JTextField();
+  JLabel lbldiscount1 = new JLabel();
+  JTextField txtprice = new JTextField();
+  JTextField txtremarks = new JTextField();
+  JPanel mainpanel4 = new JPanel();
+  JButton btnadd2 = new JButton();
+  JTextField txtprice1 = new JTextField();
+  JTextField txtdiscount1 = new JTextField();
+  JButton btnitemcategory1 = new JButton();
+  JButton btnnext2 = new JButton();
+  JButton btnedit2 = new JButton();
+  JLabel lblqty1 = new JLabel();
+  JButton btnSearch2 = new JButton();
+  JLabel lblitemcategory1 = new JLabel();
+  JLabel lbldiscount2 = new JLabel();
+  JTextField txttotal1 = new JTextField();
+  JButton btnsave2 = new JButton();
+  JLabel lbldiscount3 = new JLabel();
+  JPanel mainpanel5 = new JPanel();
+  JTextField txtitemid1 = new JTextField();
+  JLabel lblitemid1 = new JLabel();
+  JLabel lbltotal1 = new JLabel();
+  JButton btndelete2 = new JButton();
+  JTextField txtitemcateg1 = new JTextField();
+  JButton btnprevious2 = new JButton();
+  JTextField txtqty1 = new JTextField();
+  JButton btnnew2 = new JButton();
+
+  Vector colData = new Vector();
+  Vector rowData = new Vector();
+
+  JScrollPane jScrollPane1 = new JScrollPane();
+  BorderLayout borderLayout1 = new BorderLayout();
+  JTable jTable1;
+  JButton btnitem = new JButton();
+
+  public frmPO() {
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  private void jbInit() throws Exception
+  {
+    this.setSize(new Dimension(558, 529));
+    this.setResizable(false);
+    this.setTitle("Purchase Order");
+    this.getContentPane().setLayout(null);
+
+    mainpanel1.setBackground(new Color(203, 235, 207));
+    mainpanel1.setBorder(BorderFactory.createEtchedBorder());
+    mainpanel1.setBounds(new Rectangle(15, 34, 224, 160));
+    mainpanel1.setLayout(null);
+    lblpid.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblpid.setText("Purchase Id");
+    lblpid.setBounds(new Rectangle(6, 6, 70, 20));
+    txtpid.setBounds(new Rectangle(83, 7, 117, 17));
+    lblsid.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblsid.setText("Supplier Id");
+    lblsid.setBounds(new Rectangle(6, 29, 77, 17));
+    txtsid.setBounds(new Rectangle(83, 28, 117, 17));
+    lbldate.setFont(new java.awt.Font("Dialog", 1, 11));
+    lbldate.setText("Date");
+    lbldate.setBounds(new Rectangle(7, 50, 59, 15));
+    txtdate.setBounds(new Rectangle(83, 49, 117, 17));
+    lblsalesmanid.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblsalesmanid.setText("Salesman Id");
+    lblsalesmanid.setBounds(new Rectangle(7, 70, 73, 16));
+    txtsalesmanid.setBounds(new Rectangle(83, 69, 118, 19));
+    mainpanel2.setBorder(BorderFactory.createEtchedBorder());
+    mainpanel2.setBounds(new Rectangle(18, 206, 508, 210));
+    mainpanel2.setLayout(borderLayout1);
+    mainpanel3.setBackground(new Color(203, 235, 207));
+    mainpanel3.setBounds(new Rectangle(56, 420, 435, 47));
+    mainpanel3.setLayout(null);
+
+    btnsave.setBackground(new Color(0, 72, 0));
+    btnsave.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnsave.setForeground(UIManager.getColor("info"));
+    btnsave.setText("Finish");
+    btnsave.setBounds(new Rectangle(-2, 2, 82, 20));
+
+
+    btnSearch.setBackground(new Color(0, 72, 0));
+    btnSearch.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnSearch.setForeground(UIManager.getColor("info"));
+    btnSearch.setText("Search");
+    btnSearch.setBounds(new Rectangle(79, 2, 76, 20));
+
+
+    btnadd.setBackground(new Color(0, 72, 0));
+    btnadd.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnadd.setForeground(UIManager.getColor("info"));
+    btnadd.setText("Add Item");
+    btnadd.setBounds(new Rectangle(218, 2, 92, 20));
+    btnadd.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+
+      InsertDataIntoTable();
+
+      }
+    });
+
+
+    btndelete.setBackground(new Color(0, 72, 0));
+    btndelete.setFont(new java.awt.Font("Dialog", 1, 11));
+    btndelete.setForeground(UIManager.getColor("info"));
+    btndelete.setText("Delete");
+    btndelete.setBounds(new Rectangle(309, 2, 70, 20));
+    btndelete.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+
+       RemoveDataFromTable();
+      }
+    });
+
+
+    btnprevious.setBackground(new Color(0, 72, 0));
+    btnprevious.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnprevious.setForeground(UIManager.getColor("info"));
+    btnprevious.setText("<<Previous");
+    btnprevious.setBounds(new Rectangle(86, 23, 97, 21));
+    btnprevious.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+      movePrevious();
+      }
+    });
+
+    btnnext.setBackground(new Color(0, 72, 0));
+    btnnext.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnnext.setForeground(UIManager.getColor("info"));
+    btnnext.setText("Next>>");
+    btnnext.setBounds(new Rectangle(185, 23, 87, 21));
+    btnnext.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+      moveNext();
+      }
+    });
+    btnedit.setBackground(new Color(0, 72, 0));
+    btnedit.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnedit.setForeground(UIManager.getColor("info"));
+    btnedit.setText("Edit");
+    btnedit.setBounds(new Rectangle(379, 2, 55, 20));
+    btnedit.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+       UpdateData();
+      }
+      });
+    this.getContentPane().setBackground(new Color(203, 235, 207));
+    lblremarks.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblremarks.setText("Remarks");
+    lblremarks.setBounds(new Rectangle(6, 101, 65, 17));
+    lbltotal.setFont(new java.awt.Font("Dialog", 1, 11));
+    lbltotal.setText("Total");
+    lbltotal.setBounds(new Rectangle(14, 122, 42, 19));
+    txttotal.setBounds(new Rectangle(108, 125, 102, 19));
+    lblitemcategory.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblitemcategory.setText("Item Category");
+    lblitemcategory.setBounds(new Rectangle(14, 13, 86, 23));
+    txtitemcateg.setBounds(new Rectangle(109, 14, 99, 20));
+    btnitemcategory.setBackground(new Color(0, 72, 0));
+    btnitemcategory.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnitemcategory.setForeground(UIManager.getColor("info"));
+    btnitemcategory.setText("jButton1");
+    btnitemcategory.setBounds(new Rectangle(214, 14, 25, 19));
+    txtitemid.setBounds(new Rectangle(108, 37, 101, 18));
+    lblitemid.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblitemid.setText("Item Id");
+    lblitemid.setBounds(new Rectangle(15, 37, 56, 18));
+    lblqty.setFont(new java.awt.Font("Dialog", 1, 11));
+    lblqty.setText("Quantity");
+    lblqty.setBounds(new Rectangle(14, 60, 54, 18));
+    txtqty.setBounds(new Rectangle(108, 59, 100, 20));
+    btnnew.setBackground(new Color(0, 72, 0));
+    btnnew.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnnew.setForeground(UIManager.getColor("info"));
+    btnnew.setText("New");
+    btnnew.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        setFields(true);
+         clearFields();
+      }
+    });
+
+
+
+    btnnew.setBounds(new Rectangle(155, 2, 61, 21));
+    lbldiscount.setFont(new java.awt.Font("Dialog", 1, 11));
+    lbldiscount.setText("Discount");
+    lbldiscount.setBounds(new Rectangle(14, 81, 79, 18));
+    txtdiscount.setBounds(new Rectangle(108, 82, 101, 19));
+    lbldiscount1.setBounds(new Rectangle(14, 100, 79, 18));
+    lbldiscount1.setText("Price");
+    lbldiscount1.setFont(new java.awt.Font("Dialog", 1, 11));
+    txtprice.setBounds(new Rectangle(108, 103, 101, 19));
+    txtremarks.setBounds(new Rectangle(82, 95, 119, 23));
+    mainpanel4.setBackground(new Color(203, 235, 207));
+    mainpanel4.setBorder(BorderFactory.createEtchedBorder());
+    mainpanel4.setBounds(new Rectangle(244, 34, 275, 159));
+    mainpanel4.setLayout(null);
+
+    btnitem.setBounds(new Rectangle(214, 35, 25, 19));
+    btnitem.setText("jButton1");
+    btnitem.setForeground(UIManager.getColor("info"));
+    btnitem.setFont(new java.awt.Font("Dialog", 1, 11));
+    btnitem.setBackground(new Color(0, 72, 0));
+    btnitem.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+       frmproductlist frmlst= new frmproductlist();
+       frmlst.setVisible(true);
+      }
+    });
+
+    this.getContentPane().add(mainpanel1, null);
+    mainpanel1.add(lblpid, null);
+    mainpanel1.add(txtpid, null);
+    mainpanel1.add(lblsid, null);
+    mainpanel1.add(txtsid, null);
+    mainpanel1.add(lbldate, null);
+    mainpanel1.add(lblsalesmanid, null);
+    mainpanel1.add(txtsalesmanid, null);
+    mainpanel1.add(txtdate, null);
+    mainpanel1.add(lblremarks, null);
+    mainpanel1.add(txtremarks, null);
+    this.getContentPane().add(mainpanel2, null);
+    mainpanel2.add(jScrollPane1, BorderLayout.CENTER);
+   //----------------------------------------------------------
+    colData.addElement("Item Category");
+    colData.addElement("Item Id");
+    colData.addElement("Quantity");
+    colData.addElement("Discount");
+    colData.addElement("Price");
+    colData.addElement("Total");
+
+    jTable1 = new JTable(rowData,colData);
+    jScrollPane1.getViewport().add(jTable1, null);
+
+    Connect();
+    ConnectPODet();
+    this.getContentPane().add(mainpanel4, null);
+    mainpanel4.add(lblitemcategory, null);
+    mainpanel4.add(txtitemcateg, null);
+    mainpanel4.add(txtitemid, null);
+    mainpanel4.add(txtqty, null);
+    mainpanel4.add(lblitemid, null);
+    mainpanel4.add(lblqty, null);
+    mainpanel4.add(txtdiscount, null);
+    mainpanel4.add(lbldiscount, null);
+    mainpanel4.add(txtprice, null);
+    mainpanel4.add(lbldiscount1, null);
+    mainpanel4.add(txttotal, null);
+    mainpanel4.add(lbltotal, null);
+    mainpanel4.add(btnadd2, null);
+    mainpanel4.add(btnnext2, null);
+    mainpanel4.add(btnedit2, null);
+    mainpanel4.add(btnSearch2, null);
+    mainpanel4.add(btnsave2, null);
+    mainpanel4.add(mainpanel5, null);
+    mainpanel5.add(lblitemcategory1, null);
+    mainpanel5.add(txtitemcateg1, null);
+    mainpanel5.add(btnitemcategory1, null);
+    mainpanel5.add(txtitemid1, null);
+    mainpanel5.add(txtqty1, null);
+    mainpanel5.add(lblitemid1, null);
+    mainpanel5.add(lblqty1, null);
+    mainpanel5.add(txtdiscount1, null);
+    mainpanel5.add(lbldiscount2, null);
+    mainpanel5.add(txtprice1, null);
+    mainpanel5.add(lbldiscount3, null);
+    mainpanel5.add(txttotal1, null);
+    mainpanel5.add(lbltotal1, null);
+    mainpanel4.add(btndelete2, null);
+    mainpanel4.add(btnprevious2, null);
+    mainpanel4.add(btnnew2, null);
+    mainpanel4.add(btnitemcategory, null);
+    mainpanel4.add(btnitem, null);
+    this.getContentPane().add(mainpanel3, null);
+    mainpanel3.add(btnsave, null);
+    mainpanel3.add(btnnext, null);
+    mainpanel3.add(btnprevious, null);
+    mainpanel3.add(btnSearch, null);
+    mainpanel3.add(btnnew, null);
+    mainpanel3.add(btnadd, null);
+    mainpanel3.add(btndelete, null);
+    mainpanel3.add(btnedit, null);
+    this.getContentPane().add(mainpanel2, null);
+  }
+
+
+  //Database Functions,
+  public void Connect()
+  {
+    try{
+         rsPO = db.stmt.executeQuery("SELECT * FROM PO");
+  	 rsPO.next();
+         display();
+  	}catch(SQLException sqle){System.out.println(sqle);}
+   }//End of Connect
+
+  public void ConnectPODet()
+  {
+      try{
+         rsPO_Det = db.stmt.executeQuery("SELECT * FROM PO_Details");
+         rsPO_Det.next();
+         displayPODet();
+      this.getContentPane().add(mainpanel2, null);
+      this.getContentPane().add(mainpanel4, null);
+  	}catch(SQLException sqle){System.out.println(sqle);}
+  }
+
+  public void display()
+  {//Display...
+
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+  	try
+        {
+                txtpid.setText(rsPO.getString(1));
+                //txtDate.setText(new java.text.SimpleDateFormat("yyyy-MM-dd").format(rsMedi.getDate(2)));
+       		txtsid.setText(rsPO.getString(2));
+      		txtdate.setText(new java.text.SimpleDateFormat("yyyy-MM-dd").format(rsPO.getDate(3)));
+                txtsalesmanid.setText(rsPO.getString(4));
+                txtremarks.setText(rsPO.getString(5));
+  		}catch(SQLException sqle){System.out.println(sqle);}
+  }//End Of Display...
+
+  public void displayPODet()
+  {
+          java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+  	try
+        {
+                txtitemcateg.setText(rsPO_Det.getString(3));
+                txtitemid.setText(rsPO_Det.getString(4));
+                txtqty.setText(rsPO_Det.getString(5));
+                txtdiscount.setText(rsPO_Det.getString(6));
+                txtprice.setText(rsPO_Det.getString(7));
+                txttotal.setText(rsPO_Det.getString(8));
+	}catch(SQLException sqle){System.out.println(sqle);}
+  }
+  public void movePrevious() {//move first
+    try {
+      if (!rsPO.previous()) {
+        JOptionPane.showMessageDialog(null, "First Record");
+        rsPO.first();
+      }
+      display();
+    }
+    catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+    }
+  }//move first
+
+  public void moveNext() {//move next
+    try {
+      if (!rsPO.next()) {
+        JOptionPane.showMessageDialog(null, "Last Record");
+        rsPO.last();
+      }
+      display();
+    }
+    catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+    }
+  }//move next
+
+  public void InsertData() {//Add new record
+    String QueryPO = "INSERT INTO PO VALUES (" +
+        "'" + txtpid.getText()   + "'," +
+        "'" + txtsid.getText()      + "'," +
+        "'" + txtdate.getText() + "'," +
+        "'" + txtsalesmanid.getText()      + "'," +
+        "'" + txtremarks.getText()  + "');";
+
+    String QueryPODet = "INSERT INTO Po_details VALUES (" +
+        "'" + txtitemcateg.getText()   + "'," +
+        "'" + txtitemid.getText()      + "'," +
+        " " + txtqty.getText()         + "," +
+        " " + txtdiscount.getText()    + "," +
+        " " + txtprice.getText()    + "," +
+        " " + txttotal.getText()  + ");";
+    try
+    {
+        db.stmt.executeUpdate(QueryPO);
+        db.stmt.executeUpdate(QueryPODet);
+        JOptionPane.showMessageDialog(null, "Record added in Table",
+                                    "Information", 1);
+      Connect();
+    }
+    catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+    }
+  }
+
+  public boolean UpdateData() {//Edit Data
+    String Query = "UPDATE PO SET " +
+        "Po_id='"     + txtpid.getText()        + "'," +
+        "Supplier_id='"  + txtsid.getText()   + "'," +
+        "Date='"         + txtdate.getText()        + "'," +
+        "Salesman_id='"   + txtsalesmanid.getText()    + "' " +
+        "Remarks='"   + txtremarks.getText()    + "' " +
+        "WHERE Po_id='" + txtpid.getText()    + "';";
+System.out.println(Query);
+    try {
+      db.stmt.executeUpdate(Query);
+      JOptionPane.showMessageDialog(null, "Record Saved", "Information", 1);
+      Connect();
+      return true;
+    }
+    catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
+  }
+
+  public void DeleteData() {//Delete Record...
+    int yn;
+    String Query = "DELETE FROM PO WHERE Po_id='" + txtpid.getText() + "';";
+    yn = JOptionPane.showConfirmDialog(null,
+        "Are you sure you want to delete?", "Yes/No",
+        JOptionPane.YES_NO_OPTION, 3);//, imgQ
+
+      if (yn == JOptionPane.YES_OPTION)
+      {
+        try
+        {
+          db.stmt.executeUpdate(Query);
+          JOptionPane.showMessageDialog(null, "Record Deleted",
+                                        "Information", 1);
+          Connect();
+        }
+      catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+      }
+      else {
+        Connect();
+      }
+    }
+
+    public void clearFields()
+    {
+    txtpid.setText("");
+    txtsid.setText("");
+    txtdate.setText("");
+    txtsalesmanid.setText("");
+    txtremarks.setText("");
+    txtitemcateg.setText("");
+    txtitemid.setText("");
+    txtqty.setText("");
+    txtdiscount.setText("");
+    txtprice.setText("");
+    txttotal.setText("");
+    //Date d = new Date();
+    //SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
+    //txtDate.setText(sdf.format(d));
+
+    generateID();
+
+    txtpid.setText(newId);
+
+    txtsid.requestFocus();
+  }
+
+  public void generateID()
+  {
+    try{
+         rsP = db.stmt.executeQuery("SELECT COUNT(*) FROM PO");
+  	 rsP.next();
+  	}catch(SQLException sqle){System.out.println(sqle);}
+
+  	try
+        {
+           int x = Integer.parseInt(rsP.getString(1));
+           x = x+1;
+           newId="PO"+x;
+           System.out.println("new Id"+newId);
+        }
+      catch (SQLException sqle) {
+      System.out.println("Exception Occured: " + sqle);
+      JOptionPane.showMessageDialog(null,"Exception Occured: "+ sqle,
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+  }
+}
+
+  public void setFields(boolean bVal)
+  {
+    txtpid.setEnabled(bVal);
+    txtsid.setEnabled(bVal);
+    txtdate.setEnabled(bVal);
+    txtsalesmanid.setEnabled(bVal);
+    txtremarks.setEnabled(bVal);
+
+    btnprevious.setEnabled(!bVal);
+    btnnext.setEnabled(!bVal);
+    btndelete.setEnabled(!bVal);
+    btnSearch.setEnabled(!bVal);
+    btnsave.setEnabled(!bVal);
+  }
+
+   public void InsertDataIntoTable()
+   {
+        Vector temp = new Vector();
+
+        temp.addElement(txtitemid.getText());
+        temp.addElement(txtitemcateg.getText());
+        temp.addElement(txtqty.getText());
+        temp.addElement(txtdiscount.getText());
+        temp.addElement(txtprice.getText());
+        temp.addElement(txttotal.getText());
+
+        rowData.addElement(temp);
+
+        //jTable1.validate();
+        jTable1.repaint();
+        jTable1.revalidate();
+
+        System.out.print("Ok Sadia");
+
+   }
+
+   public void RemoveDataFromTable()
+   {
+        rowData.removeElementAt(jTable1.getSelectedRow());
+
+        //jTable1.validate();
+        jTable1.repaint();
+        jTable1.revalidate();
+
+        System.out.print("Ok Sadia");
+   }
+
+}
+

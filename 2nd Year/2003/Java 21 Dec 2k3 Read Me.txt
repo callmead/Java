@@ -1,0 +1,305 @@
+Java Class 21st Dec 2003
+
+ShowConformDialog
+=================
+int yn = JOptionPane.showConformDialog(null,"Are you sure you want to exit?");
+int yn = JOptionPane.showConformDialog(null,"Are you sure you want to exit?", "Title", Type);
+int yn = JOptionPane.showConformDialog(null,"Are you sure you want to exit?", "Title", Type, MsgType);
+int yn = JOptionPane.showConformDialog(null,"Are you sure you want to exit?", "Title", Type, MsgType, icon);
+============================================================================================================
+
+For This we will add a new button Exit Button on the Frame and then write this code in
+btnExit Action perform.
+
+There are 3 options in this dialog YES, NO and CANCEL
+Value of YES is 0, NO is 1, and CANCEL is 3
+So we can write that
+
+OPTION RETURN VALUE/CONSTANT
+============================
+
+Constant			VAlue
+-------------------------------------
+JOptionPane.YES_OPTION		0
+JOptionPane.OK_OPTION		0
+JOptionPane.NO_OPTION		1
+JOptionPane.CANCEL_OPTION	2
+
+JOptionPane.CLOSED_OPTION	-1 	//if just closed the Msg then
+-------------------------------------
+
+We can use anyone in above either Constant or value
+
+	if (yn==JOptionPane.YES_OPTION)
+	{
+		//System.exit(0);
+		JOptionPane.showMessageDialog(null,"You press YES button");
+	}
+--------------------------------------
+Or If we use VAlue then
+	if (yn==0)
+	{
+		System.exit(0);
+	}
+--------------------------------------
+
+By default there are 3 buttons YES NO AND CANCEL
+If we want to show only desired buttons then.... Also changing the title see below
+
+int JOptionPane.showConfirmDialog(null,"Message","Title",Button Type,Message Type);
+Message Type Values (0 to 3) and Button Type values (-1 to 2)
+
+Message Type
+=============
+Constant				Value
+---------------------------------------------
+JOptionPane.YES_NO_OPTION		0
+JOptionPane.YES_NO_CANCEL_OPTION	1
+JOptionPane.OK_CANCEL_OPTION		2
+JOptionPane.DEFAULT_OPTION		-1
+
+
+
+To show only Yes and No button see the following code
+-----------------------------------------------------
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",0);
+or
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.YES_NO_OPTION);
+-----------------------------------------------------
+
+
+To show only Ok and Cancel button see the following code
+--------------------------------------------------------
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",0);
+or
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.OK_CANCEL_OPTION);
+--------------------------------------------------------
+
+
+To show only Ok only see the following code
+--------------------------------------------------------
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",-1);
+or
+int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.DEFAULT_OPTION);
+--------------------------------------------------------
+========================================================
+
+To Set User Defined Icon we use the following code
+
+Syntax:
+int JOptionPane.showConfirmDialog(null, "Message", "Title", Button Type, Message Type, icon);
+
+Code:
+int yn = JOptionPane.showConfirmDialog(null, "Message", "Title", 0, 1, new ImageIcon("customers.GIF"));
+================================================================================================================================
+
+Java Example 21st December 2003
+================================================================================================================================
+import javax.swing.*; //14th December 2003 Example of JLabel on JPanel on JFrame
+import java.awt.*;
+import java.awt.event.*;//for Action Listener
+import javax.swing.border.*;
+
+public class MyFrame3 extends JFrame
+{
+	JPanel Pnl1=new JPanel();//Works Like Frame in VB
+	JLabel lbl1=new JLabel();
+	JLabel lbl2=new JLabel();
+	JButton btnShow=new JButton();
+	JButton btnHide=new JButton();
+	JButton btnExit=new JButton();
+
+	public MyFrame3()
+	{
+		this.setTitle("Example of Label");
+		this.setBounds(300,150,400,400);
+		this.getContentPane().setLayout(null);//Default Border Layout
+		this.setResizable(false);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.getContentPane().setBackground(Color.black);//JFrame Color
+
+
+
+		//---------Adding JPanel on JFrame------------
+		this.getContentPane().add(Pnl1);
+
+
+
+		//---------Properties of JPanel------------
+		Pnl1.setLayout(null);//If not used then by default it takes Flow Layout
+		Pnl1.setBounds(25,25,345,330);
+		Pnl1.setBackground(Color.blue);
+		Pnl1.add(lbl1);//Because this label is on the Pannel thats why Pnl1.add(lbl1)
+		Pnl1.add(lbl2);//Because this label is on the Pannel thats why Pnl1.add(lbl1)
+		Pnl1.add(btnShow);//Adding Btn on Pannel
+		Pnl1.add(btnHide);//Adding Btn on Pannel
+		Pnl1.add(btnExit);//Adding Btn on Pannel
+
+		//Line Border
+		//Pnl1.setBorder(BorderFactory.createLineBorder(Color.white,2));
+
+		//Bevel Border
+		Pnl1.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+		//Pnl1.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+
+
+
+		//*********************Properties of JLabel1*********************
+		lbl1.setBounds(10,10,180,50);//By default Label is Transparent and this will not work the size of label will be as much as the text is. Use Pnl1.setLayout(null) for changing the Layout
+		lbl1.setText("Image Viewer");//Label Text
+		lbl1.setForeground(Color.black);//Text Color
+		lbl1.setBackground(Color.white);//It will not work untill setOpaque(true) so
+		lbl1.setOpaque(true);//Must use to set background of the label
+		lbl1.setFont(new Font("Tahoma",1,16));//Font
+		//lbl1.setBorder(BorderFactory.createLineBorder(Color.red));//Label Border by default border width is 1 pixel to define more width see next line
+		lbl1.setBorder(BorderFactory.createLineBorder(Color.red,2));
+
+
+		//----------Text Horizontal Alignments-----------------
+		//lbl1.setHorizontalAlignment(SwingConstants.LEFT); //By default its left no need to write
+		lbl1.setHorizontalAlignment(SwingConstants.CENTER);
+		//lbl1.setHorizontalAlignment(SwingConstants.RIGHT);
+
+		//----------Text Vertical Alignments-----------------
+		//lbl1.setVerticalAlignment(SwingConstants.TOP);
+		//lbl1.setVerticalAlignment(SwingConstants.CENTER);//By Default its Center no need to write
+		lbl1.setVerticalAlignment(SwingConstants.BOTTOM);
+		//***************************************************************
+
+
+
+		//*********************Properties of JLabel2*********************
+		lbl2.setBounds(10,70,326,220);//By default Label is Transparent and this will not work the size of label will be as much as the text is. Use Pnl1.setLayout(null) for changing the Layout
+		lbl2.setOpaque(true);
+		//***************************************************************
+
+
+
+		//*********************Properties of JButton BtnShow*********************
+		btnShow.setBounds(200,10,120,25);
+		btnShow.setText("Show Image");
+		btnShow.setMnemonic('S');
+		//To Show Image on Label add Action Listener
+		btnShow.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent x1)
+			{
+				lbl2.setIcon(new ImageIcon("logo.GIF"));//Adding Image on the Label
+			}
+		});
+		//***************************************************************
+
+
+
+		//*********************Properties of JButton BtnHide*********************
+		btnHide.setBounds(200,40,120,25);
+		btnHide.setText("Hide Image");
+		btnHide.setMnemonic('H');
+
+		btnHide.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent x2)
+			{
+				lbl2.setIcon(new ImageIcon(""));//Removing Image on the Label
+			}
+		});
+		//***************************************************************
+
+		//*********************Properties of JButton BtnExit*********************
+		btnExit.setBounds(120,300,120,25);
+		btnExit.setText("Exit");
+		btnExit.setMnemonic('x');
+
+		//Adding border to Button
+		btnExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));	//Ubhra hua hay
+		//btnExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED,Color.red,Color.green,Color.white,Color.blue));
+
+		btnExit.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent x3)
+			{
+				//Show Conformation Dialog
+				//int yn = JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?");
+
+				//Show YES_NO_OPTION
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",0);
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.YES_NO_OPTION);
+
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",2);
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.OK_CANCEL_OPTION);
+
+				//Show YES_NO_CANCEL_OPTION
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",1);
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.YES_NO_CANCEL_OPTION);
+
+				//Show OK Only
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",-1);
+				//int yn=JOptionPane.showConfirmDialog(null,"Are you sure you want to exit?","Exit Conformation...",JOptionPane.DEFAULT_OPTION);
+
+				//Showing Icon in Conformation Dialog
+				int yn = JOptionPane.showConfirmDialog(null, "Message", "Title", 0, 1, new ImageIcon("customers.GIF"));
+
+
+				//System.out.println (yn); //Yes is 0, No is 1, and Cancel is 2
+
+				if (yn==JOptionPane.YES_OPTION)
+					{
+						//System.exit(0);
+						JOptionPane.showMessageDialog(null,"You press YES button");
+					}
+
+				else if (yn==JOptionPane.NO_OPTION)
+					{
+						//System.exit(0);
+						JOptionPane.showMessageDialog(null,"You press NO button");
+					}
+
+				else if (yn==JOptionPane.CANCEL_OPTION)
+					{
+						//System.exit(0);
+						JOptionPane.showMessageDialog(null,"You press CANCEL button");
+					}
+				else
+					JOptionPane.showMessageDialog(null,"Wrong Selection !!!");
+			}
+		});
+		//***************************************************************
+
+	}
+
+	public static void main(String a[])
+	{
+		MyFrame3 obj = new MyFrame3();
+		obj.setVisible(true);
+	}
+}
+================================================================================================================================
+
+
+Border
+======
+Line Border
+-----------
+Syntax
+ObjectName.setBorder(BorderFactory.MethodName(Color.red));
+ObjectName.setBorder(BorderFactory.MethodName(Color.red,BorderThickness)); 
+
+Code
+lbl1.setBorder(BorderFactory.createLineBorder(Color.red,2));
+---------------------------------------------------------------------------
+
+Bevel Border
+-----------
+Syntax
+ObjectName.setBorder(BorderFactory.MethodName(BevelBorder.BorderStyle, Highlighted Outer Color, Highlighted Inner Color)); 
+ObjectName.setBorder(BorderFactory.MethodName(BevelBorder.BorderStyle, Highlighted Outer Color, Highlighted Inner Color, Outer Shadow, Inner Shadow)); 
+
+Code
+Pnl1.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED)); 	//Khada hay
+Pnl1.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));	//Ubhra hua hay
+
+for Border Color Code 2 color
+btnExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED,Color.red,Color.green));
+for Border Color Code 4 color
+btnExit.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED,Color.red,Color.green,Color.white,Color.blue));
+Border to be continued..........

@@ -1,0 +1,41 @@
+import javax.swing.JOptionPane; // Program to reverse a Word 3rd Feb 2003
+public class test2
+{
+	public static void main(String args[])
+	{
+	String str1 = JOptionPane.showInputDialog("Enter a Word...");
+	int len = str1.length (); // To Findout the Length of the Word
+	int j;
+	System.out.print("The Length of Ur Word is "+len+" Cheracters\n");
+	System.out.print("And Your Word in Oposite Direction is ... \n\t\n");
+	for (j=len-1;j>=0;j--) // To Reverse the word given
+		{
+			System.out.print(str1.charAt(j));
+		}
+
+	System.out.print("\n\n");
+	System.exit(0);
+
+	}
+}
+
+---------------------
+
+public class test2 // reverse a String.
+{
+	public static void main(String args[])
+	{
+	String str1 = new String ("Adeel");
+	int len = str1.length ();
+	int i;
+	int j;
+
+	for (j=len-1;j>=0;j--)
+		{
+			System.out.print(str1.charAt(j));
+		}
+
+
+}
+}
+---------------------

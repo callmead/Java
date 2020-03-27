@@ -1,0 +1,67 @@
+Today we will learn how to read file using Buffered Reader.
+
+Example 1
+import javax.swing.*;
+import java.io.*;
+public class BufferedReaderFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+		String s;
+		while ((s=br.readLine())!=null)
+		System.out.println(s);
+
+	}//m,ain
+}
+-------------------------------------------------------------------------
+example 2
+
+import javax.swing.*;
+import java.io.*;
+public class BufferedReaderFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\winnt\\profiles\\adeel\\desktop\\java\\16th April\\BufferedReaderFile.java");//See API, File
+		FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+		String s;
+		while ((s=br.readLine())!=null)
+		System.out.println(s);
+
+	}//m,ain
+}
+-------------------------------------------------------------------------
+
+Example 3
+import javax.swing.*;
+import java.io.*;
+public class BufferedReaderFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+		String s;
+		String x = new String("Official Use");
+
+		while ((s=br.readLine())!=null)
+
+		if (s.equals (x)) //if (!s.equals (x)) for not equals
+		System.out.println();
+		else
+		System.out.println(s);
+
+
+
+	}//m,ain
+}
+This will find the String and will not print that String
+-------------------------------------------------------------------------
+NOw the task is that when the String "Official use" when the First Official use will come
+then it will stop printing and when the next Official use will come then it will start 
+printing again. (see input.txt)

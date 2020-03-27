@@ -1,0 +1,109 @@
+// Decompiled by DJ v3.7.7.81 Copyright 2004 Atanas Neshkov  Date: 7/20/2004 3:48:29 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Frame1.java
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.PrintStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.*;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
+
+public class Frame1 extends JFrame
+{
+
+    public Frame1()
+    {
+        jButton1 = new JButton();
+        jTextField1 = new JTextField();
+        jTextField2 = new JTextField();
+        jLabel1 = new JLabel();
+        jScrollPane1 = new JScrollPane();
+        jTable1 = new JTable(10, 10);
+        try
+        {
+            jbInit();
+        }
+        catch(Exception exception)
+        {
+            exception.printStackTrace();
+        }
+    }
+
+    public static void main(String args[])
+    {
+        Frame1 frame1 = new Frame1();
+        frame1.setVisible(true);
+    }
+
+    private void jbInit()
+        throws Exception
+    {
+        setBounds(200, 50, 400, 400);
+        jButton1.setText("jButton1");
+        jButton1.setBounds(new Rectangle(270, 243, 90, 27));
+        jButton1.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent actionevent)
+            {
+                jButton1_actionPerformed(actionevent);
+            }
+
+        });
+        getContentPane().setLayout(null);
+        jTextField1.setBounds(new Rectangle(56, 32, 302, 21));
+        jTextField2.setBounds(new Rectangle(55, 64, 296, 26));
+        jLabel1.setBorder(BorderFactory.createLineBorder(Color.black));
+        jLabel1.setBounds(new Rectangle(58, 104, 297, 25));
+        jScrollPane1.setBounds(new Rectangle(54, 149, 314, 84));
+        jTable1.setAutoResizeMode(0);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(200);
+        jTable1.getColumnModel().getColumn(1).setPreferredWidth(200);
+        getContentPane().add(jButton1, null);
+        getContentPane().add(jTextField1, null);
+        getContentPane().add(jTextField2, null);
+        getContentPane().add(jLabel1, null);
+        getContentPane().add(jScrollPane1, null);
+        jScrollPane1.getViewport().add(jTable1, null);
+        SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy-MM-dd");
+        jTextField1.setText(simpledateformat.format(new Date()));
+    }
+
+    void jButton1_actionPerformed(ActionEvent actionevent)
+    {
+        SimpleDateFormat simpledateformat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        try
+        {
+            Date date1 = simpledateformat.parse(jTextField1.getText());
+            long l = date1.getTime();
+            System.out.println("" + l);
+            Date date2 = new Date();
+            date2 = simpledateformat.parse(jTextField2.getText());
+            long l1 = date2.getTime();
+            System.out.println("" + l1);
+            long l2 = l1 - l;
+            System.out.println("" + l2);
+            long l3 = l2 / 0x5265c00L;
+            System.out.println("" + l3);
+            jLabel1.setText(String.valueOf(l3));
+            if(l3 >= 0L)
+                System.out.println("Ok");
+            else
+                System.out.println("Not");
+        }
+        catch(ParseException parseexception) { }
+    }
+
+    JButton jButton1;
+    JTextField jTextField1;
+    JTextField jTextField2;
+    JLabel jLabel1;
+    JScrollPane jScrollPane1;
+    JTable jTable1;
+}

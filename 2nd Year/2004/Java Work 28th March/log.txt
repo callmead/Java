@@ -1,0 +1,144 @@
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+INSERT INTO Student VALUES ('n0004','RAheel','Banani','893264','03/03/1985', 0);
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+INSERT INTO Student VALUES ('n0004','RAheel','Banani','893264','03/03/1985', 0);
+
+UPDATE Student SET SName='Raheel',Address='Banani Dhaka',Phone='893264',DOB='03/03/1985',Dues=.0000 WHERE SID='n0004';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+INSERT INTO Student VALUES ('n0004','RAheel','Banani','893264','03/03/1985', 0);
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0009';
+DELETE FROM Student WHERE SID='n0007';
+INSERT INTO Student VALUES ('n0004','Kashif','Islamabad','03005345893','03/03/1985', 0);
+-----------------------------
+
+DELETE FROM Student WHERE SID='n0005';
+
+DELETE FROM Student WHERE SID='n0004';
+
+INSERT INTO Student VALUES ('n0004','RAheel','Banani','893264','03/03/1985', 0);
+
+UPDATE Student SET SName='Raheel',Address='Banani Dhaka',Phone='893264',DOB='03/03/1985',Dues=.0000 WHERE SID='n0004';
+
+INSERT INTO Student VALUES ('n0005','Kashif Ali','Islamabad','5673544','03/03/1983', 100);
+
+INSERT INTO Student VALUES ('N0006','Manna','Dhanmondi','1245435','4/4/1980', 0);

@@ -1,0 +1,36 @@
+// Star Input form CLI Run from console Otherwise it will not work
+class Test
+{
+	public static void main(String a[])
+	{
+		 int i=Integer.parseInt(a[0]);
+		 System.out.println(i);
+		 int counter=1;
+		 int startingPoint=(i/2)+1;
+		 for(int y=0;y<i;y++)
+		 {
+			 for(int z=0;z<startingPoint;z++)
+			 System.out.print(" ");
+			 for(int x=1;x<=counter;x++)
+			 System.out.print("*");
+			 System.out.println();
+			 startingPoint-=1;
+			 counter+=2;
+			 if(counter>i)
+			 break ;
+		 }//for
+
+		 for(int y=i;y>0;y--)
+		 {
+		 	 for(int z=startingPoint;z>0;z--)
+		 	 System.out.print(" ");
+		 	 for(int x=counter;x>0;x--)
+		 	 System.out.print("*");
+		 	 System.out.println();
+		 	 startingPoint+=1;
+		 	 counter-=2;
+		 	 if(counter>i)
+		 	 break ;
+		 }//for
+	}
+}// class

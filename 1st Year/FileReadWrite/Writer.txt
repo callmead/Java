@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+public class WriteFile
+{
+ public static void main (String args[])throws IOException
+ {
+  BufferedReader br=new BufferedReader(new FileReader(new File("c:\\input.txt")));
+  BufferedWriter bw=new BufferedWriter(new FileWriter(new File("c:\\output.txt")));
+  String s;
+  while( (s=br.readLine())!=null)
+  {
+   bw.write(s,0,s.length());
+   bw.newLine();
+  }
+  bw.close();
+  System.exit(0);
+ }//main mathod
+}//class

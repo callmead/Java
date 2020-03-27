@@ -1,0 +1,94 @@
+import javax.swing.JOptionPane;// Cube using Joption Pane Message and System.out.print
+public class test
+{
+	public static void main (String args[])
+	{
+	long a,b;
+	int i,j;
+	String output=new String("Number           Cube");
+	System.out.print("See in message box");
+	for (i=1;i<=20;i++){
+		j=1;
+		j = i*i*i;
+
+		//System.out.print("\n"+i+"\t"+j+"");
+		
+		output=output+"\n"+i+"                           "+j;
+	}
+	JOptionPane.showMessageDialog(null,output);
+	System.exit(0);
+	}
+}
+-----------------------
+import javax.swing.*;  //Cube Using JText Area 1-20
+import java.awt.*;
+public class test
+{
+	public static void main (String args[])
+	{
+		JTextArea output1 = new JTextArea(20,20);
+		long a,b;
+		int i,j;
+		String output=new String("Number           Cube");
+		System.out.print("See in message box");
+		for (i=1;i<=20;i++){
+			j=1;
+			j = i*i*i;
+
+			//System.out.print("\n"+i+"\t"+j+"");
+
+			output=output+"\n"+i+"                           "+j;
+
+		}
+		output1.setText(output);
+		JOptionPane.showMessageDialog(null,output1);
+		System.exit(0);
+	}
+}
+-----------------------------
+import javax.swing.*; //Using a Scrroller 1-1000
+
+public class test
+{
+	public static void main (String args[])
+	{
+		JTextArea output1 = new JTextArea(20,20); //we can also use these 2 things in Forms also
+		JScrollPane scroller  = new JScrollPane(output1); //we can also use these 2 things in Forms also
+		long a,b;
+		int i,j;
+		String output=new String("Number           Cube");
+		System.out.print("See in message box");
+		for (i=1;i<=1000;i++){
+			j=1;
+			j = i*i*i;
+
+			//System.out.print("\n"+i+"\t"+j+"");
+
+			output=output+"\n"+i+"                         "+j;
+
+		}
+		output1.setText(output);
+		JOptionPane.showMessageDialog(null,scroller);
+		System.exit(0);
+	}
+}
+
+-------------------------
+import javax.swing.*;// Fabonacci
+public class Fabonacci
+{
+	public static void main(String args[])
+	{
+		int a,b,c;
+		a=1;
+		b=1;
+		System.out.print("1 1");
+		while(b<1000){
+			c=a+b;
+			System.out.print(" "+c);
+			a=b;
+			b=c;
+		}
+		System.exit(0);
+	}
+}

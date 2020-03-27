@@ -1,0 +1,59 @@
+Temperature Conversion
+This application demonstrates the use of a for loop to produce a Fahrenheit to Celsius conversion table. 
+
+class TempChange2 
+{
+ /* Temperature Conversion Program     by P Cunningham Nov 97
+
+   Builds a table showing equivalent temperature
+   values in Celcius and Fahrenheit
+*/
+
+   static final double Ratio = 5.0/9;
+   static final int TLow = 50;
+   static final int  THigh = 110;
+   
+  
+   public static void main (String [] args)
+   {
+   double TCel;
+   // Start with a title
+   System.out.println("Temperature Conversion Calculation");
+   System.out.println("=================================");
+
+   for (int TFar = TLow; TFar <= THigh; TFar = TFar +5) {
+      TCel = (TFar - 32) * Ratio;
+       System.out.println(TFar + " Fahrenheit is "+ TCel + " in Celcius");
+      }
+   }
+}
+
+/* Try Math.round to convert output to long integer
+   TCel = Math.round((TFar - 32) * Ratio);
+     
+*/
+
+
+Temperature Conversion
+This application demonstrates the use of a for loop to produce a Celsius to Fahrenheit conversion table. 
+
+class TempChange3 {
+/*  The Temperature Table Program    by J M Bishop Aug 1996
+    displays a simple table converting
+    Celsius to Fahrenheit for a given range.
+    Illustrates using the loop variable in
+    expressions in the loop */
+
+  public static void main (String [] args) {
+
+    System.out.println("Temperature Conversion Table");  
+    System.out.println("============================");
+    System.out.println();
+    System.out.println("C        F");
+    for (int c = 5; c <=20; c++) {
+      System.out.print(c + "\t"); 
+      System.out.println(Math.round (c*9/5 + 32)); 
+    }
+  }
+}
+

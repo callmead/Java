@@ -1,0 +1,179 @@
+Method Over Writing
+
+First file as Base.java
+class Base
+{
+	public void abc()
+	{
+		System.out.println("BASE Method");
+	}
+}
+Compile it
+
+Second file as Sub.java
+
+class Sub extends Base
+{
+	public static void main(String a[])
+	{
+		Sub s = new Sub(); //Creating Object
+		s.abc(); //Inheriting
+	}
+}
+Compile it.
+
+* The Main Method is Present in the Sub File therefore This File should Run as the Starting
+File otherwise there is no main method in the other file it will give error.
+
+If we add this code in the Sub Class
+
+class Sub extends Base
+{
+	public void abc()
+	{
+		System.out.println("Sub Method");
+	}
+	public static void main(String a[])
+	{
+		Sub s = new Sub(); //Creating Object
+		s.abc(); //Inheriting
+	}
+}
+
+Then it will Overwrite the Method Present in BAse.java and will execute the second Method
+which is in SUB. The Second one is Over writing the First one. If we write the Function twice
+in the same class then it will give compilation error.
+
+---------------------==================--------------------------
+
+-----=== Primitive Data Types ===-----
+
+int  
+long
+
+float
+double
+
+boolean
+Check the Range for all of above from book
+
+
+-----=== Scope of Variables ===-----
+
+Where the Hell Our Variable is Decleared in methid or outseide the method, 
+is Global or Local or etc.
+
+classs X
+
+{
+	int a //Global
+
+	void Y()
+	{
+		int b //Local
+	}
+
+	void z()
+	{
+		int x //Local
+	}
+
+	int c //Global
+}
+
+Which VAriable is inside any Method is Local and if its not under any Method then its Global
+
+-----=== Arrays ===-----
+int a[] = new int[10];		//Declaring Int Array
+double b[] = new double[10];	//Declearing Double array
+String a[] = new String[10];
+String b[][] = new String[2][3]
+
+Beginer Example
+
+class A
+{
+	public static void main (String a[])
+	{
+		String ab[][] = new String[2][3];
+		ab[0][0] = "0,0 ";
+		ab[0][1] = "0,1 ";
+		ab[0][2] = "0,2 ";
+		ab[1][0] = "1,0 ";
+		ab[1][1] = "1,1";
+		ab[1][2] = "1,2";
+
+		System.out.println(ab[1][1]);
+		System.out.println(ab[1][2]);
+		System.out.println(ab[0][2]);
+	}
+}
+
+--------------
+Advance Example
+
+//Array
+import javax.swing.*;
+public class Array
+{
+	String b[][] = new String[2][3];
+	String str= new String();
+
+	public void table()
+	{
+		int i,j;
+		for (i=0;i<=1;i++)
+		{
+			for (j=0;j<=2;j++)
+			{
+				str = JOptionPane.showInputDialog("Enter Values Row wise");
+				b[i][j] = str;
+			}
+		}
+
+		for (i=0;i<=1;i++)
+		{
+			for (j=0;j<=2;j++)
+			{
+				//str = [i][j];
+				//JOptionPane.showMessageDialog(null,"Enter Values Row wise");
+				System.out.print(b[i][j]+"\t");
+			}
+			System.out.println();
+		}
+
+	}
+
+	public static void main (String a[])
+	{
+		Array x = new Array();
+		x.table();
+		System.exit(0);
+	}
+}
+
+----------------
+goto Java DOC API Index then Java.io then see Class InputStreamReader (For Inout from Console CLI)
+
+import java.io.*;
+class Input
+{
+	public static void main(String  a[])throws IOException
+	{
+
+		InputStreamReader isr = new InputStreamReader(System.in);
+
+		int b = isr.read(); //Waits on CLI Untill some value is given and Returns the ASCII Value of cheracter
+
+		char c = (char)b;	//Converts the ASCII Cheracter to Cheracter type.
+
+		System.out.println("The Ascii Value is "+b);
+		System.out.println("The Cheracter of the Ascii Value is "+ c);
+	}
+
+}
+
+run and Give a cheracter type input a-z or A-Z
+-------------------------
+
+

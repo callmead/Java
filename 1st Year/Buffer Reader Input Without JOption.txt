@@ -1,0 +1,35 @@
+import java.io.*; //19th Feb 2003 Buffer Reader Standard Input w/o JOptionPane
+public class test
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader br=new BufferedReader (new InputStreamReader(System.in)); //we make a method br which we use later.
+		System.out.print ("Enter furst number");
+		String s1 = br.readLine(); //br is a method we have used above
+		System.out.print ("Enter second number");
+		String s2 = br.readLine();
+		int n1 = Integer.parseInt(s1);
+		int n2 = Integer.parseInt(s2);
+		System.out.print("The Sum is "+(n1+n2));
+	}
+}
+
+----------------------------------
+
+import java.io.*; //19th Feb 2003 Buffer Reader Standard Input w/o JOptionPane
+public class test
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader br=new BufferedReader (new InputStreamReader(System.in)); //we make a method br which we use later.
+		System.out.print ("Enter furst number");
+		String s1 = br.readLine(); //br is a method we have used above
+		System.out.print ("Enter second number");
+		String s2 = br.readLine();
+		int n1 = Integer.parseInt(s1);
+		int n2 = Integer.parseInt(s2);
+		System.out.print("The Sum is "+(n1+n2));
+	}
+}
+
+----------------------------------

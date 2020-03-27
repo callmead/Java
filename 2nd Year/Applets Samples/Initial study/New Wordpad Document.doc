@@ -1,0 +1,341 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\froman\fcharset0 Times New Roman;}{\f2\froman\fcharset0 Georgia;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}{\s3 heading 3;}{\s4 heading 4;}{\s5 heading 5;}}
+{\*\generator Msftedit 5.41.15.1503;}\viewkind4\uc1\pard\ul\b\f0\fs32 *Project Appraisal:\par
+\par
+\ulnone\fs28        *Group number : \par
+\fs24\par
+\par
+\fs52     \fs32 *Section:\par
+\par
+\par
+       *Batch:\par
+\fs52\par
+    \fs32 *Year: \par
+\par
+Candidate\rquote s name:                              ID Number:\par
+\fs52\par
+\par
+\fs32 @ Name of the system, which we want to develop:\par
+\fs52\par
+\par
+\fs32 @ Which Organisation do I work on: DIIT\par
+\fs52\par
+\par
+\fs32 @ Objective to Develop the System:\par
+\par
+\par
+\fs52 Contents:\par
+\par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li720\tx720\fs28 Preface\par
+{\pntext\f0 2\tab}Acknowledgement\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li720\tx720 Why I chose this project\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li720\tx720 The project brief\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li720\tx720 Initial study\par
+\pard{\pntext\f0 5\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart5\pndec }
+\fi-360\li720\tx720 Feasibility study\par
+\pard{\pntext\f0 6\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart6\pndec }
+\fi-360\li720\tx720 Requirements analyses\par
+\pard{\pntext\f0 7\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart7\pndec }
+\fi-360\li720\tx720 System analysis\par
+\pard{\pntext\f0 8\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart8\pndec }
+\fi-360\li720\tx720 Requirements Specification\par
+\pard      9   Design\par
+    10 Coding\par
+    11 Testing\par
+    12 Implementation\par
+\pard\par
+\fs32\par
+\fs52\par
+\pard\sl480\slmult1\qc\tx900\i\fs24 ACKNOWLEDGEMENT\par
+\pard\sl480\slmult1\qj\b0\i0 We are the  studenst of \b Daffodil Institute of Information Technology\b0  in \b 17\super th\nosupersub  Batch\b0  get an opportunity to create a project to support the teaching department of my Institute.Our project is to  Develop a software which is besed on Students Related Information mainly result. The project is\b  \b0 provided by \b London Metropolitan University \b0 of \b U.K. We \b0 would\b  \b0 like to especially thank Academic Director Mr. Nuruzzaman,\b  \b0 Chief Course Co-Ordinate Dr. Md. Fokhray Hossain, Faculty Mr. Khalid Sohel, Borhan uddin and MR. Aslam Pervez of Daffodil Institute of IT who helped me giving all related information about the Students. I would like to also thank my java teacher Mr. Nazmul Haque  who helped us in technical problems and took a good care of me during the work of this project. At last I am grateful to the almighty that I have done the project without any problem or occurrence, which would have made it complicated to finish the project.\par
+\par
+\pard I want to give special thanks Zillur Rahman, lab assistance Mohin and also \par
+\pard\fi720\par
+\pard to librarian bablu for providing me some standard project.\f1\par
+\pard\sl480\slmult1\qj\f0\par
+\par
+\par
+\pard\keepn\s1\ul\b\fs52 Preface\par
+\pard\b0\fs24\par
+\ulnone As  students of NCC, We had to submit a project which is necesary for our course. So, We have developed a software.\par
+\par
+I am grateful to our course instructor. For giving as the opportunity and also to for \par
+\par
+co- operating us and giving valuable information about DIIT.\par
+\par
+It has been found that the computer based result processing system would be a great helpful option to  \par
+\par
+DIIT.\par
+\par
+\par
+\b\fs52 The project brief:\par
+\b0\fs24\par
+\tab\par
+\par
+\par
+\par
+\par
+We are the studensts of IADCS wanted to work on a real life based project NCC \par
+\par
+has given as that wonderful opportunity. We intended to design and develop a fully \par
+\par
+working Software. Our decision was to work on a real life base project so that I not \par
+\par
+only wanted to work but also gather experience. The Software, which We planned \par
+\par
+for, will be concern about providing a facilities, reliable to process result and commercial \par
+\par
+benefits.   \par
+\f1\par
+\b\f0\fs40 Why I chose this project:\par
+\b0\fs24\par
+\tab The concept of processing result about student  may be  new in \par
+\par
+Bangladesh, but most Institute or University have not this type software. \par
+\tab\par
+\tab Few days ago, We want to develop a software name Rutine generator but in our institute result processing is very necessary for trhis reason  we decided to prepare the result processing system of DIIT\par
+\par
+Thei function of this software to provide information of result of DIIT student after processingTo the teacher and student. So it is so helpful to our teacher and to us and for this reason  we chose this project.\par
+\pard\keepn\s5\sl480\slmult1\qc\par
+\par
+\b\i Introduction\par
+\pard\sl480\slmult1\qj\b0\i0 The purpose of this project is to analysis; design and develop a software for Students performance of a Daffodil Institute of IT as a practical project of the AIDCS final year exam held in september 2004. In designing and developing this project Object Oriented Technique is used. As a modeling tool UML is practice here considering that UML is the emerging modeling tool in now-a-days also used DFD, ERD, ELH. The programming language used here JAVA and database used is access. We believe all this combination has built a foundation in our learning process and obviously We have gathered some experiences for development of a software.\par
+This students result processing system  is required by an Institute where I Study.  They have numbers of computers, printers, network equipments and other peripherals used by considerable number of users. All the instruments they posses need to be maintained.\par
+This application is developed by java which execute on all environment.\par
+\b\par
+\pard\b0\par
+\par
+\pard\sb80\sl480\slmult1\qj\b\f1\fs48 Initial study:\fs24\par
+    \par
+ \b0\f0 Initial study is mainly concerned with identifying the scope of the project, its objectives, and what product it must produce before it can be considered complete. The main purpose of initial study is to asses the feasibility so the project. It is very important to define the problem in user terms as precisely as possible.\par
+\par
+A system means any collection of component elements or procedure that work together to perform a task. System can be computerized or manual. Whatever the system is, every system has some complexity. And if the system is manual system, more complexity occurs. A manual system needs more manpower, time, spaces and expenses of money. As a result, manual system is just abuse of manpower, misuse of money, wastage of time and spaces. \par
+\pard Because of the widespread use and availability of computers, it is essential to \par
+\par
+develop the manual system to a new system, which will save our time, money \par
+\par
+and spaces and reduce the manpower making them skilled.\b\f1\par
+      \par
+\par
+\fs36 2.\fs24   \ul\f0\fs36 Background of the project:\ulnone\b0\par
+\b\fs24                            \par
+\b0\par
+\fs36\par
+\fs24 The project was assigned to us on -----. And from the very beginning we \par
+\par
+were aware of it. Any group can complete a project based on any topic \par
+\par
+through any computer related language. This project completed based \par
+\par
+on application. And it is implemented through a IT \par
+\par
+related Institute and the documentation is based on it.\par
+\par
+\par
+\pard\tx720\par
+\tab\par
+In the world IT section is popular e-learning center. And also in our \par
+\par
+country its popularity is rapid growing.\par
+\par
+\par
+\par
+\tab\par
+It has thought of working on something new and which is at the same \par
+\par
+demanding too. So we have chosen to build up a software which can be \par
+\par
+managed by DIIT. Which will provide information of student result, the best service.\par
+\par
+\par
+\par
+\par
+\pard\sl480\slmult1\qj\b  Background of DIIT: \b0 Daffodil Institute of Information Technology (DIIT) is the leading NCC education-training provider in Bangladesh\super\b\i 1, 2\nosupersub\b0 . \i0 DIIT is a sister concern of Daffodil Computers. The history of Daffodil started with one-man effort of Md. Sabur Khan, one of the successful entrepreneurs of Bangladesh. In 1990, when he started his computer business and with the very quick and marvelous growth in that business, he found the IT training opportunity in Bangladesh.\par
+In the beginning he started with IT short programs for individual and corporate organizations. After achieving great success in normal training Daffodil got the opportunity to start the NCC education and training with the name of DIIT as an affiliated institute of NCC (UK).\par
+NCC Education Service is the world\rquote s leading independent provider of IT Training and Education Programs. NCC Education operates with over 400 training and Education providers in over 38 countries worldwide and now, with over 150,000 students is assessed to NCC standards each year. Universities in UK, USA, AUSTRALIA, Canada and New Zealand recognize not only by other NCC centers worldwide, but NCC qualifications also\super\b\i 3\nosupersub\b0\i0 .\par
+The first batch of DIIT started with only seven students and fifteen computers in March 1997. Today DIIT has the latest computer lab with more than eighty computers. Due to continue effort the number of student is increasing tremendously. But the student result processing system in manually.\par
+\pard\sl480\slmult1 Note: An Increasing Bar Chart is in Appendix-A\par
+\super 1, 2 \cf1\ul www.daffodil-bd.com,www.diit.info\cf0\ulnone . 3 \cf1\ul www.nccedu.com\cf0\ulnone .\par
+\par
+\pard\sl480\slmult1\qj\nosupersub\b  Problems\par
+\b0 At present we as students go through lot of problems because everything we do is through manual process and we don\rquote t have any developed system rather than to keep record on paper. The problems we face everyday are:\par
+\par
+\b Time Consuming Process & cost ineffective:\b0  It is proven that modern technology can save time and money at the same giving a consume maximum satisfaction of the product and services.\par
+\b Intensive paper work:\b0  Pilling up paper is no longer today\rquote s technology so we need to keep our institution up to date with the present world.\par
+\b Dependent too much on human ability\b0 : Always human ability is susceptible to error, which can have a negative effect on our performance. \par
+\b Instant Access:\b0  Student can\rquote t get class schedule, examination schedule , get result on time or even lesson plan on time.\par
+\b Real time Database:\b0  Now it takes more than expected time to collect the feedback on our exams. But if you could establish a good system which can keep track on our individual database for real time use.\par
+\b Lack of co-ordination:\b0  Lack of co-ordination within the faculty members is visible because of poor and outdated communication system. \par
+The proposed system will solve some of these above problems. , which we are going to design, will help a teacher and student to get any required information and be ready in advance. All a student needs is a valid ID of his/her own. They also find examinations mark and selection result privious class test. Guardians can collect information about the performance of his/her child.\par
+\par
+\b  Needs\par
+\b0 When the thought \ldblquote Why do we need a software?\rdblquote  crosses our mind with the problem we are facing now without it. The software is the  fastest calculative media, which help an individual in getting on time real information. The importance of developing is an innovative approach itself, clearly displaying the knowledge that we learned through lectures. Developing a software  is not only displaying my adherence to our specialized area but also it will enhance our ability for the new area. So we will pay attention on the following things while designing the software.\par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 User friendly (GUI support).\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Cost effective (100% feasible).\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Keep it simple (Normal English language).\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Serve the targeted purpose (Month/yearly routine/schedule updating)\par
+\pard\sl480\slmult1\qj Who is going to benefit from the software?  \par
+ \b Current Student:\b0  They will be benefited most. For example: a student needs to know the privious result records so he/she can easily know the result by using this software. and he can also know the teachers,s  name who give their marks. He can also know their attendance amount. \par
+\b Teacher:\b0  This software is developed mainly for teaching department. So this will be very help for the teachers.The teachers can store the student's records. And by using this records the teachers can easily create various types of  result. \par
+\b 2.5: Business Activities\par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720\b0 DIIT performs some educational activities like as:\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Provides BSC honors in computer science with internal subject result.\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Takes care of internal exams after completing each topic.\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Module test is held three times after end of each subject.\par
+\pard{\pntext\f0 5\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart5\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Project work and give marks based on the project.\par
+\pard{\pntext\f0 6\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart6\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Monitors the entire student\rquote s performance.\par
+\pard{\pntext\f0 7\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart7\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Provides library facilities to the students and teachers for making good resul\par
+{\pntext\f0 8\tab}and so on which are not related on the project.\par
+{\pntext\f0 9\tab}\par
+\pard\sl480\slmult1\qj\b 2.6: Business Areas (SCOPE)\ul\par
+\ulnone\b0 Though DIIT is not a large private organization its work area is whole over the country and it is also linked with many countries all over the world. The business area of every organization as not the same, DIIT also has own business areas and they are stated bellow:\par
+\b 2.6.1: Educational Area\par
+\b0 Though DIIT started with the NCC education program, it runs many professional courses at present. The NCC course provides three years honors degrees, which are separately known as \lquote IDCS\rquote ,\rquote IADCS\rquote  and \lquote BCIS B.Sc. (Hon's)\rquote . The professional courses provides \lquote Basic Computer Application (BCA)\rquote , \lquote Diploma in Hardware Engineering (DHE)\rquote , \lquote Oracle DBA, Multimedia\rquote , \lquote Database Application Developer\rquote , \lquote Developing Web Page\rquote , \lquote MCSD\rquote , \lquote  MCSE\rquote , \lquote MCDBA\rquote  etc.\par
+\b 2.6.2: DIIT at a Glance\par
+\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clcfpat2\clcbpat3\clshdng10000\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj\b0 DAFFODIL INSTITUTE OF INFORMATION TECHNOLOGY\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Incorporation\cell 1997\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Organization Type\cell Global\cell\row\trowd\trgaph108\trleft-108\trrh858\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Sector\cell Education (IT and Business Programs Only).\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Banani Campus\cell House # 65, Block \endash  C, Road # 04, Banani, Dhaka \endash  1213, Bangladesh.\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Dhanmondi Campus\cell House # 07, Road # 14, Dhanmondi R/A, Dhaka \endash  1205, Bangladesh.\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Corporate Office\cell 64/3, Lake-Circus, Kalabagan, Dhanmondi, Dhaka \endash  120Bangladesh.\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Local Division Branch\cell Chittagong, Khulna, Feni, Comilla.\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj Association for Credit Transfer Arrangements\cell More than 60 Universities in UK, USA, Canada, Australia and Newzealand.\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj In 1990\cell Daffodil started as a general \par
+Computer training center at Firmgate.\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj In 1997\cell Achieved the affiliation of NCC \par
+Education, UK & started International \par
+Diploma Course on Computer with \par
+only 7 students & 15 computers.\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj In 1998\cell Established as Daffodil Institute of IT\par
+ (DIIT) to provide quality education \par
+Having international standard.\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj In 1999\cell Achieved the first authorization in\par
+ Bangladesh for conducting B.Sc \par
+(Hon\rquote s) in Computing & Information \par
+Systems under London Guildhall \par
+University.\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj In 2000\cell Established a well furnished Online \par
+Testing Center affiliated by VUE \par
+(Virtual University Enterprise).\par
+\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj IN 2001\cell Achieved the membership of ComTIA\cell\row\trowd\trgaph108\trleft-108\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx4320\clbrdrl\brdrw15\brdrs\brdrcf2\clbrdrt\brdrw15\brdrs\brdrcf2\clbrdrr\brdrw15\brdrs\brdrcf2\clbrdrb\brdrw15\brdrs\brdrcf2 \cellx8748\pard\intbl\sl480\slmult1\qj And NOW\cell Achieved the authorization in\par
+ Bangladesh for conducting B.Sc \par
+(Hon\rquote s) in Computing & Information \par
+Systems under London Metropolitan \par
+University. DIIT is one of Bangladesh\rquote s most innovative institutions of education offering a unique combination of academic & professional skills in a modern and supportive environment. It has built a strong reputation for providing a broad range of courses that are up \endash  to \endash  date and relevant to today\rquote s world. At this moment, DIIT has the latest computer labs of 400 computers with more than 1200 students at 7 campuses all over Bangladesh.\par
+\cell\row\pard\sl480\slmult1\qj\par
+\b 2.7: Educational Organogram of Daffodil Institute of IT\par
+\b0 (Note: Appendix-B)\par
+\b 2.8: Responsibilities of Managerial Level\par
+\b0 Every organization should have maintained through a system. So, there should be managerial posts that have to maintain the duties and responsibilities of the organization. We found that DIIT have main three managerial posts. They are:\b\par
+2.8.1: Branch Manager\par
+\b0 Branch Manager is the top managerial post of DIIT. Though he is the top management of the DIIT he got different type of jobs, which he has to maintain everyday routine. He is the top management of this educational institute (DIIT) but he has to communicate with Managing Director of Daffodil because, DIIT is the Sister Company of Daffodil. His main duties and responsibilities are stated below:\par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Communicate with all the sub-ordinates and take care about their problems.\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Arrange the internal meeting if needed.\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He has to present himself in the board meeting.\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 The report of management should be going through him to the Managing Director.\par
+\pard{\pntext\f0 5\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart5\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He has concern with the students often.\par
+\pard{\pntext\f0 6\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart6\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He also teaches the student as a subject teacher. \par
+\pard{\pntext\f0 7\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart7\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Branch Manager gets report from course co-ordinate and sometimes from administration officer.\par
+\pard{\pntext\f0 8\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart8\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He also has to maintain communication with main office Daffodil.\par
+\pard{\pntext\f0 9\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart9\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Last of all, he has to monitor all the organizational work related with sub-ordinates, employee or students.\par
+\pard{\pntext\f0 10\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart10\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 Though he works with management, he also works with the students because he is also work as a project co-ordinate. This increases his importance more to the institute.\par
+\pard\sl480\slmult1\qj\b 2.8.2: Chief Course co-ordinate\par
+\b0 In an educational institute we should find out a course co-ordinate that have to do a lot of job and also maintain a lot of responsibilities. Dr. Md. Fokhray Hossain who is responsible as a Chief Course Coordinator who look after this area stated as bellow: \par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Assist the top management in every responsibility.\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Report to the top management.\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Conduct the course of DIIT.\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Monitor and guide the performance of the teachers.\par
+\pard{\pntext\f0 5\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart5\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Develop the courses and materials of the institute.\par
+\pard{\pntext\f0 6\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart6\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Developing and maintaining the class schedule.\par
+\pard{\pntext\f0 7\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart7\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Co-ordination with other departments of the Organization.\par
+\pard{\pntext\f0 8\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart8\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Solving student\rquote s academic problems.\par
+\pard{\pntext\f0 9\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart9\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Taking classes of the students especially in absent of any teacher.\par
+\pard{\pntext\f0 10\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart10\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Registration and enrolment of the students.\par
+\pard{\pntext\f0 11\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart11\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Controlling the examination and tests.\par
+\pard{\pntext\f0 12\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart12\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840 Controlling and managing new admissions.\b\par
+\pard{\pntext\f0 13\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart13\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840\b0 Admit any potential student at DIIT.\b\par
+\pard{\pntext\f0 14\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart14\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840\b0 Any special assignment given by the management.\b\par
+\pard{\pntext\f0 15\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart15\pndec }
+\fi-360\li840\sl480\slmult1\qj\tx840\b0 Recruitment of the best faculty in DIIT.\b  \par
+\pard\sl480\slmult1\qj 2.8.3: Administration Office\par
+\b0 Every company has separate side, which is admin. DIIT also have strong administration.  There is a highly qualified administration officer in DIIT.The main responsibility of him is stated below: \par
+\pard{\pntext\f0 1\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart1\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 To maintain his sub-ordinates properly.\par
+\pard{\pntext\f0 2\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart2\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 To observe the activities of the whole institute.\par
+\pard{\pntext\f0 3\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart3\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 To communicate with other branch officer.\par
+\pard{\pntext\f0 4\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart4\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He has to maintain the accounts because of the absenteeism of the accountant.\par
+\pard{\pntext\f0 5\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart5\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He issues his sub-ordinate\rquote s applications for leave.\par
+\pard{\pntext\f0 6\tab}{\*\pn\pnlvlbody\pnf0\pnindent360\pnstart6\pndec }
+\fi-360\li720\sl480\slmult1\qj\tx720 He has to submit a weekly report to the finance manager of Daffodil Computers.\b\par
+\pard\sl480\slmult1\qj 3: Library In charge\par
+\b0 Every institute that has a library should have a library in-charge. DIIT also have a rich library but there is no specific post for a library in-charge at present. So the duty of a library in-charge is maintained by a senior lecturer, which is very sincere to his work. There are two sub-ordinates of him, the librarian and the assistant librarian. The library in-charge collects a weekly report from the librarian, which contains all the information about the library. It is also his responsibility to collect comments of both the teachers and students about the library. There is a budget of 50,000 for buying books for the library each year. To buy new books the library in-charge goes through the top management to take necessary steps. He has to submit a monthly report to the top management about all the information of the library.\par
+\b 4:  Question Of the Managerial Level and Students and Parents and Library in-charge\par
+\b0 (Note: Appendix:c)\par
+\pard\sl480\slmult1\super\par
+\pard\tx720\nosupersub\f2\par
+\pard\sl480\slmult1\qj\b\f0 5: Conclusion \par
+\b0 After completing the initial study it seems that the current system needs improvement. We received all kinds of help from every one and the working environment was very friendly. It makes sense that if we work with DIIT Personnel management,  it is possible to develop the current result processing system to computerized system. Now, we should go for feasibility study.\par
+\pard\b\f1\par
+\b0\f0\par
+\pard\sl480\slmult1\qj\par
+\par
+\par
+\pard\sl480\slmult1\par
+\par
+\par
+\pard\fs20\par
+}
+ 

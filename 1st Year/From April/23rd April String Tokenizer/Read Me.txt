@@ -1,0 +1,220 @@
+Today We will learn Class StringTokenizer 23rd April 2003.
+
+First we have 2 reaad Line from console and then store it to a string and then
+chop (Tokenise) the string into pieces and they will be stored in diff variables
+then Print them thats it.
+
+Example 1
+---------
+import java.util.*;
+import java.io.*;
+
+public class Test
+{
+	public static void main(String x[]) throws IOException
+	{
+		InputStreamReader is = new InputStreamReader(System.in);//ISR Required for BR
+		BufferedReader Br = new BufferedReader(is);		//BR gets the value from ISR
+
+		String s = new String();		//String for ReadLine which will be choped into tokens
+		String s1 = new String();		//For storing the value of 1st Tokin
+		String s2 = new String();		//For storing the value of 2nd Tokin
+		String s3 = new String();		//For storing the value of 3rd Tokin
+
+		System.out.println("Enter Your");
+		System.out.println("Name \tAge \tTel");
+
+		s = Br.readLine();								//ReadLine and store into s
+		StringTokenizer st = new StringTokenizer(s);	//Chop String s into tokens (depends in the words in string.)
+
+		while (st.hasMoreTokens())	//Untill the Last Tokens comes then (This Statement returns True or False)
+     	{
+			s1 = st.nextToken();	//s1 to store 1st Token Value
+			s2 = st.nextToken();	//s2 to store 2nd Token Value
+			s3 = st.nextToken();	//s3 to store 3rd Token Value
+		}
+
+		System.out.println();
+		System.out.println("**************************");
+		System.out.println("Name:\t"+s1);
+		System.out.println("Age:\t"+s2);
+		System.out.println("Tel:\t"+s3);
+		System.out.println("**************************");
+
+	}//main
+}//class
+---------------------------------------------------------------------------------------------------
+
+Previous Java 2 Dimensional Array Pronblem which was not showing the morethen one records. 
+Now its working and sometimes for some cases giving some problems.
+
+import javax.swing.*;
+import java.io.*;
+public class TwoDimensional
+{
+	public static void main(String a[]) throws IOException
+	{
+		InputStreamReader isr = new InputStreamReader(System.in); 	//For Input From Console
+		BufferedReader br = new BufferedReader (isr);				//Buffer Reader is Depending on ISR, it will Buffer every Cheracter from ISR and then combine it
+
+		String records[][] = new String[5][4]; 	//Array 5 Rows and 4 Columns
+
+		boolean search = false; 				//For Search
+		String s = new String();				//For Search
+		int i,j;
+
+		System.out.println("Input First Row First Name,Age,Sex,Tel");
+		System.out.println();
+
+		for(i=0;i<=4;i++)
+		{//For Array Input
+			for (j=0;j<=3;j++)
+			{
+				records[i][j] = br.readLine();
+			}
+		}//End For
+
+		System.out.println("Name\tAge\tSex\tTel");
+		for (i=0;i<=4;i++)
+		{//For Printing Array
+			for (j=0;j<=3;j++)
+			{
+				System.out.print(records[i][j]+"\t");
+			}//End i
+			System.out.println();
+		}//End j
+
+		System.out.println("Search Type Available Name(1), Age(2), Sex(3), Tel(4)");
+		System.out.println("Enter Search Type 1-4");
+
+		String t = br.readLine(); 	//For Search Type
+		//System.out.println("Enter "+t+" to Search ");
+		int t1 = Integer.parseInt(t);
+
+		s = br.readLine();//to Read the Input
+
+		if (t1==1)
+		{
+			for (i=0; i<=4;i++)
+			{
+				//System.out.println("Your Search Found "+s);
+				if (records[i][0].equals (s))
+				{
+					System.out.println(records[i][0]+"\t"+records[i][1]+"\t"+records[i][2]+"\t"+records[i][3]);
+					//break;
+				}
+				else
+				{
+				//	System.out.println("Search Not Found");
+				}
+				if(i==4)
+				System.out.println("Search Not Found");
+			}//For Loop
+		}//End First If
+
+		if (t1==2)
+		{
+			for (i=0; i<=4;i++)
+			{
+				//System.out.println("Your Search Found "+s);
+				if (records[i][1].equals (s))
+				{
+					System.out.println(records[i][0]+"\t"+records[i][1]+"\t"+records[i][2]+"\t"+records[i][3]);
+					//break;
+				}
+				else
+				{
+				//	System.out.println("Search Not Found");
+				}
+				if(i==4)
+				System.out.println("Search Not Found");
+			}//For Loop
+		}
+
+		if (t1==3)
+		{
+			for (i=0; i<=4;i++)
+			{
+				//System.out.println("Your Search Found "+s);
+				if (records[i][2].equals (s))
+				{
+					System.out.println(records[i][0]+"\t"+records[i][1]+"\t"+records[i][2]+"\t"+records[i][3]);
+					//break;
+				}
+				else
+				{
+				//	System.out.println("Search Not Found");
+				}
+				if(i==4)
+				System.out.println("Search Not Found");
+			}//For Loop
+		}
+
+		if (t1==4)
+		{
+			for (i=0; i<=4;i++)
+			{
+				//System.out.println("Your Search Found "+s);
+				if (records[i][3].equals (s))
+				{
+					System.out.println(records[i][0]+"\t"+records[i][1]+"\t"+records[i][2]+"\t"+records[i][3]);
+					//break;
+				}
+				else
+				{
+				}//Not Required
+				if(i==4)
+				System.out.println("Search Not Found");
+
+			}//For Loop
+		}//End 4th For t1=4
+	}//End Main
+}//End Class
+---------------------------------------------------------------------------------------------------
+
+Example 2 Using an Array(1D) to store these Strings
+---------
+import java.util.*;
+import java.io.*;
+
+public class Test
+{
+	public static void main(String x[]) throws IOException
+	{
+		InputStreamReader is = new InputStreamReader(System.in);//ISR Required for BR
+		BufferedReader Br = new BufferedReader(is);				//BR gets the value from ISR
+
+		String s = new String();				//String for ReadLine which will be choped into tokens
+		String rec[] = new String[3];			//For Storing Tokens
+
+		System.out.println("Enter Your");
+		System.out.println("Name \tAge \tTel");
+
+		s = Br.readLine();								//ReadLine and store into s
+		StringTokenizer st = new StringTokenizer(s);	//Chop String s into tokens (depends in the words in string.)
+
+		while (st.hasMoreTokens())	//Untill the Last Tokens comes then (This Statement returns True or False)
+     		{
+			for (int i = 0; i<=2; i++)
+			{
+				rec[i] = st.nextToken();
+			}//end for
+		}//end while
+
+		System.out.println();
+		System.out.println("**************************");
+		System.out.println("Name\tAge\tTel");
+
+		for (int j =0;j<=2;j++)
+		{
+			System.out.print(rec[j]+"\t");
+		}//end for
+		System.out.println();
+		System.out.println("**************************");
+
+	}//main
+}//class
+--------------------------
+
+Example 3 Using 2D Array to Store more then 1 records
+

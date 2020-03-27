@@ -1,0 +1,5 @@
+SELECT HW_POGR.TransactionID, HW_POGR.OID, HW_POGR.Item, HW_POGR.QtyOrd, HW_POGR.LastDate, HW_POGR.DeliveryAt, Suppliers.SID, Suppliers.Name, Suppliers.Address, Suppliers.Email, Suppliers.Phone, Suppliers.Fax
+FROM Suppliers, HW_POGR
+WHERE (Suppliers.SID = HW_POGR.SID)
+AND (Suppliers.Date = HW_POGR.Date)
+AND (Suppliers.Remarks = HW_POGR.Remarks)

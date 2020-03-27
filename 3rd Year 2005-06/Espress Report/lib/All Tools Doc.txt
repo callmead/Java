@@ -1,0 +1,206 @@
+DateTools
+------------------------------------------------------------
+
+public DateTools(){
+public static String dateToString(GregorianCalendar gc)
+public static String toDBdate(GregorianCalendar gc)
+public static String toDateandTime(GregorianCalendar gc)
+public static GregorianCalendar stringToDate(String dat)
+public static boolean isDate(String dat)
+public static GregorianCalendar getDate()
+public static String addDay(String dateString, int d, String formatString)
+public static String addDay(String dateString, int d)
+public static String dayAdd(String dateString, int d, String formatString)
+public static String dayAdd(String dateString, int d)
+public static long dateDiff(String dateString1, String dateString2, String formatString)
+public static long dateDiff(String dateString1, String dateString2)
+public static long timeDiff(String startTime, String endTime, String formatString)
+public static long timeDiff(String startTime, String endTime)
+public static String changeDateFormat(String date, String format)
+	
+//-------------------------------------------------------------------------
+JDate
+//---------------------------------------------------------------------------
+public JDate()
+
+public String getDate() 
+public String getDate(String strFormat)
+public void setDay(String day)
+public void setMonth(String month)
+public void setYear(String year)
+public String getDay(String day)
+public String getMonth(String month)
+public String getYear(String year)
+public void setSystemDate()
+public void setEditDate(String date)
+public void setEditDate(String s, String strFormat)
+
+//--------------------------------------------------------------------
+DateDialog
+//--------------------------------------------------------------------
+public DateDialog(String fieldName,boolean isSQL,boolean isSingle)
+public DateDialog(String fieldName,boolean isSQL,boolean isSingle, String dateFormat)
+  
+public String getQuery()
+
+//------------------------------------------------------------------------
+Utils
+//------------------------------------------------------------------------
+public Utils() 
+    public void setLookup(int i, Component component)
+    public void setFullScreen(JFrame jframe)
+    public void loadBackgroundImage(JFrame jframe, JDesktopPane jdesktoppane, String s)
+    public void loadBackgroundImage(JFrame f,JDesktopPane jdp, ImageIcon icon) {
+    public void loadBackgroundImage(JFrame f,JDesktopPane jdp, String imageFileName,int width,int height) {
+    public void centerFrame(int frameWidth, int frameHeight, JFrame f)
+    public void exitMsg()
+    public void createFrame(JInternalFrame frm, JDesktopPane desktop) {
+    public void checkVersion()
+    public void setFrameImage(JFrame jframe, String s)
+    public void setFrameImage(JFrame jframe, String s, int i, int j)
+    public ImageIcon resizeImage(String s, int i, int j)
+  
+
+//-----------------------------------------------------------------------
+JTextFields
+//-----------------------------------------------------------------------
+public JTextFields(int w, char v){
+
+//----------------------------------------------------------------------
+JStatusBar
+//----------------------------------------------------------------------
+public JStatusBar() {
+public void setText(String m)
+
+//-------------------------------------------------------------------------
+MenuHelpTextAdapter
+//-------------------------------------------------------------------------
+public MenuHelpTextAdapter(JMenuItem menu, String helpText,JStatusBar sbar)
+  
+//-----------------------------------------------------------------------
+JPhoto
+//-----------------------------------------------------------------------
+public JPhoto() {
+public void browseFile()
+public String getImageFileName()
+public String getImageFilePath()
+public void setImageFileName(File imageFile)
+public void setButton(boolean bVal)
+
+//------------------------------------------------------------------------
+JLakeView
+//------------------------------------------------------------------------
+public JLakeView()
+public JLakeView(String s,int width, int height)
+
+//-----------------------------------------------------------------------
+JLake
+//-----------------------------------------------------------------------
+public JLake(int duration, String imageFile,int width,int height)
+Ex: JLake tv = new JLake(6000,"./Images/tiger4.jpg",423,255);
+		
+//------------------------------------------------------------------------
+
+DATABASE RELATED CODING
+==========================================================================
+
+class DBase
+--------------------------------------------------------------------------
+public DBase() { System.out.println("Copyright(R) [DIIT] 2005 - BM Nazmul Haque");}
+public Statement getScrollableStatement(String DatabaseName, String UserName, String Password)
+public Statement getStatement(String DatabaseName, String UserName, String Password)
+public Connection getConnection(String DatabaseName, String UserName, String Password)
+public String getDBUrl()
+
+public Statement getScrollableStatementSQL(String DatabaseName, String UserName, String Password)
+public Statement getStatementSQL(String DatabaseName, String UserName, String Password)
+public Connection getConnectionSQL(String DatabaseName, String UserName, String Password)
+public Statement getStatementORA(String DatabaseName, String UserName, String Password)
+public Connection getConnectionORA(String DatabaseName, String UserName, String Password)
+public Statement getScrollableStatementMYS(String DatabaseName, String UserName, String Password)
+public Statement getStatementMYS(String DatabaseName, String UserName, String Password)
+public Connection getConnectionMYS(String DatabaseName, String UserName, String Password)
+
+//----------------------------------------------------------------------
+JGraphDialog
+//----------------------------------------------------------------------
+public JGraphDialog(String strQuery,String strCaption,int intScale, String DatabaseName, String UserName, String Password, int DriverType) {
+
+//----------------------------------------------------------------------
+reportController
+//----------------------------------------------------------------------
+public reportController(String DatabaseName, String UserName, String Password,int DriverType) {
+
+//------------------------------------------------------------------------
+JReportDialog
+//------------------------------------------------------------------------
+public JReportDialog(String Caption,String SqlStr, String DatabaseName, String UserName, String Password,int DriverType)
+
+//-------------------------------------------------------------------------
+QBViewer
+//-------------------------------------------------------------------------
+public QBViewer(String sqlString,String reportFileName, String DatabaseName, String UserName, String Password,int DriverType) {
+//----------------------------------------------------------------------------------
+QBDialog
+//------------------------------------------------------------------------
+public QBQBDialog(String sqlString,String DatabaseName, String UserName, String Password,int DriverType)
+
+//-------------------------------------------------------------------------
+SearchController
+//-------------------------------------------------------------------------
+public SearchController(String DatabaseName, String UserName, String Password,int DriverType) {
+
+//----------------------------------------------------------------------
+SearchDialog
+//----------------------------------------------------------------------
+public SearchDialog(String tblName, String DatabaseName, String UserName, String Password,int DriverType)
+public String getQuery()
+
+//------------------------------------------------------------------------
+JReportListViewer
+//------------------------------------------------------------------------
+public JReportListViewer(String Caption,String SqlStr, String DatabaseName, String UserName, String Password, int DriverType)
+
+//-------------------------------------------------------------------------
+ButtonPanel
+//-------------------------------------------------------------------------
+public ButtonPanel(ActionListener alArg)
+public void setButtons(boolean bVal)
+
+//------------------------------------------------------------------------
+ManuBarToolBar
+//-----------------------------------------------------------------------
+
+public ManuBarToolBar(String gifAddStrArg){
+public JMenuBar createJMenuBar(String[] menuNames,String input,ActionListener alArg,ActionListener printClick) {
+public JToolBar createJToolBar(String toolKeys[],ActionListener al,int p,ActionListener printClick) {
+
+//-------------------------------------------------------------------------
+dbComboBox
+//-------------------------------------------------------------------------
+
+public dbComboBox(String DatabaseName, String UserName, String Password,int DriverType)
+
+public void setData(String tableName, String columnName)
+
+//--------------------------------------------------------------------------------------
+Splash
+//------------------------------------------------------------------------
+public Splash(int duration,String imageFileName,int width,int height) 
+//------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------
+QBChartDialog
+QBChartViewer
+//-------------------------------------------------------------------------
+public QBChartViewer(String DatabaseName, String UserName, String Password,int DriverType)
+
+QBChartDialog chartFrame =
+		new QBChartDialog("select * from Stock",
+		"SCMS","","",4);
+	chartFrame.setVisible(true);
+//------------------------------------------------------------------------------------------------------
+public HelpDialog(String strPath, String strTopic)
+
+//------------------------------------------------------------------------------------------------------
+

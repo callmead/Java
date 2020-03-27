@@ -1,0 +1,66 @@
+
+
+//===============================================
+try
+{
+	File fileObj=new File("DRIP.au");
+
+	URL urlObj=new URL("file:\\"+fileObj.getAbsolutePath());//throws MalformedURLException
+
+	AudioClip audioClipObj=Applet.newAudioClip(urlObj);
+
+	audioClipObj.play();
+}
+catch(MalformedURLException mle)
+{
+	JOptionPane.showMessageDialog(this,mle);
+}
+					
+//=========================================================					
+
+public void playSound(String fileName)
+	   {
+
+		   try
+		         {
+		             URL url = new URL ("file:" + fileName);
+		             AudioClip ac = Applet.newAudioClip (url);
+		             ac.stop();
+		             ac.play();
+		   		     //ac.loop();
+	      }catch (Exception e) { System.out.println (e); }
+   }//End of playSound method
+
+   public String Next(String str)
+      {
+
+   	   String ret="";
+   		int pos = vctData.indexOf(str);
+   		ret=(String)vctData.elementAt(pos+1);
+   		return ret;
+
+   }//End of Next method
+   
+   
+//================================================================
+
+//sound5=getAudioClip(getDocumentBase(),".wav");
+
+try
+{
+	File fileobj=new File("drip.au");
+	/* The search path for classes and resources
+	* Returns the absolute pathname string of this abstract pathname.*/
+	URL url=new URL("file:\\"+fileobj.getAbsolutePath());
+	/**The <code>AudioClip</code> interface is a simple abstraction for
+	* playing a sound clip*/
+	AudioClip audio=Applet.newAudioClip(url);
+	audio.play();
+}
+catch(MalformedURLException mfu)
+{
+	System.out.println(mfu);
+
+}
+
+//=============================================================

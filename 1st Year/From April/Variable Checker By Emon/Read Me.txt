@@ -1,0 +1,4 @@
+Creat 2 Files Input.txt and output.txt and then the Input write a 
+
+Variable which should start with integer and then it will correct it
+and output in the output.txt

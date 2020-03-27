@@ -1,0 +1,13 @@
+insert into Student (lksdhf sdhf lshdfl lsdhg lsdkg)
+update set slkdhflshd fhsdlf lsdhgl sdglskh
+UPDATE Student SET SName='Adeel Ashraf Malik',Address='Banani Dhaka',Phone='011094474',DOB='06/04/1982',Dues=.0000 WHERE SID='N0001';
+INSERT INTO Student VALUES ('N0005','Test','REcord','4328598','03/03/1980', 0);
+DELETE FROM Student WHERE SID='n0005';
+UPDATE Student SET SName='Adeel Ashraf Malik.',Address='Banani Dhaka',Phone='011094474',DOB='04/06/1982',Dues=1000 WHERE SID='N0001';
+UPDATE Student SET SName='Adeel Ashraf Malik',Address='Banani Dhaka',Phone='011094474',DOB='06/04/1982',Dues=1000.0000 WHERE SID='N0001';
+INSERT INTO Student VALUES ('N0005','Malik','Banani','4209211','03/03/1985', 100);
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+------------
+SELECT * FROM Users WHERE user='adeel' and pass='diit'
+DELETE FROM Student WHERE SID='n0005';
+---------------

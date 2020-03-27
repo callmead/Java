@@ -1,0 +1,120 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://javaalmanac.com/egs/java.rmi/LookupRemote.html?l=rel -->
+<HTML><HEAD><TITLE>Looking Up a Remote Object and Invoking a Method (Java Developers Almanac Example)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="Patrick Chan" name=AUTHOR>
+<META content="Code Examples from The Java Developers Almanac 1.4" 
+name=DESCRIPTION>
+<META content="Addison-Wesley/Patrick Chan" name=OWNER>
+<META content=3/20/02 name=revision>
+<META http-equiv=Pragma content=no-cache><LINK media=screen 
+href="Looking Up a Remote Object and Invoking a Method (Java Developers Almanac Example)_files/almanac.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD></TD></TR></TBODY></TABLE><BR>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD rowSpan=3><A href="http://javaalmanac.com/?l=ex"><IMG hspace=10 
+      src="Looking Up a Remote Object and Invoking a Method (Java Developers Almanac Example)_files/almanac14a.jpg" 
+      align=bottom border=0></A></TD>
+    <TD vAlign=top>
+      <H1>The Java Developers Almanac 1.4</H1>
+      <FORM action=http://www.google.com/custom method=get target=_top>
+      <TABLE bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top noWrap align=left height=32></TD>
+          <TD noWrap><INPUT type=hidden value=javaalmanac.com 
+            name=domains><INPUT maxLength=255 size=31 name=q><INPUT type=submit value="Google Search" name=sa></TD></TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD noWrap>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD><INPUT type=radio value="" name=sitesearch><FONT 
+                  color=#000000 size=-1>Web</FONT></TD>
+                <TD><INPUT type=radio CHECKED value=javaalmanac.com 
+                  name=sitesearch><FONT color=#000000 
+                  size=-1>javaalmanac.com</FONT></TD></TR></TBODY></TABLE><INPUT 
+            type=hidden value=pub-6001183370374757 name=client><INPUT 
+            type=hidden value=1 name=forid><INPUT type=hidden value=ISO-8859-1 
+            name=ie><INPUT type=hidden value=ISO-8859-1 name=oe><INPUT 
+            type=hidden 
+            value=GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1; 
+            name=cof><INPUT type=hidden value=en 
+      name=hl></TD></TR></TBODY></TABLE></FORM></TD></TR>
+  <TR></TR></TBODY></TABLE>
+<HR color=#6666cc>
+
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <SCRIPT type=text/javascript>
+<!--
+google_ad_client = "pub-6001183370374757";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_channel = "4.777242811E9";
+google_ad_type = "text_image";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "6666CC";
+google_color_url = "6666CC";
+google_color_text = "000000";
+//--></SCRIPT>
+
+      <SCRIPT 
+      src="Looking Up a Remote Object and Invoking a Method (Java Developers Almanac Example)_files/show_ads.js" 
+      type=text/javascript></SCRIPT>
+    </TD>
+    <TD>&nbsp;&nbsp;&nbsp;</TD>
+    <TD vAlign=top>
+      <DIV align=left><A href="http://javaalmanac.com/">Home</A> &gt; <A 
+      href="http://javaalmanac.com/egs/index.html">List of Packages</A> &gt; 
+      <B><A 
+      href="http://javaalmanac.com/egs/java.rmi/pkg.html">java.rmi</A></B><FONT 
+      class=xsmall-font color=#666666> &nbsp;[6 examples] </FONT></DIV>
+      <P>
+      <H3>e189. Looking Up a Remote Object and Invoking a Method</H3><PRE>    try {
+        // Look up remote object
+        <FONT color=#0066ff><I>RObject</I></FONT> robj = (<FONT color=#0066ff><I>RObject</I></FONT>) Naming.lookup(<FONT color=#0066ff><I>"//localhost/RObjectServer"</I></FONT>);
+    
+        // Invoke method on remote object
+        robj.<FONT color=#0066ff><I>aMethod</I></FONT>();
+    } catch (MalformedURLException e) {
+    } catch (UnknownHostException e) {
+    } catch (NotBoundException e) {
+    } catch (RemoteException e) {
+    }
+</PRE>
+      <P>
+      <TABLE cellSpacing=0 cellPadding=2 width=600 border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle bgColor=#6666cc><FONT 
+            color=#ffffff>&nbsp;<B>Related 
+      Examples</B></FONT></TD></TR></TBODY></TABLE>e187. <A class=eglink 
+      href="http://javaalmanac.com/egs/java.rmi/StartRegistry.html?l=rel">Starting 
+      the RMI Registry </A><BR>e188. <A class=eglink 
+      href="http://javaalmanac.com/egs/java.rmi/DefineRemote.html?l=rel">Defining 
+      and Exporting a Remote Object </A><BR>e190. <A class=eglink 
+      href="http://javaalmanac.com/egs/java.rmi/args_Args.html?l=rel">Passing 
+      Parameters to a Remote Method </A><BR>e191. <A class=eglink 
+      href="http://javaalmanac.com/egs/java.rmi/return_Return.html?l=rel">Returning 
+      Values from a Remote Method </A><BR>e192. <A class=eglink 
+      href="http://javaalmanac.com/egs/java.rmi/exception_Exception.html?l=rel">Throwing 
+      an Exception from a Remote Method </A><BR><BR><BR><FONT 
+      class=xsmall-font>© 2002 Addison-Wesley. </FONT></P></TD>
+    <TD>&nbsp;&nbsp;&nbsp;</TD>
+    <TD vAlign=top></TD></TR></TBODY></TABLE>
+<META http-equiv=PRAGMA content=NO-CACHE></BODY></HTML>

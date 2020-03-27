@@ -1,0 +1,27 @@
+------------------------------------------------
+Calculating Factorial of a Number 21st Jan 2003
+------------------------------------------------
+import javax.swing.JOptionPane;		//Factorial Program for 1-65 Numbers
+public class Fact
+{
+	public static void main(String args[])
+	{
+		long fact;int i;int num1;String num;
+		num = JOptionPane.showInputDialog ("Enter a Number Whose Factorial is Required...");
+		num1 = Integer.parseInt(num);
+		if (num1<=65)
+		{
+		fact = 1;
+		for (i=2;i<=num1;i++)
+		{
+		fact = fact * i;
+		}
+		JOptionPane.showMessageDialog(null, "The Factorial is " + fact);
+		}
+		else
+		{
+		JOptionPane.showMessageDialog(null, "Sorry It is not Calculateable! ");
+		}
+		System.exit(0);
+	}
+}

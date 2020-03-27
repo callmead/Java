@@ -1,0 +1,6 @@
+Create 3 Threads
+1st will print a
+2nd will print b
+3rd will print c
+
+in a loop, make it hw

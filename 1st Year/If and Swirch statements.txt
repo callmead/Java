@@ -1,0 +1,288 @@
+-------------------------------
+Choice Dialog Box 8th Jan 2003 
+-------------------------------
+
+import javax.swing.JOptionPane;
+public class test
+{
+   public static void main(String args[])
+     {
+ 	 String choice;
+	 int ch;
+	 choice = JOptionPane.showInputDialog ("1) Addition \n2) Subtraction \n3) Multiplication \n4) Division");
+	 ch = Integer.parseInt(choice);
+	 JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+	 System.exit(0);
+     }
+}
+
+---------------------
+Multiple If Statement
+---------------------
+
+import javax.swing.JOptionPane;
+public class MultipleChoice2
+{
+   public static void main(String args[])
+     {
+ 	 String choice;
+	 int ch;
+
+	 choice = JOptionPane.showInputDialog ("1) Addition \n2) Subtraction \n3) Multiplication \n4) Division");
+	 ch = Integer.parseInt(choice);
+
+	 if (ch==1)
+	 	choice = "Addition...!";
+	 if (ch==2)
+		 choice = "Subtraction...!";
+	 if (ch==3)
+		 choice = "Multiplication...!";
+	 if (ch==4)
+		 choice = "Division...!";
+
+	 JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+
+	 System.exit(0);
+     }
+}
+
+-------------------------------------------------------
+Same as above but with Else Statement and AND Operator
+-------------------------------------------------------
+
+import javax.swing.JOptionPane;
+public class MultipleChoice2
+{
+  public static void main(String args[])
+   {
+ 	 String choice;
+	 int ch;
+
+	 choice = JOptionPane.showInputDialog ("1) Addition \n2) Subtraction \n3) Multiplication \n4) Division");
+	 ch = Integer.parseInt(choice);
+
+	 if (ch==1)
+	 	choice = "Addition...!";
+	 if (ch==2)
+		 choice = "Subtraction...!";
+	 if (ch==3)
+		 choice = "Multiplication...!";
+	 if (ch==4)
+		 choice = "Division...!";
+	 if (ch > 4 || ch< 1)
+	 	JOptionPane.showMessageDialog(null, "You Have Chosen wrong option" );
+	 else
+	 	JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+
+	 System.exit(0);
+   }
+}
+
+---------------------------------------------
+12th Jan 2003 Master Piece About Multiple If
+---------------------------------------------
+
+import javax.swing.JOptionPane;
+public class MultipleChoice3
+{
+  public static void main(String args[])
+   {
+ 	 String choice;
+	 int ch;
+	 String firstNumber;
+	 String secondNumber;
+	 int num1;
+	 int num2;
+	 int result;
+
+		do {
+ 		    choice = JOptionPane.showInputDialog ("1) Addition. \n2) Subtraction. \n3) Multiplication. \n4) Division. \n5) Exit.");
+	 	    ch = Integer.parseInt(choice);
+
+		    if (ch==1)
+		       {
+				 choice = "Addition...!";
+				 JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+				 firstNumber = JOptionPane.showInputDialog ("Enter 1st Value");
+			   	 secondNumber = JOptionPane.showInputDialog ("Enter 2nd Value");
+				 num1 = Integer.parseInt(firstNumber);
+				 num2 = Integer.parseInt(secondNumber);
+				 result = num1 + num2;
+				 JOptionPane.showMessageDialog(null, "The Sum is " + result);
+				}
+
+			if (ch==2)
+			   {
+			     choice = "Subtraction...!";
+			     JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+				 firstNumber = JOptionPane.showInputDialog ("Enter 1st Value");
+				 secondNumber = JOptionPane.showInputDialog ("Enter 2nd Value");
+				 num1 = Integer.parseInt(firstNumber);
+				 num2 = Integer.parseInt(secondNumber);
+				 result = num1 - num2;
+				 JOptionPane.showMessageDialog(null, "The Subtraction is " + result);
+			    }
+
+		 	if (ch==3)
+		 	   {
+				 choice = "Multiplication...!";
+				 JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+				 firstNumber = JOptionPane.showInputDialog ("Enter 1st Value");
+				 secondNumber = JOptionPane.showInputDialog ("Enter 2nd Value");
+				 num1 = Integer.parseInt(firstNumber);
+				 num2 = Integer.parseInt(secondNumber);
+				 result = num1 * num2;
+				 JOptionPane.showMessageDialog(null, "The Multiplication is " + result);
+			   }
+
+		 	if (ch==4)
+		 	   {
+				 choice = "Division...!";
+				 JOptionPane.showMessageDialog(null, "You Have Chosen " + choice);
+				 firstNumber = JOptionPane.showInputDialog ("Enter 1st Value");
+				 secondNumber = JOptionPane.showInputDialog ("Enter 2nd Value");
+				 num1 = Integer.parseInt(firstNumber);
+				 num2 = Integer.parseInt(secondNumber);
+				 if (num2==0)
+				 {
+				 JOptionPane.showMessageDialog(null, "Infinity....!");
+				 }
+				 else
+				 {
+				 result = num1 / num2;
+				 JOptionPane.showMessageDialog(null, "The Division is " + result);
+			     }
+
+			   }
+
+		 if (ch > 5 || ch< 1)
+		 	   {
+			JOptionPane.showMessageDialog(null, "You Have Chosen wrong option" );
+			   }
+
+	  } while (ch!=5);
+
+	 JOptionPane.showMessageDialog(null, "Thanks You. And Good Bye " );
+	 System.exit(0);
+   }
+}
+
+
+------------------------------------
+Using Switch Statement 15th Jan 2003
+------------------------------------
+import javax.swing.JOptionPane;      // Using Switch Statement...
+public class test
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String number;
+		 int num;
+		 number = JOptionPane.showInputDialog ("Enter a Number from 1-12..");
+		 num = Integer.parseInt(number);
+
+		 if (num >=1 && num <=12)
+		 {
+		 switch (num){
+			 case 1 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 2 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 3 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 4 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 5 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 6 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 7 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 8 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 9 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 10 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 11 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+		 	 case 12 : JOptionPane.showMessageDialog(null, "You have Pressed " + num);break;
+					 }
+		}
+		else
+		{
+		JOptionPane.showMessageDialog(null, "You have Pressed Wrong Number ");
+		}
+		System.exit(0);
+ 	}
+}
+-----------------------------------------------
+Using Switch Statement 15th Jan 2003 for Months
+-----------------------------------------------
+import javax.swing.JOptionPane;      // Using Switch Statement...
+public class test
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String number;
+		 int num;
+		 number = JOptionPane.showInputDialog ("Enter a Month in Number form(1-12).....!");
+		 num = Integer.parseInt(number);
+
+		 if (num >=1 && num <=12)
+		 {
+			 switch (num){
+			 case 1 : JOptionPane.showMessageDialog(null, "JANUARY 31 Days ");break;
+		 	 case 2 : JOptionPane.showMessageDialog(null, "FEBUARARY 28 Days ");break;
+		 	 case 3 : JOptionPane.showMessageDialog(null, "MARCH 31 Days ");break;
+		 	 case 4 : JOptionPane.showMessageDialog(null, "APRIL 30 Days ");break;
+		 	 case 5 : JOptionPane.showMessageDialog(null, "MAY 31 Days ");break;
+		 	 case 6 : JOptionPane.showMessageDialog(null, "JUNE 30 Days ");break;
+		 	 case 7 : JOptionPane.showMessageDialog(null, "JULY 31 Days ");break;
+		 	 case 8 : JOptionPane.showMessageDialog(null, "AUGUST 31 Days ");break;
+		 	 case 9 : JOptionPane.showMessageDialog(null, "SEPTEMBER 30 Days ");break;
+		 	 case 10 : JOptionPane.showMessageDialog(null, "OCTOBER 31 Days ");break;
+		 	 case 11 : JOptionPane.showMessageDialog(null, "NOVEMBER 30 Days ");break;
+		 	 case 12 : JOptionPane.showMessageDialog(null, "DECMBER 31 Days ");break;
+					 }
+		}
+		else
+			{
+			JOptionPane.showMessageDialog(null, "You have Pressed Wrong Number ");
+			}
+		System.exit(0);
+ 	}
+}
+---------------------------------------------------------------------
+Using Switch 15th_Jan_03 Months in a Complicated but simple way...
+---------------------------------------------------------------------
+import javax.swing.JOptionPane;      // Using Switch Statement...
+public class test
+{
+ 	public static void main(String args[])
+ 	{
+ 		 String number;
+		 int num;
+		 int days = 0;
+		 number = JOptionPane.showInputDialog ("Enter a Month in Number form(1-12)...!");
+		 num = Integer.parseInt(number);
+
+		 if (num >=1 && num <=12)
+		 {
+			 switch (num){
+			 case 1 :
+		 	 case 3 :
+		 	 case 5 :
+		 	 case 7 :
+		 	 case 8 :
+		 	 case 10 :
+		 	 case 12 :
+		 	 			days = 31 ; break;
+
+		 	 case 2 :
+		 	 			days = 28 ; break;
+
+		 	 case 4 :
+		 	 case 6 :
+		 	 case 9 :
+		 	 case 11 :
+		 	 			days = 30 ; break;
+					 }
+			JOptionPane.showMessageDialog(null, "This Month Have " + days + " Days");
+		}
+		else
+			{
+			JOptionPane.showMessageDialog(null, "You have Pressed Wrong Number ");
+			}
+		System.exit(0);
+ 	}
+}

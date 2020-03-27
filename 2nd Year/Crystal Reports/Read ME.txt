@@ -1,0 +1,4 @@
+Paste this exe file in java bin folder and
+Connection file for crystal report give odbc name there and place both files in same dir
+
+works with any crystal report software see desktop.java

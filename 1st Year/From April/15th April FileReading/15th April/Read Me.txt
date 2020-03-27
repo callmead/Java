@@ -1,0 +1,185 @@
+Today we will Learn about File Reading and Writing. 
+
+Normally we do two things
+
+File I/O
+
+Rading we use these classes
+a) FIle
+b) File Reader
+c) Buffered Reader
+ 
+Writing
+a) File
+b) File Writer
+c) Buffered Writer
+
+See File Class in API
+
+WE will use this
+
+File(String pathname) 
+Creates a new File instance by converting the given pathname string into an abstract pathname.
+
+e.g File f = mew FIle("c:\\input.txt"); \\ Two Times 
+
+
+Example 1
+YOur FIle input.txt in C drive root contains text
+
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+This is First Read
+
+-----------------
+And Your Java FIle is this
+
+import java.io.*;
+public class ReadingFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+		char c = (char) fr.read(); //Reading Cheracter and then Converting the Ascii VAlue to Cheracter
+		System.out.println(c);
+	}
+}
+-------------------------------------------------------
+The OutPut will be only T The Very First Cheracter Only now change the Coding in this way
+and see
+
+import java.io.*;
+public class ReadingFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+		for(int i = 1; i<=100;i++) //Change 100 with 1000 and see what happens
+		{
+			char c = (char) fr.read();
+			System.out.print(c);
+		}
+	}
+}
+---------------------------------------------------------
+If we dont use Buffer Reader then this This Reader only reads one cheracter and returns its 
+Ascii value and we have to Convert it to Cheracter. So we need to Read every next Cheracter 
+untill then Cheracters end but we need to know how many cheracters are available.
+Therefore we need BufferReader but there is another way for this method also see Example
+
+import java.io.*;
+public class ReadingFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+
+		for(int i = 1; i<=1000;i++)
+		{
+			int b = fr.read();
+			char c = (char)b;
+			//char c = (char) fr.read();
+			if (b ==-1)
+			{
+				System.out.println("End of File");
+				break;
+			}
+			else
+			{
+				System.out.print(c);
+			}
+		}
+	}
+}
+-----------------------------------
+But we still dont know how many cheracters are available in the FIle(we are using i<=1000)
+so we Use a While Loop see the Below Example
+
+import java.io.*;
+public class ReadingFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		File f = new File("c:\\input.txt");//See API, File
+		FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+
+		//for(int i = 1; i<=1000;i++)
+		//{
+int b;
+			while ((b=fr.read()) != -1)
+			{
+
+				System.out.print((char)b);
+			}
+			System.out.println("End Of File....!");
+		//}
+	}
+}
+-----------------------------------
+MAster Piece REads all kinds of Files like *.bat,*.sys, even *.doc but not Readable for Humans
+The Path is given in Input Box like c:\autoexec.bat
+
+import javax.swing.*;
+import java.io.*;
+public class ReadingDllFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		String path = JOptionPane.showInputDialog("Enter File Path with File Name e.g c:\\Autoexec.bat");
+		File f = new File(path);//See API, File
+
+		FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+		int b;
+		while ((b=fr.read()) != -1)
+		{
+			System.out.print((char)b);
+		}
+		System.out.println("End Of File....!");
+		System.exit(0);
+
+	}
+}
+----------------------------------------
+MAster PIece Which Insures if the File is Present or not and then Gives its TExt
+import javax.swing.*;
+import java.io.*;
+public class ReadingDllFile
+{
+	public static void main (String a[]) throws IOException
+	{
+		String path = JOptionPane.showInputDialog("Enter File Path with File Name e.g c:\\Autoexec.bat");
+		File f = new File(path);//See API, File
+		if(f.exists())
+		{
+			FileReader fr = new FileReader(f); //See API, FileReader This Methods REads Cheracter one by one
+			int b;
+			while ((b=fr.read()) != -1)
+			{
+				System.out.print((char)b);
+			}
+			System.out.println("End Of File....!");
+			System.exit(0);
+		}
+		//System.out.println("exists");
+		else
+		JOptionPane.showMessageDialog(null,"The File Does not Exists on This Path "+path);
+		System.exit(0);
+
+	}//m,ain
+}
+------------------------------

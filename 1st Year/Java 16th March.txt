@@ -1,0 +1,208 @@
+class Test
+{
+	int a;
+	public int b;
+	private int c;
+	int getData()
+	{
+		return c;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		Test test1 = new Test();
+		test1.a=5;
+		System.out.print (test1.a); //Printing Value from A
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	int a; // By default its public
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n)
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		Test test1 = new Test();
+		test1.a=5;
+		System.out.println (test1.a);
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	int a; // By default its public
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n) //dont return any value likea procedure
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		Test test1 = new Test();
+		test1.b=5; //test1 is an object and to access the objects
+		System.out.println (test1.b); //Printing the value from the object b
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	int a; // By default its public
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n) //This will not return any value and we cant access it from outside, But we can Access it with setdata
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		Test t1 = new Test();
+		t1.setData(5); //Seting value of C
+		System.out.println (t1.getData()); //will print the value from C
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	protected int a; //Protected is like public but when we apply inherotance then it acts as private
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n) //This will not return any value and we cant access it from outside, But we can Access it with setdata
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		/*Test t1 = new Test();
+		t1.a =5;
+		System.out.println (t1.a); //will print the value from */
+
+		B b1=new B();
+		b1.b = 5;
+		System.out.print (b1.b);
+	}
+
+}
+
+class B extends Test //New Class B Extends from Class test
+{
+
+
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	protected int a; //Protected is like public but when we apply inherotance then it acts as private
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n) //This will not return any value and we cant access it from outside, But we can Access it with setdata
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		/*Test t1 = new Test();
+		t1.a =5;
+		System.out.println (t1.a); //will print the value from */
+
+		B b1=new B();
+		b1.b = 5;
+		System.out.println (b1.b);
+	}
+
+}
+
+class B extends Test // New Class B but Extending from Class test thats how it will print 5
+{
+	int n;
+	B()
+	{
+		System.out.println ("Object of Class B Has been Created");
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+class Test
+{
+	protected int a; //Protected is like public but when we apply inherotance then it acts as private
+	public int b; //Access Modifiers Public Private and Protected
+	private int c;//Access Modifiers
+	int getData() //Method Name
+	{
+		return c;
+	}
+	void setData(int n) //This will not return any value and we cant access it from outside, But we can Access it with setdata
+	{
+		c= n;
+	}
+}
+public class DemoClass //File Name as DemoClass
+{
+	public static void main (String args[])
+	{
+		/*Test t1 = new Test();
+		t1.a =5;
+		System.out.println (t1.a); //will print the value from */
+
+		B b1=new B();
+		b1.a = 5; //.a and .b we can use but .c will give an error because c is private and cant be inherited
+		System.out.println (b1.a); //.a and .b we can use but .c will give an error
+	}
+
+}
+
+class B extends Test // New Class B but Extending from Class test thats how it will print 5
+{
+	int n;
+	B()
+	{
+		System.out.println ("Object of Class B Has been Created");
+	}
+}
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
+
+----==.: Note :.==---- 
+
+Public is Inherited as Public and Proted is inherited as Private and Private is not Inherited.
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==
